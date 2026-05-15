@@ -54,15 +54,23 @@
         }
         .img-container { text-align: center; margin: 30px 0; }
         img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+        .warning-box { background-color: #fff3cd; padding: 20px; border-left: 5px solid #ffc107; margin: 20px 0; border-radius: 4px; }
+        .warning-box strong { color: #856404; display: block; margin-bottom: 5px; }
   </style>
  </head>
  <body>
   <div class="container">
+   <div class="img-container">
+    <img alt="Logo" src="images/intro_manual_borrador_i_1.png" style="max-width: 250px; box-shadow: none;">
+   </div>
    <h1>
     Manual de Capacitaci&oacute;n T&eacute;cnico Instalador
    </h1>
+   <div class="img-container">
+    <img alt="Veh&iacute;culos" src="images/intro_manual_borrador_i_2.png">
+   </div>
    <button class="accordion">
-    Cubierta y Generalidades
+    1. Cubierta y Tabla de Contenido
    </button>
    <div class="panel" id="intro_manual_borrador_i">
     <div class="text-block">
@@ -70,133 +78,61 @@
       Tabla de Contenido
      </h2>
      <ol>
-      <li>
-       Cubierta y Generalidades
-      </li>
-      <li>
-       Introducci&oacute;n T&eacute;cnica
-      </li>
-      <li>
-       Fundamentos y Presaberes
-      </li>
-      <li>
-       Glosario de T&eacute;rminos y Conceptos Claves
-      </li>
-      <li>
-       Arquitectura de Hardware: Modelos de GPS
-       <ul>
-        <li>
-         Serie GV300 (Especificaciones de Pines)
-        </li>
-        <li>
-         Modelo GV58Lau (Conectividad)
-        </li>
-        <li>
-         Modelo GV75w (Aplicaciones en Intemperie)
-        </li>
-       </ul>
-      </li>
-      <li>
-       Herramientas y Equipo de Medici&oacute;n
-      </li>
-      <li>
-       Protocolo de Inspecci&oacute;n y Recepci&oacute;n del Veh&iacute;culo
-      </li>
-      <li>
-       Seguridad y Prevenci&oacute;n
-       <ul>
-        <li>
-         Medidas de Seguridad Personal
-        </li>
-        <li>
-         Prevenci&oacute;n de Accidentes y Da&ntilde;os El&eacute;ctricos
-        </li>
-        <li>
-         Protecci&oacute;n contra Cortocircuitos
-        </li>
-       </ul>
-      </li>
-      <li>
-       Instalaci&oacute;n y Ensamblaje
-       <ul>
-        <li>
-         Confecci&oacute;n del Arn&eacute;s El&eacute;ctrico
-        </li>
-        <li>
-         Integraci&oacute;n de Rel&eacute;s de Corte
-        </li>
-        <li>
-         T&eacute;cnicas de Empalme y Crimpado
-        </li>
-        <li>
-         Instalaci&oacute;n de Perif&eacute;ricos (Bot&oacute;n de P&aacute;nico)
-        </li>
-       </ul>
-      </li>
-      <li>
-       Identificaci&oacute;n Avanzada de Conductores y Se&ntilde;ales
-       <ul>
-        <li>
-         Alimentaci&oacute;n Constante (+12V) y Sleep Mode
-        </li>
-        <li>
-         Sistemas de Apertura de Seguros (Doble Estado)
-        </li>
-        <li>
-         Se&ntilde;ales del Interruptor de Encendido (Llav&iacute;n)
-        </li>
-       </ul>
-      </li>
+      <li>Cubierta y Tabla de Contenido</li>
+      <li>Introducci&oacute;n T&eacute;cnica</li>
+      <li>Glosario de T&eacute;rminos y Conceptos Claves</li>
+      <li>Arquitectura de Hardware: Modelos de GPS</li>
+      <li>Herramientas y Equipo de Medici&oacute;n</li>
+      <li>Protocolo de Inspecci&oacute;n y Recepci&oacute;n del Veh&iacute;culo</li>
+      <li>Seguridad Personal y Vehicular</li>
+      <li>Prevenci&oacute;n de Accidentes y Cortocircuitos</li>
+      <li>Ensamble del Arn&eacute;s El&eacute;ctrico</li>
+      <li>Configuraci&oacute;n y Conexi&oacute;n de Rel&eacute;s (Corte de Ignici&oacute;n)</li>
+      <li>T&eacute;cnicas de Empalme y Encintado</li>
+      <li>Uso de Terminales Remachables</li>
+      <li>Instalaci&oacute;n de Perif&eacute;ricos: Bot&oacute;n de P&aacute;nico</li>
+      <li>Identificaci&oacute;n Avanzada de Conductores y Se&ntilde;ales</li>
      </ol>
-    </div>
-    <div class="img-container">
-     <img src="images/intro_manual_borrador_i_1.png">
-    </div>
-    <div class="text-block">
-     MANUAL DE CAPACITACION
-     T&Eacute;CNICA
-     Manual de capacitaci&oacute;n T&eacute;cnica
-     Para Instalaci&oacute;n de GPS
-    </div>
-    <div class="img-container">
-     <img src="images/intro_manual_borrador_i_2.png">
     </div>
     <div class="text-block">
      <h3>
       Fundamentos y Conocimientos Previos (Presaberes)
      </h3>
      <p>
-      Antes de proceder con la pr&aacute;ctica de instalaci&oacute;n, es imperativo que el t&eacute;cnico domine conceptos fundamentales de la tecnolog&iacute;a GPS y la electr&oacute;nica b&aacute;sica. El GPS (Global Positioning System) es una red de sat&eacute;lites que orbitan la Tierra, permitiendo que un receptor calcule su ubicaci&oacute;n exacta mediante la triangulaci&oacute;n de se&ntilde;ales de al menos cuatro sat&eacute;lites.
+      Antes de proceder con la pr&aacute;ctica de instalaci&oacute;n, es imperativo que el t&eacute;cnico domine los conceptos fundamentales de los sistemas de rastreo y seguridad vehicular. A diferencia de los navegadores GPS convencionales, los dispositivos abordados en este manual son unidades de telem&aacute;tica dise&ntilde;adas para el monitoreo de ubicaci&oacute;n, rastreo en tiempo real, inmovilizaci&oacute;n remota y gesti&oacute;n de flotas.
      </p>
      <ul>
       <li>
-       <strong>
-        Triangulaci&oacute;n y Sincronizaci&oacute;n:
-       </strong>
-       Los receptores miden el tiempo que tarda la se&ntilde;al en viajar desde el sat&eacute;lite hasta la antena. Debido a la velocidad de la luz, incluso un error de microsegundos puede resultar en kil&oacute;metros de imprecisi&oacute;n, por lo que la sincronizaci&oacute;n at&oacute;mica es vital.
+       <strong>Posicionamiento H&iacute;brido y Comunicaci&oacute;n:</strong>
+       Estos equipos no dependen exclusivamente de la se&ntilde;al satelital GPS. Funcionan mediante una arquitectura de tres pilares:
+       <ol>
+        <li><strong>GNSS (GPS/GLONASS):</strong> Captaci&oacute;n de se&ntilde;ales satelitales para obtener coordenadas de alta precisi&oacute;n.</li>
+        <li><strong>Redes M&oacute;viles (GSM/LTE):</strong> Uso de m&oacute;dem celular integrado para transmitir los datos recolectados hacia servidores centrales y recibir comandos de control.</li>
+        <li><strong>LBS (Location Based Services):</strong> Triangulaci&oacute;n por antenas de telefon&iacute;a m&oacute;vil, que permite obtener una ubicaci&oacute;n aproximada incluso en lugares sin visi&oacute;n al cielo (s&oacute;tanos, t&uacute;neles) donde el GPS pierde se&ntilde;al.</li>
+       </ol>
       </li>
       <li>
-       <strong>
-        Electr&oacute;nica Automotriz:
-       </strong>
+       <strong>Interacci&oacute;n de Sistemas y Seguridad:</strong>
+       La unidad de rastreo procesa constantemente las coordenadas y el estado de los sensores (ignici&oacute;n, p&aacute;nico). Esta informaci&oacute;n es enviada mediante la red celular hacia una plataforma de monitoreo. En caso de requerir seguridad activa, la plataforma env&iacute;a un comando de vuelta al dispositivo que, mediante un rel&eacute; externo, permite la inmovilizaci&oacute;n o apagado remoto del veh&iacute;culo de forma segura.
+      </li>
+      <li>
+       <strong>Electr&oacute;nica Automotriz:</strong>
        Se requiere comprensi&oacute;n profunda de la Ley de Ohm, identificaci&oacute;n de circuitos (ignici&oacute;n, accesorios, constante) y el uso correcto del mult&iacute;metro y probador de l&iacute;nea.
       </li>
       <li>
-       <strong>
-        Sistemas del Veh&iacute;culo:
-       </strong>
+       <strong>Sistemas del Veh&iacute;culo:</strong>
        Conocimiento de la arquitectura el&eacute;ctrica, ubicaci&oacute;n de cajas de fusibles y protocolos de desarmado de interiores para evitar da&ntilde;os est&eacute;ticos o estructurales.
       </li>
      </ul>
     </div>
    </div>
    <button class="accordion">
-    Introducci&oacute;n
+    2. Introducci&oacute;n T&eacute;cnica
    </button>
    <div class="panel" id="m1_introduccion">
     <div class="text-block">
      <p>
-      Este manual t&eacute;cnico ha sido desarrollado como una gu&iacute;a integral para los nuevos t&eacute;cnicos especializados en la instalaci&oacute;n, configuraci&oacute;n y mantenimiento de sistemas de Posicionamiento Global (GPS) en una amplia gama de veh&iacute;culos. En el contexto actual de gesti&oacute;n de flotas y seguridad vehicular, la precisi&oacute;n en la instalaci&oacute;n es cr&iacute;tica no solo para la funcionalidad del dispositivo, sino tambi&eacute;n para la integridad el&eacute;ctrica y mec&aacute;nica del veh&iacute;culo.
+      Este manual t&eacute;cnico ha sido desarrollado como una gu&iacute;a integral para los nuevos t&eacute;cnicos especializados en la instalaci&oacute;n, configuraci&oacute;n y mantenimiento de sistemas de rastreo y seguridad vehicular. A diferencia de la navegaci&oacute;n convencional, estos dispositivos integran tecnolog&iacute;as de posicionamiento satelital con comunicaciones m&oacute;viles GSM/LTE para permitir el monitoreo en tiempo real, la gesti&oacute;n de flotas y funciones de seguridad activa como la inmovilizaci&oacute;n remota. En el contexto actual, la precisi&oacute;n en la instalaci&oacute;n es cr&iacute;tica no solo para la funcionalidad del dispositivo, sino tambi&eacute;n para la integridad el&eacute;ctrica y mec&aacute;nica del veh&iacute;culo.
      </p>
      <p>
       A lo largo de este documento, el aspirante encontrar&aacute; desde los fundamentos de la electr&oacute;nica automotriz hasta procedimientos avanzados de diagn&oacute;stico. Nuestro objetivo primordial es asegurar que cada t&eacute;cnico adquiera las competencias necesarias para realizar instalaciones limpias, seguras y altamente efectivas, minimizando riesgos y maximizando la vida &uacute;til de los equipos instalados.
@@ -207,7 +143,7 @@
     </div>
    </div>
    <button class="accordion">
-    T&eacute;rminos y Conceptos Claves.
+    3. Glosario de T&eacute;rminos y Conceptos Claves
    </button>
    <div class="panel" id="m1_terminos_y_conceptos_claves">
     <div class="text-block">
@@ -275,32 +211,50 @@
       </li>
       <li>
        <strong>
-        10. Ubicaci&oacute;n:
+        10. Ubicaci&oacute;n y Telem&aacute;tica:
        </strong>
-       Es la funci&oacute;n principal del GPS que permite localizar y determinar la posici&oacute;n exacta de un objeto o persona en un mapa.
+       Capacidad de determinar la posici&oacute;n exacta mediante GNSS y transmitir datos de sensores del veh&iacute;culo a trav&eacute;s de redes celulares para su visualizaci&oacute;n en mapas y reportes.
       </li>
       <li>
        <strong>
-        11. Pruebas manuales:
+        11. GSM/LTE:
+       </strong>
+       Est&aacute;ndares de comunicaci&oacute;n m&oacute;vil utilizados por el dispositivo para enviar informaci&oacute;n y recibir comandos de la plataforma de monitoreo.
+      </li>
+      <li>
+       <strong>
+        12. LBS (Location Based Services):
+       </strong>
+       M&eacute;todo de posicionamiento alternativo basado en la proximidad a antenas de telefon&iacute;a, usado como respaldo cuando la se&ntilde;al satelital es bloqueada.
+      </li>
+      <li>
+       <strong>
+        13. Plataforma de Monitoreo:
+       </strong>
+       Software centralizado que recibe, procesa y muestra la informaci&oacute;n enviada por los dispositivos de rastreo.
+      </li>
+      <li>
+       <strong>
+        14. Pruebas manuales:
        </strong>
        implica realizar las pruebas de funcionamiento directamente, utilizando el probador de l&iacute;nea.
       </li>
       <li>
        <strong>
-        12. Pruebas:
+        15. Pruebas:
        </strong>
-       Conjunto de procedimientos para verificar el correcto funcionamiento del dispositivo GPS una vez instalado. Incluye pruebas de localizaci&oacute;n, conectividad y funcionalidades adicionales.
+       Conjunto de procedimientos para verificar el correcto funcionamiento del dispositivo de rastreo una vez instalado. Incluye pruebas de localizaci&oacute;n, transmisi&oacute;n de datos y ejecuci&oacute;n de comandos remotos.
       </li>
       <li>
        <strong>
-        13. Orden de Trabajo:
+        16. Orden de Trabajo:
        </strong>
        Documento que detalla las tareas a realizar por el
      t&eacute;cnico, incluyendo la instalaci&oacute;n, desinstalaci&oacute;n, mantenimiento o reparaci&oacute;n de un dispositivo GPS. Suele contener informaci&oacute;n sobre el cliente, el equipo a trabajar y los tiempos estimados.
       </li>
       <li>
        <strong>
-        14. Datos de Orden de Trabajo:
+        17. Datos de Orden de Trabajo:
        </strong>
        Informaci&oacute;n espec&iacute;fica que incluye el nombre
      del cliente, la direcci&oacute;n, el tipo de servicio solicitado, los dispositivos involucrados, los costos estimados y cualquier nota adicional que el t&eacute;cnico deba considerar antes de llevar a cabo la tarea.
@@ -309,13 +263,12 @@
     </div>
    </div>
    <button class="accordion">
-    Modelos de GPS y sus funciones
+    4. Arquitectura de Hardware: Modelos de GPS
    </button>
    <div class="panel" id="m1_modelos_de_gps_y_sus_funciones">
     <div class="text-block">
      <p>
-      Modelos de GPS y sus funciones
-     Es fundamental conocer los tipos de GPS disponibles y sus funciones b&aacute;sicas para seleccionar el dispositivo que mejor se ajuste a nuestras necesidades. Los GPS pueden ser port&aacute;tiles, para actividades espec&iacute;ficas, o sistemas instalables en veh&iacute;culos, algunos con funciones adicionales como llamadas, seguimiento de rutas y alertas de velocidad. Conocer estas caracter&iacute;sticas ayuda a optimizar su uso. Cabe destacar la existencia de unidades descontinuadas, que a&uacute;n pueden encontrarse en veh&iacute;culos usados; en caso de detectarse una falla en estas unidades, es necesario reemplazarlas.
+      <strong>Modelos de Rastreo y Seguridad Vehicular:</strong> Es fundamental diferenciar estos dispositivos de los sistemas de navegaci&oacute;n comunes. Las unidades de rastreo instalables se integran directamente al sistema el&eacute;ctrico del veh&iacute;culo para ofrecer funciones de monitoreo continuo, gesti&oacute;n de flotas y seguridad activa, como el apagado remoto. Conocer la arquitectura técnica de cada modelo permite optimizar su instalaci&oacute;n y asegurar la compatibilidad con las redes de comunicaci&oacute;n GSM/LTE y los servicios de monitoreo.
      </p>
      <h3>
       Unidades Descontinuadas
@@ -348,14 +301,12 @@
      <img src="images/m1_modelos_de_gps_y_sus_funciones_4.png">
     </div>
     <div class="text-block">
+     <h3>Serie GV300</h3>
      <p>
-      Serie GV300
-     Actualmente esta plataforma es la que m&aacute;s se ha utilizado a lo largo de los a&ntilde;os, cuenta con dos modelos como ser GV300w, GV310LAU actualmente en us. Se presenta a continuaci&oacute;n el desglose t&eacute;cnico de las funciones asignadas de cada pin en el conector
-     serie GV300
-     Descripciones de los pines Serie GV300
-     Al observar de cerca las unidades GPS de la serie GV300, encontramos un conector de 16 pines y, en uno de los lados de la unidad, una infograf&iacute;a que
-     detalla la funci&oacute;n de cada pin. Esta informaci&oacute;n facilita la instalaci&oacute;n y conexi&oacute;n de componentes adicionales, como se ilustra en la imagen 3.
-     En las im&aacute;genes 1 y 2 se muestran las diferentes disposiciones de colores en los pines del conector, lo cual facilita la identificaci&oacute;n de cada funci&oacute;n.
+      Actualmente, esta plataforma es la que m&aacute;s se ha utilizado a lo largo de los a&ntilde;os. Cuenta con modelos como el <strong>GV300W</strong> y el <strong>GV310LAU</strong>. A continuaci&oacute;n, se presenta el desglose t&eacute;cnico de las funciones asignadas a cada pin en el conector de 16 pines.
+     </p>
+     <p>
+      Al observar de cerca las unidades de la serie GV300, encontramos un conector principal y, en uno de los laterales, una infograf&iacute;a que detalla la funci&oacute;n de cada terminal. Esta informaci&oacute;n es vital para la correcta integración de perif&eacute;ricos.
      </p>
     </div>
     <div class="img-container">
@@ -394,41 +345,31 @@
     </div>
     <div class="text-block">
      <ul>
-      <li>
-       <strong>
-        Pin 8 (Amarillo):
-       </strong>
-       Apertura Este pin se utiliza para enviar un pulso negativo ( - )
-     moment&aacute;neo, que se utiliza para la apertura de seguros.
-     Pines 9 y 10 (Morados): Parlante Estos pines se utilizan para conectar un parlante activo.
-      </li>
-      <li>
-       <strong>
-        Pin 11 (Rojo):
-       </strong>
-       Positivo Este pin se utiliza para la alimentaci&oacute;n (DC) del veh&iacute;culo, el cual se puede conectar a una se&ntilde;al positiva del veh&iacute;culo que se mantenga activada independientemente si el veh&iacute;culo est&aacute; apagado o encendido, el rango de operaci&oacute;n es desde 8 a 36 voltios.
-      </li>
-      <li>
-       <strong>
-        Pin 13 (Naranja):
-       </strong>
-       P&aacute;nico Este pin se utiliza para entrada de una se&ntilde;al negativa moment&aacute;nea, se utiliza para la se&ntilde;al del bot&oacute;n de p&aacute;nico.
-      </li>
-      <li>
-       <strong>
-        Pin 14 (Azul):
-       </strong>
-       Bloqueo Este pin es una se&ntilde;al negativa sostenida, al activarse mantiene el veh&iacute;culo apagado e imposibilita el encendido.
-     GV58Lau
-     Este dispositivo ofrece la mayor&iacute;a de las funcionalidades comunes a otros dispositivos GPS. A diferencia del modelo GV300, no incluye un conector; sin embargo posee cables de distintos colores integrados para facilitar la conexi&oacute;n. Este dispositivo cuenta con solo 6 pines y, al igual que la serie GV300, incluye una infograf&iacute;a (Imagen B1) que detalla la funci&oacute;n espec&iacute;fica de cada cable, facilitando as&iacute; su
-     identificaci&oacute;n y correcta instalaci&oacute;n.
-     A continuaci&oacute;n, una explicaci&oacute;n m&aacute;s detallada de cada una de las terminales del modelo GV50Lau
-     Color Funci&oacute;n Color Funci&oacute;n
-     Naranja Se&ntilde;al de p&aacute;nico Blanco Se&ntilde;al de ignici&oacute;n
-     Amarillo Salida 2, Apertura Negro Negativo
-     PRECAUCION: Por favor, Asegurarse de conectar primero la terminal negativa del GPS antes de cualquier otra terminal.
-      </li>
+      <li><strong>Pin 8 (Amarillo): Apertura.</strong> Env&iacute;a un pulso negativo (-) moment&aacute;neo para la activaci&oacute;n del cierre centralizado.</li>
+      <li><strong>Pines 9 y 10 (Morados): Parlante.</strong> Salidas para audio (micr&oacute;fono/parlante activo).</li>
+      <li><strong>Pin 11 (Rojo): Positivo (+).</strong> Alimentaci&oacute;n constante (8V - 36V DC). Debe conectarse a una l&iacute;nea que no se interrumpa al apagar el veh&iacute;culo.</li>
+      <li><strong>Pin 13 (Naranja): P&aacute;nico.</strong> Entrada para pulso negativo moment&aacute;neo proveniente del bot&oacute;n de emergencia.</li>
+      <li><strong>Pin 14 (Azul): Bloqueo.</strong> Salida de se&ntilde;al negativa sostenida para activar el rel&eacute; de inmovilizaci&oacute;n.</li>
      </ul>
+
+     <h3>Modelo GV58LAU</h3>
+     <p>
+      Este dispositivo compacto integra la mayor&iacute;a de las funciones en un arn&eacute;s de 6 cables. A diferencia de la serie GV300, los cables est&aacute;n integrados directamente al chasis del equipo.
+     </p>
+     <div style="background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin: 10px 0;">
+         <strong>C&oacute;digo de Colores GV58LAU:</strong>
+         <ul style="column-count: 2;">
+             <li><strong>Blanco:</strong> Ignici&oacute;n</li>
+             <li><strong>Rojo:</strong> Positivo (+)</li>
+             <li><strong>Negro:</strong> Negativo (-)</li>
+             <li><strong>Naranja:</strong> P&aacute;nico</li>
+             <li><strong>Amarillo:</strong> Apertura</li>
+             <li><strong>Verde:</strong> Bloqueo</li>
+         </ul>
+     </div>
+     <p style="color: #d93025; font-weight: bold;">
+      ⚠️ PRECAUCI&Oacute;N: Aseg&uacute;rese de conectar siempre la terminal negativa (Negro) antes de cualquier otra conexi&oacute;n de potencia o se&ntilde;al.
+     </p>
     </div>
     <div class="img-container">
      <img src="images/m1_modelos_de_gps_y_sus_funciones_8.png">
@@ -437,22 +378,17 @@
      <img src="images/m1_modelos_de_gps_y_sus_funciones_9.png">
     </div>
     <div class="text-block">
+     <h3>Modelo GV75W (Waterproof)</h3>
      <p>
-      Verde Salida 1. Bloqueo Rojo Positivo 8 - 32 Voltios
+      Dise&ntilde;ado para aplicaciones en condiciones extremas, como motocicletas, cuatrimotos o maquinaria pesada expuesta a la intemperie. Cuenta con protecci&oacute;n IP67.
      </p>
-     <h3>
-      GV75w
-     </h3>
-     <p>
-      Este dispositivo ha sido dise&ntilde;ado espec&iacute;ficamente para aplicaciones en para motocicletas, cuatrimotos o veh&iacute;culos con partes expuestas a la intemperie. Ofrece la mayor&iacute;a de las funciones de la unidad GV58LAU, proporcionando un rendimiento confiable incluso en condiciones externas dif&iacute;ciles, si observamos la infograf&iacute;a en una de las caras del dispositivo, encontraremos en detalle la
-     funci&oacute;n de cada pin.
-     A continuaci&oacute;n, se detallar&aacute; los pines que utilizamos de esta unidad:
-     Color Funci&oacute;n
-     Rojo Positivo
-     Negro Negativo
-     Blanco Se&ntilde;al ignici&oacute;n
-     Azul Bloqueo
-     </p>
+     <p><strong>Configuraci&oacute;n de Cables GV75W:</strong></p>
+     <ul>
+      <li><strong>Rojo:</strong> Positivo (+)</li>
+      <li><strong>Negro:</strong> Negativo (-)</li>
+      <li><strong>Blanco:</strong> Ignici&oacute;n</li>
+      <li><strong>Azul:</strong> Bloqueo de Motor</li>
+     </ul>
     </div>
     <div class="img-container">
      <img src="images/m1_modelos_de_gps_y_sus_funciones_10.png">
@@ -475,14 +411,13 @@
     </div>
    </div>
    <button class="accordion">
-    Herramientas Necesarias
+    5. Herramientas y Equipo de Medici&oacute;n
    </button>
    <div class="panel" id="m1_herramientas_necesarias">
     <div class="text-block">
-     <h4>
-      Herramientas Necesarias
-     Ahora que podemos identificar los distintos modelos de dispositivos GPS y sus funciones espec&iacute;ficas, procederemos a enumerar las herramientas necesarias para su instalaci&oacute;n, junto con una breve descripci&oacute;n del uso adecuado de cada una:
-     </h4>
+     <p>
+      Una vez identificados los distintos modelos de dispositivos GPS y sus funciones t&eacute;cnicas, procederemos a enumerar el equipo necesario para una instalaci&oacute;n profesional.
+     </p>
      <h4>
       Desarmadores:
      </h4>
@@ -557,7 +492,7 @@
     </div>
    </div>
    <button class="accordion">
-    Inspecci&oacute;n de veh&iacute;culo
+    6. Protocolo de Inspecci&oacute;n y Recepci&oacute;n del Veh&iacute;culo
    </button>
    <div class="panel" id="m1_inspeccion_de_vehiculo">
     <div class="text-block">
@@ -565,17 +500,17 @@
       Inspecci&oacute;n de veh&iacute;culo
      A continuaci&oacute;n, se dar&aacute;n instrucciones para la Aproximaci&oacute;n Profesional y Recepci&oacute;n del Veh&iacute;culo para Instalaci&oacute;n de GPS
      </p>
-     <h4>
-      1. Preparaci&oacute;n de Materiales y Herramientas
-     Para asegurar una instalaci&oacute;n adecuada, reunir los siguientes materiales y herramientas:
-     </h4>
+     <h3>1. Preparaci&oacute;n de Materiales y Herramientas</h3>
+     <p>
+      Para asegurar una instalaci&oacute;n eficiente y sin contratiempos, es fundamental reunir todos los componentes antes de iniciar el trabajo:
+     </p>
      <p>
       - Dispositivo GPS. - Datos de orden de trabajo. - Herramientas. - Materiales consumibles: cinta aislante, conectores, fusibles, bridas. - Relay y pulsador: necesarios para el bloqueo de encendido y el bot&oacute;n de p&aacute;nico. Es indispensable disponer de todos estos elementos antes de iniciar la recepci&oacute;n del veh&iacute;culo.
      </p>
     </div>
-    <div class="text-block" style="background-color: #fff3cd; padding: 10px; border-left: 5px solid #ffc107; margin: 10px 0;">
+    <div class="warning-box">
      <strong>
-      NOTA DE SEGURIDAD CR&Iacute;TICA:
+      ⚠️ NOTA DE SEGURIDAD CR&Iacute;TICA:
      </strong>
      Antes de proceder a encender o realizar pruebas en un veh&iacute;culo con
      <strong>
@@ -816,14 +751,7 @@
     </div>
    </div>
    <button class="accordion">
-    Avanzado: Medidas de Seguridad y T&eacute;cnicas de Instalaci&oacute;n
-   </button>
-   <div class="panel" id="intro_manual_borrador_ii">
-    <div class="text-block">
-    </div>
-   </div>
-   <button class="accordion">
-    Medidas de Seguridad Personal y Vehicular
+    7. Medidas de Seguridad Personal y Vehicular
    </button>
    <div class="panel" id="m2_i_medidas_de_seguridad">
     <div class="text-block">
@@ -849,7 +777,7 @@
     </div>
    </div>
    <button class="accordion">
-    T&eacute;cnicas de prevenci&oacute;n de accidentes
+    8. Prevenci&oacute;n de Accidentes
    </button>
    <div class="panel" id="m2_tecnicas_de_prevencion_de_accidentes">
     <div class="text-block">
@@ -871,7 +799,7 @@
     </div>
    </div>
    <button class="accordion">
-    Prevenci&oacute;n de corto circuito
+    8.1. Prevenci&oacute;n de Cortocircuito y Manejo de Herramientas
    </button>
    <div class="panel" id="m2_prevencion_de_corto_circuito">
     <div class="text-block">
@@ -995,17 +923,41 @@
     </div>
    </div>
    <button class="accordion">
-    Ensamble del Arn&eacute;s El&eacute;ctrico
+    9. Ensamble del Arn&eacute;s El&eacute;ctrico
    </button>
    <div class="panel" id="m2_ensamble_del_arnes_electrico">
     <div class="text-block">
-     Ensamble del Arn&eacute;s El&eacute;ctrico
-     El arn&eacute;s el&eacute;ctrico del GPS es una pieza clave en la instalaci&oacute;n de sistemas de rastreo en veh&iacute;culos. Su funci&oacute;n principal es conectar el dispositivo GPS a la red el&eacute;ctrica del veh&iacute;culo de manera segura y eficiente, garantizando una comunicaci&oacute;n estable y continua con el sistema de rastreo. Este proceso de ensamble requiere precisi&oacute;n y conocimiento en la identificaci&oacute;n y manejo de los distintos cables y conectores involucrados, ya que una conexi&oacute;n incorrecta puede afectar el rendimiento del sistema o incluso da&ntilde;ar componentes del veh&iacute;culo.
-     En esta secci&oacute;n se explicar&aacute;n los pasos b&aacute;sicos para el ensamble del arn&eacute;s el&eacute;ctrico, desde la selecci&oacute;n de materiales hasta la verificaci&oacute;n de conexiones. La atenci&oacute;n a los detalles en esta fase es fundamental para asegurar que la instalaci&oacute;n funcione correctamente y cumpla con los est&aacute;ndares de calidad y seguridad esperados.
+     <p>
+      El arn&eacute;s el&eacute;ctrico del GPS es el componente cr&iacute;tico que integra el dispositivo con la arquitectura el&eacute;ctrica del veh&iacute;culo. Un ensamble correcto garantiza no solo la operaci&oacute;n continua del rastreo, sino tambi&eacute;n la seguridad contra cortocircuitos o fallos en el sistema de encendido.
+     </p>
+     <h3>Ensamble B&aacute;sico del Arn&eacute;s</h3>
+     <p>
+      Una vez definidos los componentes (rel&eacute;s, bot&oacute;n de p&aacute;nico, micr&oacute;fonos), procedemos a la integraci&oacute;n f&iacute;sica del arn&eacute;s:
+     </p>
+     <ol>
+      <li><strong>Planificaci&oacute;n:</strong> Determine la ubicaci&oacute;n final del GPS para calcular las longitudes de cable necesarias.</li>
+      <li><strong>Agrupaci&oacute;n por Funci&oacute;n:</strong> Organice los cables en grupos (Alimentaci&oacute;n, Se&ntilde;ales de Entrada, Salidas de Control).</li>
+      <li><strong>Preparaci&oacute;n de Terminales:</strong> Utilice terminales remachables para las conexiones al rel&eacute; y puntos de tierra.</li>
+      <li><strong>Protecci&oacute;n:</strong> Aplique encintado profesional (estilo automotriz) para proteger los empalmes y dar rigidez estructural al mazo de cables.</li>
+     </ol>
+
+     <h3>Protocolo para Unidades Serie GV300</h3>
+     <p>
+      Para los modelos GV300W y GV310LAU, el protocolo de ensamble est&aacute;ndar es:
+     </p>
+     <ul>
+      <li><strong>Pin 11 (Rojo) y Pin 6 (Negro):</strong> L&iacute;nea principal de energ&iacute;a.</li>
+      <li><strong>Pin 14 (Azul):</strong> Conexi&oacute;n al Pin 86 del rel&eacute; de bloqueo.</li>
+      <li><strong>Pin 3 (Blanco):</strong> Conexi&oacute;n a la se&ntilde;al de ignici&oacute;n del veh&iacute;culo.</li>
+      <li><strong>Pin 12 (Naranja):</strong> Conexi&oacute;n al bot&oacute;n de p&aacute;nico.</li>
+     </ul>
+    </div>
+    <div class="img-container">
+     <img src="images/m2_boton_de_panico_5.png">
     </div>
    </div>
    <button class="accordion">
-    Configuraci&oacute;n y Conexi&oacute;n de Rel&eacute;s
+    10. Configuraci&oacute;n y Conexi&oacute;n de Rel&eacute;s (Corte de Ignici&oacute;n)
    </button>
    <div class="panel" id="m2_configuracion_del_relee">
     <div class="text-block">
@@ -1094,7 +1046,7 @@
     </div>
    </div>
    <button class="accordion">
-    Empalmes
+    11. T&eacute;cnicas de Empalme y Encintado
    </button>
    <div class="panel" id="m2_empalmes">
     <div class="text-block">
@@ -1169,7 +1121,7 @@
     </div>
    </div>
    <button class="accordion">
-    Uso de Terminales Remachables
+    12. Uso de Terminales Remachables
    </button>
    <div class="panel" id="m2_uso_de_terminales_remachables">
     <div class="text-block">
@@ -1219,7 +1171,7 @@
     </div>
    </div>
    <button class="accordion">
-    Bot&oacute;n de P&aacute;nico
+    13. Instalaci&oacute;n de Perif&eacute;ricos: Bot&oacute;n de P&aacute;nico
    </button>
    <div class="panel" id="m2_boton_de_panico">
     <div class="text-block">
@@ -1236,7 +1188,7 @@
     <div class="text-block">
      <p>
       requieren esta polaridad para activarse o generar una alerta, facilitando una integraci&oacute;n adecuada con el resto de componentes del sistema.
-     Instalaci&oacute;n: la integraci&oacute;n b&aacute;sica de este perif&eacute;rico no suele dar complicaciones a menos que el pulsador este da&ntilde;ado, la conexi&oacute;n consiste en el empalme de unas de sus terminales al cable del GPS destinado a la se&ntilde;al de entrada negativa especifica para la alerta de p&aacute;nico. Mientras que la otra terminal necesita una se&ntilde;al negativa constante.
+     <strong>Instalaci&oacute;n:</strong> La integraci&oacute;n b&aacute;sica de este perif&eacute;rico consiste en el empalme de una de sus terminales al cable del GPS destinado a la se&ntilde;al de entrada negativa de p&aacute;nico (Naranja en la mayoría de modelos). La otra terminal debe conectarse a una se&ntilde;al negativa constante (tierra).
      Si el pulsador tiene un c&oacute;digo de colores para identificar las terminales (como rojo y negro), es recomendable seguir esta identificaci&oacute;n, conectando cada terminal de acuerdo con su color: el negro generalmente debe ir a un negativo constante.
      Adem&aacute;s, en muchos casos, la terminal para la se&ntilde;al negativa constante suele empalmarse con el negativo del GPS, permitiendo que ambos dispositivos compartan la misma conexi&oacute;n a tierra. Esto asegura una instalaci&oacute;n ordenada y confiable, reduciendo posibles problemas de conexi&oacute;n y mejorando la estabilidad del sistema, como se puede apreciar en la imagen.
      Es importante recordar que este perif&eacute;rico debe estar oculto pero accesible para el conductor del veh&iacute;culo. Esto requiere un enfoque creativo e intuitivo para encontrar un lugar pr&aacute;ctico donde el bot&oacute;n est&eacute; disponible cuando se necesite, pero fuera de la vista para mantener su discreci&oacute;n y evitar manipulaciones no autorizadas
@@ -1258,83 +1210,25 @@
      <img src="images/m2_boton_de_panico_4.png">
     </div>
     <div class="text-block">
-     <p>
-     </p>
-     <ol>
-      <li>
-       Detr&aacute;s de una tapa o panel desmontable: Aprovechando cubiertas o tapas que pueden retirarse f&aacute;cilmente, como las del fusible o &aacute;reas de almacenamiento en el tablero. Esto oculta el bot&oacute;n, pero lo mantiene accesible al retirarlas.
-      </li>
-      <li>
-       En la base del asiento: en la parte lateral o base del asiento del conductor. Es discreto y accesible cuando se necesita sin ser visible para un pasajero o desde el exterior.
-      </li>
-      <li>
-       Dentro de la consola central o apoyabrazos: Si el veh&iacute;culo cuenta con un compartimento en la consola central, puedes colocar el bot&oacute;n all&iacute;. Permite acceso directo al piloto al abrir el compartimento sin comprometer la visibilidad.
-     Ensamble b&aacute;sico del arn&eacute;s
-     Ahora que sabemos c&oacute;mo se configuran y se agregan los componentes del arn&eacute;s, podemos proceder a armarlo con su configuraci&oacute;n b&aacute;sica.
-     Lo primero que se debe tener en cuenta es, con las funcionalidades que pueden ser instaladas en el veh&iacute;culo, (que se explicar&aacute; m&aacute;s adelante como identificar los cables) como el bloqueo de motor, apertura de seguros, si ser&aacute; necesario utilizar antena y adem&aacute;s considerar el modelo del dispositivo GPS a utilizar
-     Una vez que se tienen claras las funcionalidades que se desean instalar en el veh&iacute;culo y el modelo de dispositivo GPS que se va a utilizar, se puede proceder a armar el arn&eacute;s con la configuraci&oacute;n b&aacute;sica. A continuaci&oacute;n, se describen los pasos clave a seguir:
-      </li>
-      <li>
-       Planificaci&oacute;n y Dise&ntilde;o del Arn&eacute;s Funcionalidades a integrar: Determina las funciones espec&iacute;ficas que se quieren controlar, como el bloqueo de motor, apertura de seguros, activaci&oacute;n de la antena GPS, etc.
-     - Modelo de dispositivo GPS: Cada modelo de dispositivo GPS puede tener diferentes requisitos en t&eacute;rminos de conexiones y componentes. Verifica el diagrama de cableado del GPS para asegurarte de que los cables est&eacute;n correctamente empalmados y conectados.
-      </li>
-      <li>
-       Elecci&oacute;n de Cables y Terminales Seleccionar cables adecuados: Elegir cables con el calibre correcto para cada
-      </li>
+     <ol start="2">
+      <li><strong>Detr&aacute;s de una tapa o panel desmontable:</strong> Aprovechando cubiertas o tapas de fusibles.</li>
+      <li><strong>En la base del asiento:</strong> En la parte lateral, discreto pero accesible para el piloto.</li>
+      <li><strong>Dentro de la consola central:</strong> Permite acceso directo sin comprometer la visibilidad exterior.</li>
      </ol>
-    </div>
-    <div class="img-container">
-     <img src="images/m2_boton_de_panico_5.png">
-    </div>
-    <div class="text-block">
+
+     <h3>Configuraci&oacute;n de Instalaci&oacute;n Est&aacute;ndar</h3>
      <p>
-      funci&oacute;n, considerando las necesidades de corriente de cada componente. Asegurarse de utilizar cables con aislamiento adecuado para evitar cortocircuito Utilizar terminales compatibles: Escoger terminales de crimpado o remachables apropiados para las conexiones, asegurando una uni&oacute;n firme y confiable.
+      Para una instalaci&oacute;n limpia, se recomienda:
      </p>
-     <ol>
-      <li>
-       Conexiones Principales
-     Bloqueo de motor: El relay debe estar configurado para interrumpir el circuito de encendido cuando se active.
-     Apertura de seguros: Conectar los cables correspondientes al sistema de apertura de seguros, que puede implicar el uso de relays adicionales o controladores de cerraduras electr&oacute;nicas.
-      </li>
-      <li>
-       Instalaci&oacute;n del Relay
-     - Configura el relay de 5 pines: Este relay se utilizar&aacute; para realizar el corte de ignici&oacute;n, donde el pin 30 ser&aacute; la entrada de la se&ntilde;al, el pin 87 se conecta a la salida para el motor, el pin 87a es la salida alternativa cuando el relay est&aacute; en reposo, el pin 85 seria en este caso la alimentaci&oacute;n de la bobina, mientras que el pin 86 ser&aacute; el receptor negativo mediante el cual se gestionar&aacute; la conmutaci&oacute;n de la se&ntilde;al que active o desactive el relay.
-     - Conexi&oacute;n de la se&ntilde;al negativa: Recuerda que, en muchos sistemas, se trabaja con se&ntilde;ales negativas. Conecta correctamente las se&ntilde;ales de control de los relays y dispositivos de alerta para que funcionen adecuadamente.
-      </li>
-      <li>
-       Organizaci&oacute;n y Empalme de Cables
-     - Agrupa los cables: Organiza los cables de manera eficiente, agrup&aacute;ndolos por funci&oacute;n (bloqueo de motor, apertura de seguros, GPS, etc.) y utiliza cinta aislante o funda protectora para asegurar que los cables se mantengan ordenados.
-     - Empalmes seguros: Aseg&uacute;rate de realizar los empalmes con terminales de crimpado o remachado, como se explic&oacute; anteriormente, para asegurar una conexi&oacute;n confiable y duradera.
-     Armado de arn&eacute;s para las unidades gv300 Al conocer la asignaci&oacute;n de funciones para cada pin del conector de la unidad GV300 (modelos GV300W y GV310LAU), se pueden realizar las conexiones correspondientes de manera adecuada:
-      </li>
-      <li>
-       Alimentaci&oacute;n de la unidad GPS:
-     Rojo (Pin 11): Conectar al positivo de la alimentaci&oacute;n (12V). Negro (Pin 6): Conectar al negativo o tierra del sistema.
-      </li>
-      <li>
-       Funciones de se&ntilde;al:
-     Bloqueo: El cable Azul (Pin 14) proporciona un pulso negativo constante cuando se activa la funci&oacute;n de bloqueo.
-     Apertura de seguros: El cable Amarillo Amarillo (Pin 8) env&iacute;a una se&ntilde;al negativa moment&aacute;nea para activar la apertura de seguros.
-     P&aacute;nico: El cable Naranja (Pin 12) recibe una se&ntilde;al negativa moment&aacute;nea cuando se activa la funci&oacute;n de p&aacute;nico. Se&ntilde;al de Ignici&oacute;n: cable Blanco Blanco (pin 3), recibe la se&ntilde;al que indica que el veh&iacute;culo este encendido.
-     Configuraci&oacute;n de las conexiones La siguiente configuraci&oacute;n se utiliza en una instalaci&oacute;n est&aacute;ndar. Donde utilizaremos los pines mencionados anteriormente.
-      </li>
-      <li>
-       Es recomendable tomar la medida de donde estar&aacute; oculto el dispositivo GPS, y de donde tomar&aacute; los cables de corte y alimentaci&oacute;n.
-      </li>
-      <li>
-       Separar y apartar los cables necesarios: Identifique y aparte los cables que se utilizar&aacute;n para la instalaci&oacute;n, de acuerdo con el esquema de conexi&oacute;n.
-      </li>
-      <li>
-       Corte los cables innecesarios en &aacute;ngulo diagonal para evitar que queden a la misma altura y as&iacute; reducir el riesgo de contacto accidental entre ellos. Deje una distancia adecuada en cada cable antes de aplicar la cinta aislante, lo cual ayuda a asegurar que queden bien cubiertos y firmes, evitando cortocircuitos.
-      </li>
-      <li>
-       Mantener suficiente longitud de los cables facilita agregar funciones adicionales (como un micr&oacute;fono) sin tener que reemplazar el conector o lidiar con cables muy cortos.
-      </li>
-     </ol>
+     <ul>
+      <li>Tomar medidas precisas de donde estar&aacute; oculto el dispositivo antes de cortar cables.</li>
+      <li>Separar los cables que no se utilizar&aacute;n y cortarlos en &aacute;ngulo diagonal para evitar contactos accidentales.</li>
+      <li>Mantener una longitud de reserva para permitir futuras expansiones o mantenimientos.</li>
+     </ul>
     </div>
    </div>
    <button class="accordion">
-    Identificaci&oacute;n de los cables
+    14. Identificaci&oacute;n Avanzada de Conductores y Se&ntilde;ales
    </button>
    <div class="panel" id="m2_identificacion_de_los_cables">
     <div class="text-block">
