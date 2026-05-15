@@ -9,7 +9,8 @@
   <style>
    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 20px; background-color: #f0f2f5; color: #333; }
         .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
-        h1 { text-align: center; color: #1a73e8; margin-bottom: 40px; font-size: 2.5em; }
+        h1 { text-align: left; color: #1a73e8; margin-bottom: 40px; font-size: 2.5em; }
+        h2, h3, h4, h5 { text-align: left; color: #1a73e8; }
         .accordion {
             background-color: #ffffff;
             color: #1a73e8;
@@ -52,9 +53,13 @@
             line-height: 1.6;
             text-align: justify;
         }
+        .text-block p, .text-block li {
+            text-align: justify;
+        }
         .img-container { text-align: center; margin: 30px 0; }
         img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
-        .warning-box { background-color: #fff3cd; padding: 20px; border-left: 5px solid #ffc107; margin: 20px 0; border-radius: 4px; }
+        .warning-box { background-color: #fff3cd; padding: 20px; border-left: 5px solid #ffc107; margin: 20px 0; border-radius: 4px; display: flex; align-items: flex-start; }
+        .warning-icon { width: 32px; height: 32px; margin-right: 15px; flex-shrink: 0; }
         .warning-box strong { color: #856404; display: block; margin-bottom: 5px; }
   </style>
  </head>
@@ -367,16 +372,12 @@
              <li><strong>Verde:</strong> Bloqueo</li>
          </ul>
      </div>
-     <p style="color: #d93025; font-weight: bold;">
-      ⚠️ PRECAUCI&Oacute;N: Aseg&uacute;rese de conectar siempre la terminal negativa (Negro) antes de cualquier otra conexi&oacute;n de potencia o se&ntilde;al.
-     </p>
+     <div class="warning-box"><img src="images/warning_icon.png" class="warning-icon"><div><strong>PRECAUCI&Oacute;N:</strong><p>Aseg&uacute;rese de conectar siempre la terminal negativa (Negro) antes de cualquier otra conexi&oacute;n de potencia o se&ntilde;al.</p></div></div>
     </div>
     <div class="img-container">
      <img src="images/m1_modelos_de_gps_y_sus_funciones_8.png">
     </div>
-    <div class="img-container">
-     <img src="images/m1_modelos_de_gps_y_sus_funciones_9.png">
-    </div>
+
     <div class="text-block">
      <h3>Modelo GV75W (Waterproof)</h3>
      <p>
@@ -390,16 +391,9 @@
       <li><strong>Azul:</strong> Bloqueo de Motor</li>
      </ul>
     </div>
-    <div class="img-container">
-     <img src="images/m1_modelos_de_gps_y_sus_funciones_10.png">
-    </div>
+
     <div class="text-block">
-     <strong>
-      PRECAUCION:
-     </strong>
-     <p>
-      Esta unidad presenta una falla en el conector, es recomendable eliminar el conector y hacer las conexiones directas.
-     </p>
+     <div class="warning-box"><img src="images/warning_icon.png" class="warning-icon"><div><strong>PRECAUCION:</strong><p>Esta unidad presenta una falla en el conector, es recomendable eliminar el conector y hacer las conexiones directas.</p></div></div>
     </div>
     <div class="img-container">
      <img src="images/m1_modelos_de_gps_y_sus_funciones_11.png">
@@ -476,16 +470,9 @@
     <div class="img-container">
      <img src="images/m1_herramientas_necesarias_6.png">
     </div>
-    <div class="img-container">
-     <img src="images/m1_herramientas_necesarias_7.png">
-    </div>
+
     <div class="text-block">
-     <h4>
-      IMPORTANTE:
-     </h4>
-     <p>
-      Se debe asegurar mantener las herramientas en un estado de &oacute;ptimas condiciones para asegurar una instalaci&oacute;n apropiada.
-     </p>
+     <div class="warning-box"><img src="images/warning_icon.png" class="warning-icon"><div><strong>IMPORTANTE:</strong><p>Se debe asegurar mantener las herramientas en un estado de &oacute;ptimas condiciones para asegurar una instalaci&oacute;n apropiada.</p></div></div>
      <h4>
       Otros materiales utilizados
      </h4>
@@ -508,11 +495,8 @@
       - Dispositivo GPS. - Datos de orden de trabajo. - Herramientas. - Materiales consumibles: cinta aislante, conectores, fusibles, bridas. - Relay y pulsador: necesarios para el bloqueo de encendido y el bot&oacute;n de p&aacute;nico. Es indispensable disponer de todos estos elementos antes de iniciar la recepci&oacute;n del veh&iacute;culo.
      </p>
     </div>
-    <div class="warning-box">
-     <strong>
-      ⚠️ NOTA DE SEGURIDAD CR&Iacute;TICA:
-     </strong>
-     Antes de proceder a encender o realizar pruebas en un veh&iacute;culo con
+    <div class="warning-box"><img src="images/warning_icon.png" class="warning-icon"><div><strong>NOTA DE SEGURIDAD CR&Iacute;TICA:</strong>
+     <p>Antes de proceder a encender o realizar pruebas en un veh&iacute;culo con
      <strong>
       transmisi&oacute;n manual
      </strong>
@@ -524,8 +508,7 @@
      <strong>
       freno de emergencia
      </strong>
-     est&eacute; totalmente activado. Esto evita movimientos accidentales que podr&iacute;an causar da&ntilde;os materiales o lesiones graves.
-    </div>
+     est&eacute; totalmente activado. Esto evita movimientos accidentales que podr&iacute;an causar da&ntilde;os materiales o lesiones graves.</p></div></div>
     <div class="img-container">
      <img src="images/m1_inspeccion_de_vehiculo_1.png">
     </div>
@@ -555,12 +538,7 @@
      <h4>
       Formulario de Tracklink
      </h4>
-     <h4>
-      PRECAUCI&Oacute;N:
-     </h4>
-     <p>
-      Es muy importante llenar las ordenes correctamente con
-     </p>
+     <div class="warning-box"><img src="images/warning_icon.png" class="warning-icon"><div><strong>PRECAUCI&Oacute;N:</strong><p>Es muy importante llenar las ordenes correctamente con toda la informaci&oacute;n solicitada en el formulario.</p></div></div>
     </div>
     <div class="img-container">
      <img src="images/m1_inspeccion_de_vehiculo_5.png">
@@ -570,13 +548,9 @@
       Informaci&oacute;n del dispositivo GPS
      </p>
     </div>
-    <div class="img-container">
-     <img src="images/m1_inspeccion_de_vehiculo_6.png">
-    </div>
+
     <div class="text-block">
-     <p>
-      toda la informaci&oacute;n solicitada en el formulario.
-     </p>
+
      <h4>
       3. Recepci&oacute;n del Veh&iacute;culo
      Disponibilidad del Veh&iacute;culo para la Instalaci&oacute;n:
@@ -628,9 +602,7 @@
     <div class="img-container">
      <img src="images/m1_inspeccion_de_vehiculo_8.png">
     </div>
-    <div class="img-container">
-     <img src="images/m1_inspeccion_de_vehiculo_9.png">
-    </div>
+
     <div class="text-block">
      <p>
       Es importante observar la cantidad de bater&iacute;as y c&oacute;mo est&aacute;n conectadas (en serie o en paralelo), ya que esto afectar&aacute; directamente al voltaje. En el caso de bater&iacute;as conectadas en paralelo, el voltaje se mantiene constante (12V, 24V, dependiendo de la configuraci&oacute;n), pero la corriente se suma.
@@ -659,9 +631,7 @@
     <div class="img-container">
      <img src="images/m1_inspeccion_de_vehiculo_12.png">
     </div>
-    <div class="img-container">
-     <img src="images/m1_inspeccion_de_vehiculo_13.png">
-    </div>
+
     <div class="text-block">
      <p>
       VI. Aspectos y funcionalidades
@@ -689,12 +659,7 @@
      III. Revisi&oacute;n de Herramientas:
      Confirmar la presencia del kit de herramientas, normalmente ubicado en la cajuela o bajo el asiento trasero (en el caso de pickups), Tambi&eacute;n es importante confirmar la presencia de la llanta de repuesto, la cual suele ubicarse en la cajuela del veh&iacute;culo o debajo de la paila en el caso de las pickups.
      </p>
-     <h4>
-      PRECAUCI&Oacute;N:
-     </h4>
-     <p>
-      Registrar cualquier anomal&iacute;a en el funcionamiento de estos componentes en la orden de trabajo.
-     </p>
+     <div class="warning-box"><img src="images/warning_icon.png" class="warning-icon"><div><strong>PRECAUCI&Oacute;N:</strong><p>Registrar cualquier anomal&iacute;a en el funcionamiento de estos componentes en la orden de trabajo.</p></div></div>
     </div>
     <div class="img-container">
      <img src="images/m1_inspeccion_de_vehiculo_16.png">
@@ -708,9 +673,7 @@
     <div class="img-container">
      <img src="images/m1_inspeccion_de_vehiculo_19.png">
     </div>
-    <div class="img-container">
-     <img src="images/m1_inspeccion_de_vehiculo_20.png">
-    </div>
+
     <div class="text-block">
      <h4>
       7. Inspecci&oacute;n F&iacute;sica del Exterior del Veh&iacute;culo
@@ -792,9 +755,7 @@
     <div class="img-container">
      <img src="images/m2_tecnicas_de_prevencion_de_accidentes_1.png">
     </div>
-    <div class="img-container">
-     <img src="images/m2_tecnicas_de_prevencion_de_accidentes_2.png">
-    </div>
+
     <div class="text-block">
     </div>
    </div>
@@ -860,9 +821,7 @@
      - Di&aacute;metro y Rigidez: Suelen ser m&aacute;s delgados y flexibles que el coaxial y la fibra &oacute;ptica.
      - Color: Vienen en una variedad de colores, a menudo en funci&oacute;n de su funci&oacute;n espec&iacute;fica (tierra, alimentaci&oacute;n, se&ntilde;al). Usando estos detalles, deber&iacute;as poder identificar estos tipos de cables visualmente y al tacto en el arn&eacute;s de un veh&iacute;culo.
     </div>
-    <div class="img-container">
-     <img src="images/m2_prevencion_de_corto_circuito_8.png">
-    </div>
+
     <div class="text-block">
      Importante: Algunos arneses automotrices indican cables con funciones delicadas, como los de activaci&oacute;n de las bolsas de aire. Estos cables suelen estar cubiertos con tubos protectores y conectores de color amarillo, que sirven como advertencia visual. Tambi&eacute;n es com&uacute;n encontrar cables trenzados entre s&iacute;, los cuales suelen estar asociados con sensores del veh&iacute;culo. Es fundamental identificar y respetar estos cables para evitar posibles da&ntilde;os y accidentes.
      Estos cuidados ayudan a mantener el &aacute;rea de trabajo segura y minimizan el riesgo de da&ntilde;os durante el proceso de instalaci&oacute;n.
@@ -916,9 +875,7 @@
     <div class="img-container">
      <img src="images/m2_prevencion_de_corto_circuito_16.png">
     </div>
-    <div class="img-container">
-     <img src="images/m2_prevencion_de_corto_circuito_17.png">
-    </div>
+
     <div class="text-block">
     </div>
    </div>
@@ -1034,9 +991,7 @@
     <div class="img-container">
      <img src="images/m2_configuracion_del_relee_5.png">
     </div>
-    <div class="img-container">
-     <img src="images/m2_configuracion_del_relee_6.png">
-    </div>
+
     <div class="text-block">
      Relay para algunos modelos de motocicletas
      En algunos modelos de motocicletas, el apagado se realiza enviando un pulso negativo al bot&oacute;n corta corriente, o a la bobina de alta, cabe aclarar que, si bien el apagado podr&iacute;a funcionar sin el relay, se recomienda utilizar el relay para aislar la se&ntilde;al de GPS y la del apagado de la moto, de lo contrario podr&iacute;a ocurrir apagados inesperados.
@@ -1079,9 +1034,7 @@
     <div class="img-container">
      <img src="images/m2_empalmes_4.png">
     </div>
-    <div class="img-container">
-     <img src="images/m2_empalmes_5.png">
-    </div>
+
     <div class="text-block">
      Empalmes tipo T para derivaciones
      Estos tipos de empalmes se emplean en derivaciones donde no es necesario cortar los cables. No obstante, cuando se necesita tomar la alimentaci&oacute;n positiva o gestionar la apertura y apagado mediante un pulso negativo como en el caso de la apertura de seguros y el apagado en veh&iacute;culos de encendido
