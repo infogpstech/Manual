@@ -1,3 +1,4 @@
+prohibido modificar este archivo
 # NORMAS DE DESARROLLO Y PROCESO ESTÁNDAR
 
 Este documento define de manera estructurada el proceso de desarrollo estándar para el proyecto. Incluye criterios, reglas, lineamientos técnicos e instrucciones paso a paso que regulan todas las fases del ciclo de desarrollo para garantizar consistencia, trazabilidad, control de cambios y calidad del código.
