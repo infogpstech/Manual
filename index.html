@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>
+   Manual de Capacitaci&oacute;n T&eacute;cnico Instalador
+  </title>
+  <style>
+   body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 20px; background-color: #f0f2f5; color: #333; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        h1 { text-align: left; color: #1a73e8; margin-bottom: 40px; font-size: 2.5em; }
+        h2, h3, h4, h5 { text-align: left; color: #1a73e8; }
+        .accordion {
+            background-color: #ffffff;
+            color: #1a73e8;
+            cursor: pointer;
+            padding: 20px;
+            width: 100%;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+            outline: none;
+            font-size: 1.1em;
+            transition: 0.3s;
+            margin-top: 10px;
+            border-radius: 4px;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .accordion:after {
+            content: '\002B';
+            color: #1a73e8;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+        .active:after { content: "\2212"; }
+        .active, .accordion:hover { background-color: #f8faff; border-color: #1a73e8; }
+        .panel {
+            padding: 0 20px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+            border-left: 2px solid #1a73e8;
+            border-right: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+            margin-bottom: 10px;
+        }
+        .text-block {
+            margin: 15px 0;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        .text-block p, .text-block li {
+            text-align: justify;
+        }
+        .img-container { text-align: center; margin: 30px 0; }
+        img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+        .warning-box { background-color: #fff3cd; padding: 20px; border-left: 5px solid #ffc107; margin: 20px 0; border-radius: 4px; display: flex; align-items: flex-start; }
+        .warning-icon { width: 32px; height: 32px; margin-right: 15px; flex-shrink: 0; }
+        .warning-box strong { color: #856404; display: block; margin-bottom: 5px; }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="img-container">
+    <img alt="Logo" src="images/intro_manual_borrador_i_1.png" style="max-width: 250px; box-shadow: none;">
+   </div>
+   <h1>
+    Manual de Capacitaci&oacute;n T&eacute;cnico Instalador
+   </h1>
+   <div class="img-container">
+    <img alt="Veh&iacute;culos" src="images/intro_manual_borrador_i_2.png">
+   </div>
+   <button class="accordion">
+    1. Cubierta y Tabla de Contenido
+   </button>
+   <div class="panel" id="intro_manual_borrador_i">
+    <div class="text-block">
+     <h2>
+      Tabla de Contenido
+     </h2>
+     <ol>
+      <li>Cubierta y Tabla de Contenido</li>
+      <li>Introducci&oacute;n T&eacute;cnica</li>
+      <li>Glosario de T&eacute;rminos y Conceptos Claves</li>
+      <li>Arquitectura de Hardware: Modelos de GPS</li>
+      <li>Herramientas y Equipo de Medici&oacute;n</li>
+      <li>Protocolo de Inspecci&oacute;n y Recepci&oacute;n del Veh&iacute;culo</li>
+      <li>Seguridad Personal y Vehicular</li>
+      <li>Prevenci&oacute;n de Accidentes y Cortocircuitos</li>
+      <li>Ensamble del Arn&eacute;s El&eacute;ctrico</li>
+      <li>Configuraci&oacute;n y Conexi&oacute;n de Rel&eacute;s (Corte de Ignici&oacute;n)</li>
+      <li>T&eacute;cnicas de Empalme y Encintado</li>
+      <li>Uso de Terminales Remachables</li>
+      <li>Instalaci&oacute;n de Perif&eacute;ricos: Bot&oacute;n de P&aacute;nico</li>
+      <li>Identificaci&oacute;n Avanzada de Conductores y Se&ntilde;ales</li>
+     </ol>
+    </div>
+    <div class="text-block">
+     <h3>
+      Fundamentos y Conocimientos Previos (Presaberes)
+     </h3>
+     <p>
+      Antes de proceder con la pr&aacute;ctica de instalaci&oacute;n, es imperativo que el t&eacute;cnico domine los conceptos fundamentales de los sistemas de rastreo y seguridad vehicular. A diferencia de los navegadores GPS convencionales, los dispositivos abordados en este manual son unidades de telem&aacute;tica dise&ntilde;adas para el monitoreo de ubicaci&oacute;n, rastreo en tiempo real, inmovilizaci&oacute;n remota y gesti&oacute;n de flotas.
+     </p>
+     <ul>
+      <li>
+       <strong>Posicionamiento H&iacute;brido y Comunicaci&oacute;n:</strong>
+       Estos equipos no dependen exclusivamente de la se&ntilde;al satelital GPS. Funcionan mediante una arquitectura de tres pilares:
+       <ol>
+        <li><strong>GNSS (GPS/GLONASS):</strong> Captaci&oacute;n de se&ntilde;ales satelitales para obtener coordenadas de alta precisi&oacute;n.</li>
+        <li><strong>Redes M&oacute;viles (GSM/LTE):</strong> Uso de m&oacute;dem celular integrado para transmitir los datos recolectados hacia servidores centrales y recibir comandos de control.</li>
+        <li><strong>LBS (Location Based Services):</strong> Triangulaci&oacute;n por antenas de telefon&iacute;a m&oacute;vil, que permite obtener una ubicaci&oacute;n aproximada incluso en lugares sin visi&oacute;n al cielo (s&oacute;tanos, t&uacute;neles) donde el GPS pierde se&ntilde;al.</li>
+       </ol>
+      </li>
+      <li>
+       <strong>Interacci&oacute;n de Sistemas y Seguridad:</strong>
+       La unidad de rastreo procesa constantemente las coordenadas y el estado de los sensores (ignici&oacute;n, p&aacute;nico). Esta informaci&oacute;n es enviada mediante la red celular hacia una plataforma de monitoreo. En caso de requerir seguridad activa, la plataforma env&iacute;a un comando de vuelta al dispositivo que, mediante un rel&eacute; externo, permite la inmovilizaci&oacute;n o apagado remoto del veh&iacute;culo de forma segura.
+      </li>
+      <li>
+       <strong>Electr&oacute;nica Automotriz:</strong>
+       Se requiere comprensi&oacute;n profunda de la Ley de Ohm, identificaci&oacute;n de circuitos (ignici&oacute;n, accesorios, constante) y el uso correcto del mult&iacute;metro y probador de l&iacute;nea.
+      </li>
+      <li>
+       <strong>Sistemas del Veh&iacute;culo:</strong>
+       Conocimiento de la arquitectura el&eacute;ctrica, ubicaci&oacute;n de cajas de fusibles y protocolos de desarmado de interiores para evitar da&ntilde;os est&eacute;ticos o estructurales.
+      </li>
+     </ul>
+    </div>
+   </div>
+   <button class="accordion">
+    2. Introducci&oacute;n T&eacute;cnica
+   </button>
+   <div class="panel" id="m1_introduccion">
+    <div class="text-block">
+     <p>
+      Este manual t&eacute;cnico ha sido desarrollado como una gu&iacute;a integral para los nuevos t&eacute;cnicos especializados en la instalaci&oacute;n, configuraci&oacute;n y mantenimiento de sistemas de rastreo y seguridad vehicular. A diferencia de la navegaci&oacute;n convencional, estos dispositivos integran tecnolog&iacute;as de posicionamiento satelital con comunicaciones m&oacute;viles GSM/LTE para permitir el monitoreo en tiempo real, la gesti&oacute;n de flotas y funciones de seguridad activa como la inmovilizaci&oacute;n remota. En el contexto actual, la precisi&oacute;n en la instalaci&oacute;n es cr&iacute;tica no solo para la funcionalidad del dispositivo, sino tambi&eacute;n para la integridad el&eacute;ctrica y mec&aacute;nica del veh&iacute;culo.
+     </p>
+     <p>
+      A lo largo de este documento, el aspirante encontrar&aacute; desde los fundamentos de la electr&oacute;nica automotriz hasta procedimientos avanzados de diagn&oacute;stico. Nuestro objetivo primordial es asegurar que cada t&eacute;cnico adquiera las competencias necesarias para realizar instalaciones limpias, seguras y altamente efectivas, minimizando riesgos y maximizando la vida &uacute;til de los equipos instalados.
+     </p>
+     <p>
+      La capacitaci&oacute;n abarca el manejo de herramientas especializadas, la interpretaci&oacute;n de diagramas complejos y la aplicaci&oacute;n de protocolos de seguridad rigurosos. Al finalizar este manual, se incluye una secci&oacute;n dedicada a las particularidades de los veh&iacute;culos con los que operamos habitualmente, proporcionando un conocimiento pr&aacute;ctico directo para el campo de trabajo.
+     </p>
+    </div>
+   </div>
+   <button class="accordion">
+    3. Glosario de T&eacute;rminos y Conceptos Claves
+   </button>
+   <div class="panel" id="m1_terminos_y_conceptos_claves">
+    <div class="text-block">
+     <h3>
+      T&eacute;rminos y Conceptos Claves
+     </h3>
+     <p>
+      Al momento de realizar un trabajo se debe de conocer los t&eacute;rminos y conceptos claves que se utilizan en el &aacute;mbito del t&eacute;cnico instalador de GPS.
+     </p>
+     <ul>
+      <li>
+       <strong>
+        1. Instalaci&oacute;n Nueva:
+       </strong>
+       Proceso de montar y configurar un dispositivo GPS por primera vez en un veh&iacute;culo o equipo. Esto incluye la conexi&oacute;n del dispositivo a la fuente de alimentaci&oacute;n y la integraci&oacute;n con el sistema el&eacute;ctrico del veh&iacute;culo.
+      </li>
+      <li>
+       <strong>
+        2. Desinstalaci&oacute;n:
+       </strong>
+       Procedimiento para retirar un dispositivo GPS previamente instalado. Este proceso debe hacerse cuidadosamente para evitar da&ntilde;ar el veh&iacute;culo o el propio dispositivo.
+      </li>
+      <li>
+       <strong>
+        3. Reinstalaci&oacute;n:
+       </strong>
+       Implica volver a instalar un dispositivo GPS que ha sido desinstalado. Esto puede requerir ajustes en el cableado y la configuraci&oacute;n del dispositivo.
+      </li>
+      <li>
+       <strong>
+        4. Traspaso:
+       </strong>
+       Proceso mediante el cual se transfiere un dispositivo GPS de un veh&iacute;culo a otro. Este procedimiento puede implicar la desinstalaci&oacute;n del GPS del primer veh&iacute;culo y su reinstalaci&oacute;n en el nuevo, as&iacute; como la actualizaci&oacute;n de la informaci&oacute;n de configuraci&oacute;n y usuario en el sistema del dispositivo. Es importante asegurarse de que todas las configuraciones y datos previos se transfieran correctamente para mantener la funcionalidad y la continuidad en el seguimiento.
+      </li>
+      <li>
+       <strong>
+        5. Revisi&oacute;n por Falla:
+       </strong>
+       Inspecci&oacute;n y diagn&oacute;stico de un dispositivo GPS que no est&aacute; funcionando correctamente. Esto puede incluir pruebas de conexi&oacute;n, verificaci&oacute;n de configuraci&oacute;n y an&aacute;lisis de posibles da&ntilde;os en el equipo.
+      </li>
+      <li>
+       <strong>
+        6. Revisi&oacute;n Preventiva:
+       </strong>
+       (Mantenimiento preventivo) Mantenimiento programado para asegurar que el dispositivo GPS funcione de manera &oacute;ptima. Incluye la verificaci&oacute;n de conexiones, actualizaciones de software y comprobaci&oacute;n del estado general del sistema.
+      </li>
+      <li>
+       <strong>
+        7. Bloqueo de Motor (Apagado Remoto):
+       </strong>
+       Funci&oacute;n que permite al usuario desactivar el motor de un veh&iacute;culo de forma remota a trav&eacute;s de la plataforma del GPS. Esta caracter&iacute;stica es especialmente &uacute;til en casos de robo.
+      </li>
+      <li>
+       <strong>
+        8. Apertura de Seguros:
+       </strong>
+       Opci&oacute;n que permite desbloquear o abrir las puertas de un veh&iacute;culo a distancia mediante el sistema GPS. Esto se puede hacer a
+     trav&eacute;s de una aplicaci&oacute;n m&oacute;vil o un comando remoto.
+      </li>
+      <li>
+       <strong>
+        9. Bot&oacute;n de P&aacute;nico:
+       </strong>
+       Dispositivo de seguridad que, al ser activado, env&iacute;a una se&ntilde;al de alerta a un centro de monitoreo o a contactos predeterminados. Este bot&oacute;n es esencial para situaciones de emergencia.
+      </li>
+      <li>
+       <strong>
+        10. Ubicaci&oacute;n y Telem&aacute;tica:
+       </strong>
+       Capacidad de determinar la posici&oacute;n exacta mediante GNSS y transmitir datos de sensores del veh&iacute;culo a trav&eacute;s de redes celulares para su visualizaci&oacute;n en mapas y reportes.
+      </li>
+      <li>
+       <strong>
+        11. GSM/LTE:
+       </strong>
+       Est&aacute;ndares de comunicaci&oacute;n m&oacute;vil utilizados por el dispositivo para enviar informaci&oacute;n y recibir comandos de la plataforma de monitoreo.
+      </li>
+      <li>
+       <strong>
+        12. LBS (Location Based Services):
+       </strong>
+       M&eacute;todo de posicionamiento alternativo basado en la proximidad a antenas de telefon&iacute;a, usado como respaldo cuando la se&ntilde;al satelital es bloqueada.
+      </li>
+      <li>
+       <strong>
+        13. Plataforma de Monitoreo:
+       </strong>
+       Software centralizado que recibe, procesa y muestra la informaci&oacute;n enviada por los dispositivos de rastreo.
+      </li>
+      <li>
+       <strong>
+        14. Pruebas manuales:
+       </strong>
+       implica realizar las pruebas de funcionamiento directamente, utilizando el probador de l&iacute;nea.
+      </li>
+      <li>
+       <strong>
+        15. Pruebas:
+       </strong>
+       Conjunto de procedimientos para verificar el correcto funcionamiento del dispositivo de rastreo una vez instalado. Incluye pruebas de localizaci&oacute;n, transmisi&oacute;n de datos y ejecuci&oacute;n de comandos remotos.
+      </li>
+      <li>
+       <strong>
+        16. Orden de Trabajo:
+       </strong>
+       Documento que detalla las tareas a realizar por el
+     t&eacute;cnico, incluyendo la instalaci&oacute;n, desinstalaci&oacute;n, mantenimiento o reparaci&oacute;n de un dispositivo GPS. Suele contener informaci&oacute;n sobre el cliente, el equipo a trabajar y los tiempos estimados.
+      </li>
+      <li>
+       <strong>
+        17. Datos de Orden de Trabajo:
+       </strong>
+       Informaci&oacute;n espec&iacute;fica que incluye el nombre
+     del cliente, la direcci&oacute;n, el tipo de servicio solicitado, los dispositivos involucrados, los costos estimados y cualquier nota adicional que el t&eacute;cnico deba considerar antes de llevar a cabo la tarea.
+      </li>
+     </ul>
+    </div>
+   </div>
+   <button class="accordion">
+    4. Arquitectura de Hardware: Modelos de GPS
+   </button>
+   <div class="panel" id="m1_modelos_de_gps_y_sus_funciones">
+    <div class="text-block">
+     <p>
+      <strong>Modelos de Rastreo y Seguridad Vehicular:</strong> Es fundamental diferenciar estos dispositivos de los sistemas de navegaci&oacute;n comunes. Las unidades de rastreo instalables se integran directamente al sistema el&eacute;ctrico del veh&iacute;culo para ofrecer funciones de monitoreo continuo, gesti&oacute;n de flotas y seguridad activa, como el apagado remoto. Conocer la arquitectura técnica de cada modelo permite optimizar su instalaci&oacute;n y asegurar la compatibilidad con las redes de comunicaci&oacute;n GSM/LTE y los servicios de monitoreo.
+     </p>
+     <h3>
+      Unidades Descontinuadas
+     </h3>
+     <p>
+      Corresponden a dispositivos que han sido retirados del cat&aacute;logo para nuevas instalaciones en instalaciones nuevas
+     </p>
+    </div>
+    <div class="img-container">
+     <img src="images/m1_modelos_de_gps_y_sus_funciones_1.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m1_modelos_de_gps_y_sus_funciones_2.png">
+    </div>
+    <div class="text-block">
+     <h3>
+      Unidades En uso
+     </h3>
+     <h3>
+      Funcionalidades
+     </h3>
+     <p>
+      Las arquitecturas funcionales de las unidades GPS contempor&aacute;neas presentan una alta convergencia t&eacute;cnica. En particular, los modelos de la serie GV300 comparten un conector est&aacute;ndar de 16 pines que integra varias funciones, como el bloqueo remoto, la apertura de seguros, el bot&oacute;n de p&aacute;nico, y la alimentaci&oacute;n con un rango de voltaje operativo de entre 8 y 36 voltios. Adem&aacute;s, incluye una conexi&oacute;n a tierra y soporta se&ntilde;ales de dispositivos de audio, permitiendo la integraci&oacute;n de un micr&oacute;fono y parlantes.
+     </p>
+    </div>
+    <div class="img-container">
+     <img src="images/m1_modelos_de_gps_y_sus_funciones_3.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m1_modelos_de_gps_y_sus_funciones_4.png">
+    </div>
+    <div class="text-block">
+     <h3>Serie GV300</h3>
+     <p>
+      Actualmente, esta plataforma es la que m&aacute;s se ha utilizado a lo largo de los a&ntilde;os. Cuenta con modelos como el <strong>GV300W</strong> y el <strong>GV310LAU</strong>. A continuaci&oacute;n, se presenta el desglose t&eacute;cnico de las funciones asignadas a cada pin en el conector de 16 pines.
+     </p>
+     <p>
+      Al observar de cerca las unidades de la serie GV300, encontramos un conector principal y, en uno de los laterales, una infograf&iacute;a que detalla la funci&oacute;n de cada terminal. Esta informaci&oacute;n es vital para la correcta integración de perif&eacute;ricos.
+     </p>
+    </div>
+    <div class="img-container">
+     <img src="images/m1_modelos_de_gps_y_sus_funciones_6.png">
+    </div>
+    <div class="text-block">
+     <ul>
+      <li>
+       <strong>
+        Pin 1 (Gris):
+       </strong>
+       micr&oacute;fono ( + ) Este pin se usa con el positivo del micr&oacute;fono en caso que la instalaci&oacute;n lo requiera.
+      </li>
+      <li>
+       <strong>
+        Pin 2 (Gris l&iacute;nea negra):
+       </strong>
+       micr&oacute;fono ( - ) Es la conexi&oacute;n negativa del micr&oacute;fono.
+      </li>
+      <li>
+       <strong>
+        Pin 3 (Blanco):
+       </strong>
+       Ignici&oacute;n Este pin se conecta a una se&ntilde;al constante de ignici&oacute;n del veh&iacute;culo, es decir: la se&ntilde;al debe de activarse al momento que el veh&iacute;culo se encienda y apagarse al momento que el veh&iacute;culo se apague.
+      </li>
+      <li>
+       <strong>
+        Pin 6 (Negro):
+       </strong>
+       Negativo Este pin se conecta a tierra del veh&iacute;culo
+      </li>
+     </ul>
+    </div>
+    <div class="img-container">
+     <img src="images/m1_modelos_de_gps_y_sus_funciones_7.png">
+    </div>
+    <div class="text-block">
+     <ul>
+      <li><strong>Pin 8 (Amarillo): Apertura.</strong> Env&iacute;a un pulso negativo (-) moment&aacute;neo para la activaci&oacute;n del cierre centralizado.</li>
+      <li><strong>Pines 9 y 10 (Morados): Parlante.</strong> Salidas para audio (micr&oacute;fono/parlante activo).</li>
+      <li><strong>Pin 11 (Rojo): Positivo (+).</strong> Alimentaci&oacute;n constante (8V - 36V DC). Debe conectarse a una l&iacute;nea que no se interrumpa al apagar el veh&iacute;culo.</li>
+      <li><strong>Pin 13 (Naranja): P&aacute;nico.</strong> Entrada para pulso negativo moment&aacute;neo proveniente del bot&oacute;n de emergencia.</li>
+      <li><strong>Pin 14 (Azul): Bloqueo.</strong> Salida de se&ntilde;al negativa sostenida para activar el rel&eacute; de inmovilizaci&oacute;n.</li>
+     </ul>
+
+     <h3>Modelo GV58LAU</h3>
+     <p>
+      Este dispositivo compacto integra la mayor&iacute;a de las funciones en un arn&eacute;s de 6 cables. A diferencia de la serie GV300, los cables est&aacute;n integrados directamente al chasis del equipo.
+     </p>
+     <div style="background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin: 10px 0;">
+         <strong>C&oacute;digo de Colores GV58LAU:</strong>
+         <ul style="column-count: 2;">
+             <li><strong>Blanco:</strong> Ignici&oacute;n</li>
+             <li><strong>Rojo:</strong> Positivo (+)</li>
+             <li><strong>Negro:</strong> Negativo (-)</li>
+             <li><strong>Naranja:</strong> P&aacute;nico</li>
+             <li><strong>Amarillo:</strong> Apertura</li>
+             <li><strong>Verde:</strong> Bloqueo</li>
+         </ul>
+     </div>
+     <div class="warning-box"><img src="images/warning_icon.png" class="warning-icon"><div><strong>PRECAUCI&Oacute;N:</strong><p>Aseg&uacute;rese de conectar siempre la terminal negativa (Negro) antes de cualquier otra conexi&oacute;n de potencia o se&ntilde;al.</p></div></div>
+    </div>
+    <div class="img-container">
+     <img src="images/m1_modelos_de_gps_y_sus_funciones_8.png">
+    </div>
+
+    <div class="text-block">
+     <h3>Modelo GV75W (Waterproof)</h3>
+     <p>
+      Dise&ntilde;ado para aplicaciones en condiciones extremas, como motocicletas, cuatrimotos o maquinaria pesada expuesta a la intemperie. Cuenta con protecci&oacute;n IP67.
+     </p>
+     <p><strong>Configuraci&oacute;n de Cables GV75W:</strong></p>
+     <ul>
+      <li><strong>Rojo:</strong> Positivo (+)</li>
+      <li><strong>Negro:</strong> Negativo (-)</li>
+      <li><strong>Blanco:</strong> Ignici&oacute;n</li>
+      <li><strong>Azul:</strong> Bloqueo de Motor</li>
+     </ul>
+    </div>
+
+    <div class="text-block">
+     <div class="warning-box"><img src="images/warning_icon.png" class="warning-icon"><div><strong>PRECAUCION:</strong><p>Esta unidad presenta una falla en el conector, es recomendable eliminar el conector y hacer las conexiones directas.</p></div></div>
+    </div>
+    <div class="img-container">
+     <img src="images/m1_modelos_de_gps_y_sus_funciones_11.png">
+    </div>
+    <div class="text-block">
+    </div>
+    <div class="img-container">
+     <img src="images/m1_modelos_de_gps_y_sus_funciones_5.png">
+    </div>
+   </div>
+   <button class="accordion">
+    5. Herramientas y Equipo de Medici&oacute;n
+   </button>
+   <div class="panel" id="m1_herramientas_necesarias">
+    <div class="text-block">
+     <p>
+      Una vez identificados los distintos modelos de dispositivos GPS y sus funciones t&eacute;cnicas, procederemos a enumerar el equipo necesario para una instalaci&oacute;n profesional.
+     </p>
+     <h4>
+      Desarmadores:
+     </h4>
+     <p>
+      Herramientas b&aacute;sicas para desmontar paneles o partes del veh&iacute;culo donde se instalar&aacute; el dispositivo GPS. En la mayor&iacute;a de los casos, utilizaremos desarmadores de punta de cruz (Phillips) para desmontar paneles y piezas del veh&iacute;culo. Adem&aacute;s, es com&uacute;n emplear desarmadores tipo Torx y hexagonales, as&iacute; como cubos de 5.5 mm (particularmente para modelos Ford Escape 2008-2012), 7 mm y 10 mm, seg&uacute;n las necesidades espec&iacute;ficas del veh&iacute;culo. Tambi&eacute;n usaremos desarmadores planos, &uacute;tiles para desmontar paneles laterales, tapas de tornillos o incluso para hacer palanca en los seguros pl&aacute;sticos que sostienen algunas piezas.
+     </p>
+     <h4>
+      Probador de l&iacute;nea
+     </h4>
+     <p>
+      Este tipo de herramienta es com&uacute;nmente utilizado en trabajos de electricidad automotriz, como en la instalaci&oacute;n de dispositivos GPS, para verificar la presencia de voltaje en los cables y conexiones del veh&iacute;culo.
+     Usos en la Instalaci&oacute;n de GPS:
+     Verificaci&oacute;n de Corriente: Se utiliza para verificar los cables que suministran corriente constante y aquellos que se activan solo al encender el veh&iacute;culo y las funciones que se activan con un pulso negativo o positivo, como el bloqueo y la apertura. Esto es crucial para conectar el GPS a una fuente de energ&iacute;a adecuada.
+     Identificaci&oacute;n de Tierra: Ayuda a encontrar los puntos de tierra correctos, asegurando que el dispositivo GPS est&eacute; adecuadamente conectado.
+     Detecci&oacute;n de Fallas: Puede emplearse para revisar si una conexi&oacute;n est&aacute; fallando, lo que es &uacute;til en tareas de diagn&oacute;stico o mantenimiento preventivo.
+     </p>
+    </div>
+    <div class="img-container">
+     <img src="images/m1_herramientas_necesarias_1.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m1_herramientas_necesarias_2.png">
+    </div>
+    <div class="text-block">
+     <h4>
+      Navaja o Cutter
+     </h4>
+     <p>
+      es una herramienta de corte vers&aacute;til y esencial en la instalaci&oacute;n de dispositivos GPS y en otros trabajos de electricidad automotriz. Se utiliza principalmente para acceder al los cables dentro de las guardas pl&aacute;ticas (tubings), cortar cinta aislante, y realizar ajustes en materiales de instalaci&oacute;n.
+     </p>
+     <h4>
+      Pela Cable o Desguarnizador
+     </h4>
+     <p>
+      Es una herramienta fundamental en trabajos el&eacute;ctricos y, en particular, en la instalaci&oacute;n de dispositivos GPS. Su funci&oacute;n principal es retirar de manera segura y precisa el aislamiento de los cables sin da&ntilde;ar los conductores internos, permitiendo as&iacute; realizar conexiones limpias y seguras.
+     </p>
+     <h4>
+      Remachadora
+     </h4>
+     <p>
+      Herramienta utilizada para realizar conexiones el&eacute;ctricas seguras al crimpar o remachar terminales y conectores en los cables. Posee muescas ajustables para adaptarse a distintos tama&ntilde;os de terminales y calibres de cables, aplicando presi&oacute;n para asegurar una uni&oacute;n mec&aacute;nica y el&eacute;ctrica confiable.
+     </p>
+     <h4>
+      Otras Herramientas
+     </h4>
+    </div>
+    <div class="img-container">
+     <img src="images/m1_herramientas_necesarias_3.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m1_herramientas_necesarias_4.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m1_herramientas_necesarias_5.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m1_herramientas_necesarias_6.png">
+    </div>
+
+    <div class="text-block">
+     <div class="warning-box"><img src="images/warning_icon.png" class="warning-icon"><div><strong>IMPORTANTE:</strong><p>Se debe asegurar mantener las herramientas en un estado de &oacute;ptimas condiciones para asegurar una instalaci&oacute;n apropiada.</p></div></div>
+     <h4>
+      Otros materiales utilizados
+     </h4>
+    </div>
+   </div>
+   <button class="accordion">
+    6. Protocolo de Inspecci&oacute;n y Recepci&oacute;n del Veh&iacute;culo
+   </button>
+   <div class="panel" id="m1_inspeccion_de_vehiculo">
+    <div class="text-block">
+     <p>
+      Inspecci&oacute;n de veh&iacute;culo
+     A continuaci&oacute;n, se dar&aacute;n instrucciones para la Aproximaci&oacute;n Profesional y Recepci&oacute;n del Veh&iacute;culo para Instalaci&oacute;n de GPS
+     </p>
+     <h3>1. Preparaci&oacute;n de Materiales y Herramientas</h3>
+     <p>
+      Para asegurar una instalaci&oacute;n eficiente y sin contratiempos, es fundamental reunir todos los componentes antes de iniciar el trabajo:
+     </p>
+     <p>
+      - Dispositivo GPS. - Datos de orden de trabajo. - Herramientas. - Materiales consumibles: cinta aislante, conectores, fusibles, bridas. - Relay y pulsador: necesarios para el bloqueo de encendido y el bot&oacute;n de p&aacute;nico. Es indispensable disponer de todos estos elementos antes de iniciar la recepci&oacute;n del veh&iacute;culo.
+     </p>
+    </div>
+    <div class="warning-box"><img src="images/warning_icon.png" class="warning-icon"><div><strong>NOTA DE SEGURIDAD CR&Iacute;TICA:</strong>
+     <p>Antes de proceder a encender o realizar pruebas en un veh&iacute;culo con
+     <strong>
+      transmisi&oacute;n manual
+     </strong>
+     , es obligatorio verificar que la palanca de cambios se encuentre en posici&oacute;n de
+     <strong>
+      NEUTRO
+     </strong>
+     y que el
+     <strong>
+      freno de emergencia
+     </strong>
+     est&eacute; totalmente activado. Esto evita movimientos accidentales que podr&iacute;an causar da&ntilde;os materiales o lesiones graves.</p></div></div>
+    <div class="img-container">
+     <img src="images/m1_inspeccion_de_vehiculo_1.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m1_inspeccion_de_vehiculo_2.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m1_inspeccion_de_vehiculo_3.png">
+    </div>
+    <div class="text-block">
+     <h4>
+      2. Formulario de Orden de Trabajo
+     Datos de la orden de instalaci&oacute;n:
+     </h4>
+     <p>
+      Este documento contiene toda la informaci&oacute;n relevante sobre la instalaci&oacute;n, lo cual es esencial para gestionar el proceso de manera eficiente gracias a los datos que proporciona.
+     </p>
+    </div>
+    <div class="img-container">
+     <img src="images/m1_inspeccion_de_vehiculo_4.png">
+    </div>
+    <div class="text-block">
+     <p>
+      A continuaci&oacute;n, se ofrece una breve gu&iacute;a para llenar correctamente el formulario de la orden de trabajo.
+     Este documento es fundamental en la recepci&oacute;n del veh&iacute;culo, ya que permite registrar datos clave del cliente, el estado y caracter&iacute;sticas del veh&iacute;culo, adem&aacute;s de informaci&oacute;n sobre el dispositivo GPS y el t&eacute;cnico encargado de la instalaci&oacute;n. Completarlo con precisi&oacute;n asegura una comunicaci&oacute;n clara entre el equipo t&eacute;cnico y el cliente, mejorando la calidad del servicio. Antes de llenarlo, se debe contar con la informaci&oacute;n detallada del veh&iacute;culo y verificarla para la instalaci&oacute;n del sistema GPS. A continuaci&oacute;n, un ejemplo de formato de datos de la instalaci&oacute;n:
+     </p>
+     <h4>
+      Formulario de Tracklink
+     </h4>
+     <div class="warning-box"><img src="images/warning_icon.png" class="warning-icon"><div><strong>PRECAUCI&Oacute;N:</strong><p>Es muy importante llenar las ordenes correctamente con toda la informaci&oacute;n solicitada en el formulario.</p></div></div>
+    </div>
+    <div class="img-container">
+     <img src="images/m1_inspeccion_de_vehiculo_5.png">
+    </div>
+    <div class="text-block">
+     <p>
+      Informaci&oacute;n del dispositivo GPS
+     </p>
+    </div>
+
+    <div class="text-block">
+
+     <h4>
+      3. Recepci&oacute;n del Veh&iacute;culo
+     Disponibilidad del Veh&iacute;culo para la Instalaci&oacute;n:
+     </h4>
+     <p>
+      En algunos casos el veh&iacute;culo puede no estar disponible, para ello es importante confirmar que el veh&iacute;culo est&eacute; libre y no est&eacute; sometido a otros trabajos (reparaci&oacute;n, lavado o polarizado).
+     - Si el veh&iacute;culo no est&aacute; disponible, informar al supervisor o a la persona encargada de la programaci&oacute;n de citas.
+     - En caso de que sea necesario mover el veh&iacute;culo, se recomienda delegar esta responsabilidad al cliente, al encargado, o a una persona autorizada y capacitada para hacerlo. Solicitarlo de manera atenta y respetuosa que trasladen el veh&iacute;culo al lugar adecuado, sin importar si se trata de un movimiento breve. Esto es especialmente importante en una agencia de veh&iacute;culos, donde no se aconseja mover veh&iacute;culos sin autorizaci&oacute;n.
+     </p>
+     <h4>
+      4. Aproximaci&oacute;n Inicial con el Cliente
+     Antes de iniciar la inspecci&oacute;n y revisi&oacute;n del veh&iacute;culo, es esencial seguir un protocolo de acercamiento profesional para establecer confianza y cortes&iacute;a con el cliente. Este proceso aplica tanto para clientes que visitan el taller como para citas a domicilio.
+     Saludo y Presentaci&oacute;n Personal:
+     </h4>
+     <p>
+      - Acercarse al cliente o encargado con un saludo amable y profesional. - Presentarse claramente, mencionando el nombre y el cargo (ejemplo: &ldquo;Buenos d&iacute;as, mi nombre es [Nombre], soy el t&eacute;cnico encargado de la instalaci&oacute;n del dispositivo GPS en su veh&iacute;culo.&rdquo;).
+     Explicaci&oacute;n del Proceso: - Informar brevemente al cliente sobre el proceso que se va a realizar. Por ejemplo: &ldquo;Voy a realizar una revisi&oacute;n inicial de su veh&iacute;culo antes de proceder con la instalaci&oacute;n del GPS.&rdquo;
+     Solicitud de Acompa&ntilde;amiento:
+     - Solicitar amablemente al cliente que lo acompa&ntilde;e durante la revisi&oacute;n preliminar, asegurando transparencia y brind&aacute;ndole confianza. Esto se puede hacer diciendo: &ldquo;Le agradecer&iacute;a si puede acompa&ntilde;arme mientras realizo la inspecci&oacute;n inicial de su veh&iacute;culo.&rdquo;
+     Solicitud de Llave del Veh&iacute;culo:
+     - Solicitar la llave del veh&iacute;culo de manera cort&eacute;s para poder iniciar la
+     inspecci&oacute;n.
+     </p>
+     <h4>
+      5. Procedimiento est&aacute;ndar de Inspecci&oacute;n
+     Con el cliente presente, el t&eacute;cnico deber&aacute; seguir el protocolo de inspecci&oacute;n detallado en el procedimiento est&aacute;ndar (a continuaci&oacute;n), verificando aspectos de identidad del veh&iacute;culo, funcionalidad el&eacute;ctrica y estado f&iacute;sico. Es importante explicar al cliente brevemente cada paso para que comprenda el motivo de la inspecci&oacute;n y su relevancia para el servicio que se va a realizar
+     I. Confirmaci&oacute;n de Identidad del Veh&iacute;culo:
+     </h4>
+     <p>
+      ⚠
+     - Comparar los datos del veh&iacute;culo en la orden de trabajo (marca, modelo, n&uacute;mero de placa y color) con el veh&iacute;culo presente.
+     - Verificar que el veh&iacute;culo coincide con la informaci&oacute;n y est&eacute; disponible para la instalaci&oacute;n Inspecci&oacute;n inicial:
+     Verificaci&oacute;n de Encendido ⚠
+     - Asegurarse que el veh&iacute;culo tenga la bater&iacute;a en buen estado y que pueda encenderse. - Identificar si el veh&iacute;culo es autom&aacute;tico o mec&aacute;nico. - Que la puerta del conductor o del pasajero pueda abrirse sin ning&uacute;n inconveniente. - Verificar que la palanca de cambios est&eacute; en posici&oacute;n neutral (en veh&iacute;culos mec&aacute;nicos) y que el freno de emergencia est&eacute; activado.
+     II. Procedimiento de Encendido:
+     - Para ambos tipos de transmisi&oacute;n, presionar el freno y, si corresponde, el embrague.
+     - Insertar la llave en la posici&oacute;n de ignici&oacute;n (Imagen C1), observando los testigos del tablero para detectar alguna posible manipulaci&oacute;n.
+     - Encender el veh&iacute;culo y registrar cualquier testigo del tablero que permanezca encendido en la hoja de trabajo.
+     III. Identificaci&oacute;n del Voltaje de operaci&oacute;n
+     Es fundamental identificar el voltaje operativo del veh&iacute;culo, ya que este influir&aacute; directamente en la selecci&oacute;n de los componentes adecuados para la instalaci&oacute;n, como el rel&eacute;. Es especialmente importante en el caso de veh&iacute;culos pesados, que generalmente operan a 24 voltios, frente a los veh&iacute;culos ligeros que utilizan sistemas de 12 voltios.
+     Verificaci&oacute;n del Sistema de Bater&iacute;as
+     Para determinar el voltaje en caso de ser veh&iacute;culo pesado, primero se debe inspeccionar el sistema de bater&iacute;as del veh&iacute;culo:
+     Veh&iacute;culos de 24 voltios: Si el veh&iacute;culo utiliza dos bater&iacute;as conectadas en serie, el voltaje total ser&aacute; de 24V, ya que las bater&iacute;as conectadas en serie suman su voltaje, pero mantienen la corriente.
+     </p>
+    </div>
+    <div class="img-container">
+     <img src="images/m1_inspeccion_de_vehiculo_7.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m1_inspeccion_de_vehiculo_8.png">
+    </div>
+
+    <div class="text-block">
+     <p>
+      Es importante observar la cantidad de bater&iacute;as y c&oacute;mo est&aacute;n conectadas (en serie o en paralelo), ya que esto afectar&aacute; directamente al voltaje. En el caso de bater&iacute;as conectadas en paralelo, el voltaje se mantiene constante (12V, 24V, dependiendo de la configuraci&oacute;n), pero la corriente se suma.
+     Verificaci&oacute;n del Voltaje en la Cabina
+     Si no se puede determinar claramente el voltaje solo mediante la inspecci&oacute;n de las bater&iacute;as, se pueden usar otros m&eacute;todos adicionales dentro de la cabina del veh&iacute;culo:
+     - Tac&oacute;metro: Algunos veh&iacute;culos cuentan con un indicador de voltaje en el tac&oacute;metro o en el panel de instrumentos. Este indicador puede proporcionar una lectura precisa del voltaje del sistema. - Toma de Encendedor: Verificar el voltaje de la toma de encendedor, utilizando un mult&iacute;metro para medir el voltaje disponible en esta fuente de energ&iacute;a.
+     - Brillo del Probador de L&iacute;nea: Utilizar un probador de l&iacute;nea (tester) para verificar el brillo o la intensidad de la luz del dispositivo. Un brillo m&aacute;s tenue podr&iacute;a indicar un voltaje inferior, mientras que un brillo m&aacute;s intenso puede indicar un voltaje mayor.
+     Selecci&oacute;n del Rel&eacute; Adecuado
+     Una vez identificado el voltaje operativo del veh&iacute;culo, se podr&aacute; seleccionar el rel&eacute; adecuado para la instalaci&oacute;n del GPS. Un rel&eacute; incorrecto podr&iacute;a no funcionar adecuadamente, causar fallos o incluso da&ntilde;ar el sistema el&eacute;ctrico del veh&iacute;culo. Es crucial elegir un rel&eacute; que est&eacute; dise&ntilde;ado espec&iacute;ficamente para operar con el voltaje identificado en el veh&iacute;culo (12V o 24V)
+     </p>
+    </div>
+    <div class="img-container">
+     <img src="images/m1_inspeccion_de_vehiculo_10.png">
+    </div>
+    <div class="text-block">
+     <p>
+      IV. Verificaci&oacute;n de Testigos en el Tablero.
+     - Inspeccionar cuidadosamente el tablero y observar si hay alg&uacute;n testigo
+     encendido, como: V. Verificaci&oacute;n de Funciones El&eacute;ctricas ⚠
+     Importante: Revisar cada uno de los componentes el&eacute;ctricos del veh&iacute;culo y registrarlo en la orden de trabajo.
+     </p>
+    </div>
+    <div class="img-container">
+     <img src="images/m1_inspeccion_de_vehiculo_11.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m1_inspeccion_de_vehiculo_12.png">
+    </div>
+
+    <div class="text-block">
+     <p>
+      VI. Aspectos y funcionalidades
+     Los siguientes aspectos y funcionalidades requieren ser verificadas al momento de
+     inspeccionar un veh&iacute;culo:
+     </p>
+    </div>
+    <div class="img-container">
+     <img src="images/m1_inspeccion_de_vehiculo_14.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m1_inspeccion_de_vehiculo_15.png">
+    </div>
+    <div class="text-block">
+     <h4>
+      6. Inspecci&oacute;n F&iacute;sica del Interior del Veh&iacute;culo
+     I. Condiciones Generales del Interior:
+     </h4>
+     <p>
+      - Revisar que no falten elementos como pl&aacute;sticos, tapas o paneles. Es fundamental verificar el estado f&iacute;sico de la cabina antes de realizar la instalaci&oacute;n del GPS. revisar que los pl&aacute;sticos internos est&eacute;n en buen estado, sin rayaduras, fracturas o se&ntilde;ales de manipulaci&oacute;n.
+     - Inspeccionar el parabrisas
+     Se verifica el estado del parabrisas para detectar fisuras o astillamientos, as&iacute; como el estado del polarizado, para detectar burbujas, rayones o quemaduras
+     - Inspecci&oacute;n de Tapizados y Alfombras:
+     -Se deben revisar los asientos para detectar si est&aacute;n sucios, manchados; y asegurar que los asientos puedan moverse y que el respaldo sea ajustable, adem&aacute;s sus funcionalidades en caso de poderse ajustar el&eacute;ctricamente.
+     III. Revisi&oacute;n de Herramientas:
+     Confirmar la presencia del kit de herramientas, normalmente ubicado en la cajuela o bajo el asiento trasero (en el caso de pickups), Tambi&eacute;n es importante confirmar la presencia de la llanta de repuesto, la cual suele ubicarse en la cajuela del veh&iacute;culo o debajo de la paila en el caso de las pickups.
+     </p>
+     <div class="warning-box"><img src="images/warning_icon.png" class="warning-icon"><div><strong>PRECAUCI&Oacute;N:</strong><p>Registrar cualquier anomal&iacute;a en el funcionamiento de estos componentes en la orden de trabajo.</p></div></div>
+    </div>
+    <div class="img-container">
+     <img src="images/m1_inspeccion_de_vehiculo_16.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m1_inspeccion_de_vehiculo_17.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m1_inspeccion_de_vehiculo_18.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m1_inspeccion_de_vehiculo_19.png">
+    </div>
+
+    <div class="text-block">
+     <h4>
+      7. Inspecci&oacute;n F&iacute;sica del Exterior del Veh&iacute;culo
+     1. Revisi&oacute;n de la Carrocer&iacute;a:
+     </h4>
+    </div>
+    <div class="img-container">
+     <img src="images/m1_inspeccion_de_vehiculo_21.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m1_inspeccion_de_vehiculo_22.png">
+    </div>
+    <div class="text-block">
+     <p>
+      Aspectos a considerar:
+     - Inspeccionar cuidadosamente la carrocer&iacute;a en busca de abolladuras, rayones o piezas faltantes.
+     Condiciones de Componentes Externos:
+     - Verificar que los faros delanteros y traseros funcionen correctamente. - Revisar retrovisores, insignias, y asegurarse de que las llantas, incluida la de repuesto, est&eacute;n en buenas condiciones.
+     Registrar cualquier detalle ⚠
+     observado en la orden de trabajo.
+     </p>
+     <h4>
+      8. Comunicaci&oacute;n de Resultados al Cliente
+     I. Informe de Observaciones:
+     </h4>
+     <p>
+      Explicar al cliente o encargado los detalles encontrados en la revisi&oacute;n. Esto es crucial para que el cliente est&eacute; al tanto de cualquier posible anomal&iacute;a o condici&oacute;n preexistente del veh&iacute;culo.
+     II. Solicitud de Informaci&oacute;n de Contacto:
+     Solicitar un n&uacute;mero de tel&eacute;fono al cliente para poder contactarlo en caso de que surja alg&uacute;n inconveniente o actualizaci&oacute;n durante la instalaci&oacute;n y asegurarse de contar con este n&uacute;mero para notificar al cliente cuando el trabajo haya finalizado.
+     III. Confirmaci&oacute;n y Firma del Cliente:
+     - Pedir al cliente que firme la orden de trabajo en el &aacute;rea correspondiente, al lado de la firma del t&eacute;cnico, confirmando que est&aacute; informado sobre el estado del veh&iacute;culo.
+     9. Inicio del Procedimiento de Instalaci&oacute;n
+     Con el cliente informado y habiendo completado todos los pasos de inspecci&oacute;n, se procede a la instalaci&oacute;n del dispositivo GPS conforme a los est&aacute;ndares establecidos. Es importante, adem&aacute;s, que el t&eacute;cnico instalador cumpla con todos los aspectos de seguridad y cuidado necesarios durante el proceso.
+     </p>
+    </div>
+    <div class="img-container">
+     <img src="images/m1_inspeccion_de_vehiculo_23.png">
+    </div>
+   </div>
+   <button class="accordion">
+    7. Medidas de Seguridad Personal y Vehicular
+   </button>
+   <div class="panel" id="m2_i_medidas_de_seguridad">
+    <div class="text-block">
+     I. Medidas de Seguridad.
+     Procedimientos y cuidados al desarmar cualquier parte del veh&iacute;culo que se debe de tener en cuenta antes de iniciar el desarmado de cualquier parte del veh&iacute;culo, es fundamental tener precauci&oacute;n con los accesorios o herramientas que podr&iacute;an da&ntilde;ar o rayar la carrocer&iacute;a y los pl&aacute;sticos. Para ello, aseg&uacute;rese de cumplir con las siguientes condiciones:
+     1. Espacio de trabajo adecuado: Verifique que haya suficiente espacio alrededor del veh&iacute;culo para realizar el trabajo de forma segura, especialmente cerca de la puerta del conductor o de la puerta donde se realizar&aacute; la instalaci&oacute;n. Aseg&uacute;rese de que la puerta pueda abrirse completamente y de que haya suficiente separaci&oacute;n entre veh&iacute;culos para facilitar la instalaci&oacute;n.
+     2. Informaci&oacute;n del modelo del veh&iacute;culo: Re&uacute;na todos los datos necesarios sobre el modelo y las &aacute;reas espec&iacute;ficas donde se puede trabajar sin riesgos, especialmente si es la primera instalaci&oacute;n en ese modelo en particular. Para obtener esta informaci&oacute;n, consulte fuentes confiables, como otros t&eacute;cnicos con experiencia, el manual del veh&iacute;culo o investigaciones en internet. Esto asegurar&aacute; una instalaci&oacute;n adecuada y segura, adaptada a las particularidades de cada veh&iacute;culo.
+     Utilizaci&oacute;n de Guantes y Gabardina
+     Es de mucha importaci&oacute;n utilizar guantes de seguridad para las heridas en la manos, y la gabardina para el cuidado del uniforme.
+    </div>
+    <div class="img-container">
+     <img src="images/m2_i_medidas_de_seguridad_1.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m2_i_medidas_de_seguridad_2.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m2_i_medidas_de_seguridad_3.png">
+    </div>
+    <div class="text-block">
+     3. Precauciones con la vestimenta: Si usa pantalones de mezclilla o jeans, verifique que no tengan pines met&aacute;licos en los bolsillos. Evite llevar llaves, l&aacute;pices o bol&iacute;grafos en los bolsillos, ya que podr&iacute;an rayar los pl&aacute;sticos del veh&iacute;culo. Se recomienda el uso de un overol o gabacha para mayor protecci&oacute;n.
+     Estos cuidados garantizan que el trabajo se realice de forma segura, evitando da&ntilde;os en el veh&iacute;culo y manteniendo los est&aacute;ndares de calidad.
+    </div>
+   </div>
+   <button class="accordion">
+    8. Prevenci&oacute;n de Accidentes
+   </button>
+   <div class="panel" id="m2_tecnicas_de_prevencion_de_accidentes">
+    <div class="text-block">
+     T&eacute;cnicas de prevenci&oacute;n de accidentes
+     Asegurarse de los aspectos anteriores es parte fundamental de los cuidados necesarios al realizar una instalaci&oacute;n de GPS. Adem&aacute;s, es importante considerar otros aspectos, como el uso adecuado de las herramientas y las precauciones necesarias para evitar da&ntilde;os en el veh&iacute;culo debido a un mal manejo. A continuaci&oacute;n, se presentan algunas t&eacute;cnicas clave para prevenir
+     da&ntilde;os al utilizar herramientas durante la instalaci&oacute;n.
+     Antes de comenzar, es fundamental verificar el estado de las herramientas, ya que unas herramientas en &oacute;ptimas condiciones garantizan un trabajo de calidad.
+     Algunos manuales t&eacute;cnicos recomiendan desconectar la bater&iacute;a del veh&iacute;culo antes de realizar cualquier trabajo el&eacute;ctrico. Aunque es un m&eacute;todo sensato y &uacute;til, presenta algunas desventajas: dificulta la identificaci&oacute;n de las l&iacute;neas de ignici&oacute;n y de corriente positiva, y en algunos modelos puede activar ciertos testigos al reconectar la bater&iacute;a.
+     Este manual recomienda no desconectar la bater&iacute;a; sin embargo, se deben tener en cuenta las siguientes precauciones para asegurar una instalaci&oacute;n de GPS segura en cualquier veh&iacute;culo.
+     &iexcl;Importante!: Es importante que lector preste especial atenci&oacute;n a toda la siguiente secci&oacute;n, debido a la delicadeza del trabajo que se va a realizar.
+    </div>
+    <div class="img-container">
+     <img src="images/m2_tecnicas_de_prevencion_de_accidentes_1.png">
+    </div>
+
+    <div class="text-block">
+    </div>
+   </div>
+   <button class="accordion">
+    8.1. Prevenci&oacute;n de Cortocircuito y Manejo de Herramientas
+   </button>
+   <div class="panel" id="m2_prevencion_de_corto_circuito">
+    <div class="text-block">
+     Prevenci&oacute;n de corto circuito
+     Al utilizar herramientas para cortar o retirar el aislamiento de un cable, es fundamental asegurarse de que dichas herramientas cuenten con guardas aisladoras, es decir, recubrimientos de goma en la mayor&iacute;a de las partes
+     met&aacute;licas.
+     Si la herramienta presenta &aacute;reas extensas de metal expuesto, es necesario aislar esas zonas utilizando cinta aislante o ductos de goma retr&aacute;ctiles.
+     Adem&aacute;s, debemos garantizar que la herramienta no entre en contacto con ninguna parte del chasis y que haya suficiente espacio entre los cables. De esta manera, evitamos cortar accidentalmente un cable que no era nuestra
+    </div>
+    <div class="img-container">
+     <img src="images/m2_prevencion_de_corto_circuito_1.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m2_prevencion_de_corto_circuito_2.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m2_prevencion_de_corto_circuito_3.png">
+    </div>
+    <div class="text-block">
+     intenci&oacute;n cortar al realizar un remache o un corte.
+     T&eacute;cnicas en la utilizaci&oacute;n de herramientas Al utilizar una herramienta, es importante prestar atenci&oacute;n a la forma en que la sujetamos, considerando que estamos en un entorno donde muchos elementos son delicados y pueden da&ntilde;arse con facilidad. A continuaci&oacute;n, se muestra un ejemplo de c&oacute;mo evitar da&ntilde;os al aplicar fuerza para retirar un
+     tornillo con un destornillador:
+     Una de las t&eacute;cnicas sugerida es asegurarse de sujetar el destornillador firmemente con una mano, mientras que con la otra mano act&uacute;a como soporte o gu&iacute;a para evitar resbalones que puedan da&ntilde;ar o rayar las superficies cercanas.
+     Control de la fuerza: Aplique la fuerza de manera gradual y controlada. Evite ejercer demasiada presi&oacute;n desde el inicio, ya que esto podr&iacute;a hacer que el destornillador se deslice y cause da&ntilde;os en el &aacute;rea circundante.
+    </div>
+    <div class="img-container">
+     <img src="images/m2_prevencion_de_corto_circuito_4.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m2_prevencion_de_corto_circuito_5.png">
+    </div>
+    <div class="text-block">
+     Protecci&oacute;n de superficies: Coloque un pa&ntilde;o o material protector alrededor del tornillo para evitar que cualquier deslizamiento accidental pueda rayar o da&ntilde;ar el acabado del veh&iacute;culo.
+    </div>
+    <div class="img-container">
+     <img src="images/m2_prevencion_de_corto_circuito_6.png">
+    </div>
+    <div class="text-block">
+     Identificaci&oacute;n de Cables Una t&eacute;cnica fundamental para evitar accidentes y da&ntilde;os en los componentes del veh&iacute;culo es la correcta identificaci&oacute;n de los cables y el procedimiento adecuado para identificarlos. Aunque este tema se detallar&aacute; m&aacute;s adelante, es importante destacar que se deben evitar cortes o pruebas con el probador de l&iacute;nea en ciertos cables. Esto podr&iacute;a causar problemas que van desde el da&ntilde;o del cable (como en el caso de fibras &oacute;pticas o cables coaxiales de c&aacute;maras de reversa) hasta activar un testigo (si se trata de un sensor de retroalimentaci&oacute;n), o, en el peor de los casos, provocar la detonaci&oacute;n de una bolsa de aire.
+     Para diferenciar un cable coaxial de un cable de fibra &oacute;ptica en un arn&eacute;s de veh&iacute;culo, puedes observar las siguientes caracter&iacute;sticas:
+     Cable Coaxial: Estructura: Tiene un conductor central de cobre, rodeado por un aislante de pl&aacute;stico, una malla met&aacute;lica o trenzado de cobre (pantalla) y una cubierta exterior. Es m&aacute;s grueso que la mayor&iacute;a de los cables el&eacute;ctricos.
+    </div>
+    <div class="img-container">
+     <img src="images/m2_prevencion_de_corto_circuito_7.png">
+    </div>
+    <div class="text-block">
+     Conector: Suele usar conectores espec&iacute;ficos, como BNC o F-type, y puede tener una forma cil&iacute;ndrica en sus extremos.
+     Color: Aunque el color puede variar, los cables coaxiales suelen ser negros o blancos. La cubierta es robusta para proteger de interferencias electromagn&eacute;ticas.
+     Rigidez y textura: Es relativamente r&iacute;gido en comparaci&oacute;n con cables el&eacute;ctricos comunes, a menudo estos cables se sienten al tacto con una textura &aacute;spera o con grumos.
+     Cable de Fibra &Oacute;ptica:
+     Aun que pocos modelos tienen cables de comunicaci&oacute;n de fibra &oacute;ptica, no
+     esta de mas algunas caracter&iacute;sticas sobre estos cables.
+     - Estructura: No tiene metal. La fibra &oacute;ptica usa un n&uacute;cleo de vidrio o pl&aacute;stico que transmite luz, protegido por varias capas de recubrimiento (refuerzo de aramida, amortiguadores y chaqueta aislante exterior).
+     - Di&aacute;metro: Puede ser m&aacute;s fino que el coaxial. Al tacto, la fibra &oacute;ptica puede sentirse m&aacute;s delicada y flexible. - Color y Marcas: Suele ser de colores vivos (como amarillo o verde) y a menudo lleva marcas de advertencia o etiquetas indicando "fibra &oacute;ptica".
+     - Conectores: Usan conectores especiales como SC, LC o ST, dise&ntilde;ados para alinear los n&uacute;cleos de las fibras. No tienen el mismo tipo de blindaje met&aacute;lico que los coaxiales.
+     Cables El&eacute;ctricos Comunes:
+     - Estructura: Usan m&uacute;ltiples filamentos de cobre o un solo n&uacute;cleo de cobre cubierto por un aislamiento de pl&aacute;stico, sin malla o blindaje met&aacute;lico.
+     - Di&aacute;metro y Rigidez: Suelen ser m&aacute;s delgados y flexibles que el coaxial y la fibra &oacute;ptica.
+     - Color: Vienen en una variedad de colores, a menudo en funci&oacute;n de su funci&oacute;n espec&iacute;fica (tierra, alimentaci&oacute;n, se&ntilde;al). Usando estos detalles, deber&iacute;as poder identificar estos tipos de cables visualmente y al tacto en el arn&eacute;s de un veh&iacute;culo.
+    </div>
+
+    <div class="text-block">
+     Importante: Algunos arneses automotrices indican cables con funciones delicadas, como los de activaci&oacute;n de las bolsas de aire. Estos cables suelen estar cubiertos con tubos protectores y conectores de color amarillo, que sirven como advertencia visual. Tambi&eacute;n es com&uacute;n encontrar cables trenzados entre s&iacute;, los cuales suelen estar asociados con sensores del veh&iacute;culo. Es fundamental identificar y respetar estos cables para evitar posibles da&ntilde;os y accidentes.
+     Estos cuidados ayudan a mantener el &aacute;rea de trabajo segura y minimizan el riesgo de da&ntilde;os durante el proceso de instalaci&oacute;n.
+    </div>
+    <div class="img-container">
+     <img src="images/m2_prevencion_de_corto_circuito_9.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m2_prevencion_de_corto_circuito_10.png">
+    </div>
+    <div class="text-block">
+     T&eacute;cnicas para desarmar pl&aacute;sticos Desarmar los pl&aacute;sticos del interior de un veh&iacute;culo requiere precisi&oacute;n y herramientas adecuadas para evitar da&ntilde;os. A continuaci&oacute;n, algunas t&eacute;cnicas y consejos que pueden ayudarte:
+     1. Usa Herramientas de Pl&aacute;stico para Desmontaje
+     - Utiliza herramientas especiales de desmontaje de pl&aacute;stico (tambi&eacute;n llamadas "spudgers" o "trim removal tools") para evitar rayones o da&ntilde;os. Estas herramientas est&aacute;n dise&ntilde;adas para entrar en las ranuras sin da&ntilde;ar el acabado.
+     - Consejo: Evita herramientas de metal que pueden romper clips o dejar marcas.
+     Identifica los Clips y Tornillos Ocultos
+     - Muchos paneles est&aacute;n sujetos con clips y tornillos ocultos bajo tapas pl&aacute;sticas o tapetes.
+     - Revisar alrededor de manijas, portavasos, y otros accesorios. Usar un destornillador peque&ntilde;o para quitar las tapas y exponer los tornillos.
+     Aplica Fuerza Uniforme y Desmonta de Manera Gradual
+     - Al sacar paneles, aplica presi&oacute;n suavemente y de forma uniforme, movi&eacute;ndote alrededor del panel en lugar de enfocarte en un solo punto.
+     - Empieza por una esquina o borde y sigue alrededor hasta soltar todos los clips.
+    </div>
+    <div class="img-container">
+     <img src="images/m2_prevencion_de_corto_circuito_11.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m2_prevencion_de_corto_circuito_12.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m2_prevencion_de_corto_circuito_13.png">
+    </div>
+    <div class="text-block">
+     Usa Extractores de Clips para los Sujetadores Pl&aacute;sticos
+     - Los extractores de clips permiten retirar clips de pl&aacute;stico sin quebrarlos. Inserta la herramienta debajo del clip y haz palanca lentamente.
+     - Consejo: Si un clip est&aacute; muy r&iacute;gido, intentar girarlo ligeramente o aplicar una peque&ntilde;a cantidad de lubricante en aerosol para ayudar a soltarlo.
+     6. Presta Atenci&oacute;n a la Orientaci&oacute;n y Posici&oacute;n Original de las Piezas
+     - De ser necesario tomar fotos durante el proceso para recordar la posici&oacute;n exacta de las piezas, clips, y tornillos. Esto ser&aacute; &uacute;til al volver a ensamblar.
+     Desarma con Cuidado las Conexiones El&eacute;ctricas
+     Algunos paneles tienen conexiones el&eacute;ctricas para luces o controles. Antes de desconectar, revisa c&oacute;mo est&aacute; orientado el conector y aseg&uacute;rate de que el veh&iacute;culo est&eacute; apagado para evitar cortocircuitos, se recomienda tomar fotograf&iacute;as para saber la posici&oacute;n de los conectores al momento de armar los pl&aacute;sticos.
+     Retirar las Piezas con Cuidado y Almacenarlas en un Lugar Seguro
+     - A medida que quites cada pieza, col&oacute;cala en un lugar seguro y ordenado, como el asiento trasero adem&aacute;s se puede usar bandejas o recipientes para los tornillos y clips.
+     Siguiendo estas t&eacute;cnicas, puedes desmontar los pl&aacute;sticos del interior sin da&ntilde;ar el acabado o los componentes del veh&iacute;culo.
+     Importante: Si durante el proceso de desmontaje de los pl&aacute;sticos del veh&iacute;culo ocurre alg&uacute;n da&ntilde;o accidental, comun&iacute;quese de inmediato con un superior para informarle del incidente y proceder seg&uacute;n las indicaciones.
+    </div>
+    <div class="img-container">
+     <img src="images/m2_prevencion_de_corto_circuito_14.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m2_prevencion_de_corto_circuito_15.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m2_prevencion_de_corto_circuito_16.png">
+    </div>
+
+    <div class="text-block">
+    </div>
+   </div>
+   <button class="accordion">
+    9. Ensamble del Arn&eacute;s El&eacute;ctrico
+   </button>
+   <div class="panel" id="m2_ensamble_del_arnes_electrico">
+    <div class="text-block">
+     <p>
+      El arn&eacute;s el&eacute;ctrico del GPS es el componente cr&iacute;tico que integra el dispositivo con la arquitectura el&eacute;ctrica del veh&iacute;culo. Un ensamble correcto garantiza no solo la operaci&oacute;n continua del rastreo, sino tambi&eacute;n la seguridad contra cortocircuitos o fallos en el sistema de encendido.
+     </p>
+     <h3>Ensamble B&aacute;sico del Arn&eacute;s</h3>
+     <p>
+      Una vez definidos los componentes (rel&eacute;s, bot&oacute;n de p&aacute;nico, micr&oacute;fonos), procedemos a la integraci&oacute;n f&iacute;sica del arn&eacute;s:
+     </p>
+     <ol>
+      <li><strong>Planificaci&oacute;n:</strong> Determine la ubicaci&oacute;n final del GPS para calcular las longitudes de cable necesarias.</li>
+      <li><strong>Agrupaci&oacute;n por Funci&oacute;n:</strong> Organice los cables en grupos (Alimentaci&oacute;n, Se&ntilde;ales de Entrada, Salidas de Control).</li>
+      <li><strong>Preparaci&oacute;n de Terminales:</strong> Utilice terminales remachables para las conexiones al rel&eacute; y puntos de tierra.</li>
+      <li><strong>Protecci&oacute;n:</strong> Aplique encintado profesional (estilo automotriz) para proteger los empalmes y dar rigidez estructural al mazo de cables.</li>
+     </ol>
+
+     <h3>Protocolo para Unidades Serie GV300</h3>
+     <p>
+      Para los modelos GV300W y GV310LAU, el protocolo de ensamble est&aacute;ndar es:
+     </p>
+     <ul>
+      <li><strong>Pin 11 (Rojo) y Pin 6 (Negro):</strong> L&iacute;nea principal de energ&iacute;a.</li>
+      <li><strong>Pin 14 (Azul):</strong> Conexi&oacute;n al Pin 86 del rel&eacute; de bloqueo.</li>
+      <li><strong>Pin 3 (Blanco):</strong> Conexi&oacute;n a la se&ntilde;al de ignici&oacute;n del veh&iacute;culo.</li>
+      <li><strong>Pin 12 (Naranja):</strong> Conexi&oacute;n al bot&oacute;n de p&aacute;nico.</li>
+     </ul>
+    </div>
+    <div class="img-container">
+     <img src="images/m2_boton_de_panico_5.png">
+    </div>
+   </div>
+   <button class="accordion">
+    10. Configuraci&oacute;n y Conexi&oacute;n de Rel&eacute;s (Corte de Ignici&oacute;n)
+   </button>
+   <div class="panel" id="m2_configuracion_del_relee">
+    <div class="text-block">
+     Configuraci&oacute;n del Relee
+     Un relay de 5 pines es un interruptor el&eacute;ctrico controlado por una se&ntilde;al, que permite abrir o cerrar circuitos de manera remota. Es ideal para el corte de ignici&oacute;n en sistemas de seguridad de veh&iacute;culos, ya que permite apagar el veh&iacute;culo e impedir que se encienda hasta que se desactive el relay.
+     Descripci&oacute;n de los Pines
+     - Pin 30: Entrada de corriente. Es el pin al que normalmente se conecta el suministro de corriente que se desea controlar.
+     - Pin 87: Salida normalmente abierta (NO). Cuando el relay est&aacute; activado, este pin se conecta al pin 30, permitiendo el paso de corriente.
+     - Pin 87a: Salida normalmente cerrada (NC). Cuando el relay est&aacute; desactivado, este pin est&aacute; conectado al pin 30, permitiendo el flujo de corriente por defecto.
+     - Pin 85: Tierra (negativo). Este pin se conecta a tierra y permite que el relay funcione adecuadamente cuando recibe se&ntilde;al de activaci&oacute;n.
+     - Pin 86: Activaci&oacute;n del relay (positivo). Recibe una se&ntilde;al de corriente para activar el relay y cambiar el estado de los pines 87 y 87a.
+     <h3>
+      Operaci&oacute;n Detallada del Rel&eacute; (Relay) de 5 Pines
+     </h3>
+     <p>
+      El rel&eacute; es un interruptor electromec&aacute;nico fundamental para el corte de ignici&oacute;n. Su funcionamiento se basa en una bobina que, al ser energizada, genera un campo magn&eacute;tico que mueve un contacto f&iacute;sico.
+     </p>
+     <ul>
+      <li>
+       <strong>
+        Pin 85 y 86:
+       </strong>
+       Corresponden a los extremos de la bobina. En una instalaci&oacute;n est&aacute;ndar, el pin 85 se conecta a una se&ntilde;al positiva (12V) y el 86 a la salida de bloqueo del GPS (pulso negativo). Al activarse el bloqueo desde la plataforma, la bobina se energiza.
+      </li>
+      <li>
+       <strong>
+        Pin 30 (Com&uacute;n):
+       </strong>
+       Es el punto de entrada de la se&ntilde;al que deseamos interrumpir. Debe conectarse al extremo del cable de ignici&oacute;n que proviene del llav&iacute;n.
+      </li>
+      <li>
+       <strong>
+        Pin 87a (Normalmente Cerrado - NC):
+       </strong>
+       En reposo, el pin 30 est&aacute; conectado internamente al 87a. Aqu&iacute; se conecta el cable que contin&uacute;a hacia el sistema de encendido del motor. Al activarse el rel&eacute;, esta conexi&oacute;n se abre, cortando el flujo el&eacute;ctrico y apagando el veh&iacute;culo.
+      </li>
+      <li>
+       <strong>
+        Pin 87 (Normalmente Abierto - NO):
+       </strong>
+       Se utiliza para aplicaciones donde se desea activar un componente (como una sirena o luces) cuando el bloqueo est&aacute; activo.
+      </li>
+     </ul>
+    </div>
+    <div class="img-container">
+     <img src="images/m2_configuracion_del_relee_1.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m2_configuracion_del_relee_2.png">
+    </div>
+    <div class="text-block">
+     Configuraci&oacute;n B&aacute;sica para Corte de Ignici&oacute;n
+     En esta configuraci&oacute;n, el relay cortar&aacute; la alimentaci&oacute;n de la l&iacute;nea de ignici&oacute;n cuando est&eacute; activado, evitando que el veh&iacute;culo arranque.
+     1. Pin 30: Con&eacute;ctalo a la l&iacute;nea de alimentaci&oacute;n de ignici&oacute;n del veh&iacute;culo. Este pin es la entrada de corriente al relay. 2. Pin 87a: Con&eacute;ctalo al circuito de ignici&oacute;n del veh&iacute;culo (por ejemplo, a la l&iacute;nea que lleva la corriente al encendido). En estado desactivado (cuando el relay est&aacute; sin activaci&oacute;n), el veh&iacute;culo puede arrancar normalmente porque la corriente fluye de pin 30 a pin 87a. 3. Pin 87: Deja este pin desconectado o &uacute;salo para una funci&oacute;n adicional si se requiere (en esta configuraci&oacute;n, no ser&aacute; necesario para el corte de ignici&oacute;n). 4. Pin 85: Realiza un puente con el pin 30 para que reciba la corriente de ignici&oacute;n. Cuando el relay recibe una se&ntilde;al de activaci&oacute;n (por ejemplo, desde un sistema de seguridad), el circuito se activa y cambia el flujo de corriente de 87a a 87, adem&aacute;s podremos conectar nuestra se&ntilde;al de ignici&oacute;n (cable blanco) en el pin 85 5. Pin 86: Este pin ser&aacute; nuestro activador, aqu&iacute; conectaremos la salida de se&ntilde;al negativa de nuestro GPS. (cable azul GV300, Cable verde Gv58lau)
+     Diagrama:
+     Funcionamiento
+     1. Relay desactivado: En este estado, el pin 30 se conecta al pin 87a, permitiendo el flujo de corriente hacia la l&iacute;nea de ignici&oacute;n del veh&iacute;culo. Esto permite que el veh&iacute;culo encienda y funcione normalmente.
+     2. Relay activado: Cuando el sistema de seguridad activa el relay (por ejemplo, enviando una se&ntilde;al a trav&eacute;s del pin 86), el pin 30 se conecta al pin 87 y se interrumpe la conexi&oacute;n con 87a, cortando el flujo de corriente hacia la ignici&oacute;n y apagando el veh&iacute;culo.
+    </div>
+    <div class="img-container">
+     <img src="images/m2_configuracion_del_relee_3.png">
+    </div>
+    <div class="text-block">
+     Cabe aclarar que para algunos modelos de veh&iacute;culos se utiliza una configuraci&oacute;n modificada del relay que depende de la situaci&oacute;n, se debe configurar, por ejemplo, en los modelos l200 2025 de llave, donde la corriente que llega al llav&iacute;n, es negativa, que, por tanto, no se hace el puente entre los pines 30 y 86.
+     A continuaci&oacute;n, una configuraci&oacute;n sobre el caso del modelo Mitsubishi L200
+     2025 de llave.
+     Funcionamiento:
+     En este caso en particular podemos observar que el pin 85 y pin 30 ya no comparten un puente, lo que significa que la alimentaci&oacute;n bobina debe ser independiente, recomendablemente un positivo constante. Otra observaci&oacute;n es la inversi&oacute;n de los pines 30 y 87a los cuales la direcci&oacute;n cambia, donde el pin 30 sol&iacute;a ser la corriente que entraba al relay ahora es la que sale, y lo mismo para el pin 87a.
+     Es importante tener en cuenta que tanto la se&ntilde;al que entra al relay como la se&ntilde;al de salida deben de ser correctamente se&ntilde;alizadas para no confundir los cables que salen del llav&iacute;n con la se&ntilde;al que va al encendido, esto se puede realizar con solo retirar un poco del aislante de uno de los cables que salen de los pines 30 y 87a, se recomienda marcar &uacute;nicamente solo uno, tradicionalmente el cable del pin 30.
+    </div>
+    <div class="img-container">
+     <img src="images/m2_configuracion_del_relee_4.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m2_configuracion_del_relee_5.png">
+    </div>
+
+    <div class="text-block">
+     Relay para algunos modelos de motocicletas
+     En algunos modelos de motocicletas, el apagado se realiza enviando un pulso negativo al bot&oacute;n corta corriente, o a la bobina de alta, cabe aclarar que, si bien el apagado podr&iacute;a funcionar sin el relay, se recomienda utilizar el relay para aislar la se&ntilde;al de GPS y la del apagado de la moto, de lo contrario podr&iacute;a ocurrir apagados inesperados.
+     A continuaci&oacute;n, una configuraci&oacute;n sobre el caso de motos con apagado con negativo
+     Funcionamiento: Como se puede observar en el diagrama, el pin 87a ya no se utiliza, debido a que en este caso lo que necesitamos enviar un pulso negativo contante al sistema de apagado de la motocicleta, en este caso ya no es necesario realizar ning&uacute;n corte en los cables de la motocicleta.
+     Se recomienda tomar la se&ntilde;al negativa de la bater&iacute;a de la motocicleta, esto es para minimizar problemas.
+    </div>
+   </div>
+   <button class="accordion">
+    11. T&eacute;cnicas de Empalme y Encintado
+   </button>
+   <div class="panel" id="m2_empalmes">
+    <div class="text-block">
+     Empalmes
+     Ahora que sabemos lo necesario sobre los relays y las configuraciones utilizadas, a continuaci&oacute;n, veremos brevemente sobre los empalmes recomendados en la instalaci&oacute;n de GPS. Empalme Wester Short es una t&eacute;cnica de empalme de cables que se utiliza com&uacute;nmente en instalaciones el&eacute;ctricas para hacer conexiones seguras y duraderas. Es especialmente &uacute;til en aplicaciones de baja tensi&oacute;n y en trabajos de mantenimiento. Este tipo de empalme es parecido al empalme tradicional Wester, pero m&aacute;s corto y simple de realizar.
+    </div>
+    <div class="img-container">
+     <img src="images/m2_empalmes_1.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m2_empalmes_2.png">
+    </div>
+    <div class="text-block">
+     A continuaci&oacute;n, una breve demostraci&oacute;n del empalme Wester short:
+    </div>
+    <div class="img-container">
+     <img src="images/m2_empalmes_3.png">
+    </div>
+    <div class="text-block">
+     Aspectos a considerar:
+     Pela aproximadamente 4 a 5 cm de aislamiento en los extremos de ambos cables con una herramienta de pelado, exponiendo el conductor de cobre.
+     Alineaci&oacute;n de los Cables:
+     Coloca los extremos pelados de los cables uno junto al otro, de forma que los conductores queden alineados y paralelos entre s&iacute;.
+     Torcer los Cables:
+     Usando alicates, empieza a torcer ambos conductores de cobre entre s&iacute; de manera uniforme y ajustada. La idea es hacer que los hilos se enrosquen unos con otros.
+     Aseg&uacute;rate de que los giros sean firmes y queden bien apretados para garantizar un buen contacto el&eacute;ctrico. Esta torsi&oacute;n evita que los cables se separen o tengan un contacto deficiente.
+     Recomendaci&oacute;n
+     Si los cables a empalmar comparten el mismo conector y se dirigen al mismo destino, es importante realizar los empalmes en puntos diferentes del conector para evitar que se toquen entre s&iacute;, lo cual podr&iacute;a causar cortocircuitos o mal funcionamiento del sistema. Adem&aacute;s, para un acabado profesional y seguro, es recomendable aplicar cinta aislante de forma firme y uniforme en cada empalme, asegur&aacute;ndose de que no queden partes flojas o expuestas que puedan deteriorarse con el tiempo o comprometer la integridad de la conexi&oacute;n.
+    </div>
+    <div class="img-container">
+     <img src="images/m2_empalmes_4.png">
+    </div>
+
+    <div class="text-block">
+     Empalmes tipo T para derivaciones
+     Estos tipos de empalmes se emplean en derivaciones donde no es necesario cortar los cables. No obstante, cuando se necesita tomar la alimentaci&oacute;n positiva o gestionar la apertura y apagado mediante un pulso negativo como en el caso de la apertura de seguros y el apagado en veh&iacute;culos de encendido
+     de boton.
+     En las instalaciones de GPS, se utiliza una versi&oacute;n adaptada en la que el cable derivado sigue una direcci&oacute;n espec&iacute;fica y no necesariamente en forma de &ldquo;T&rdquo;. Por lo tanto, es importante aplicar la cinta aislante de manera firme, cubriendo tanto el empalme como ambos cables juntos. Esto asegura una conexi&oacute;n estable y evita que el empalme se afloje o se exponga a factores externos, garantizando la durabilidad y seguridad de la instalaci&oacute;n.
+     Encintado:
+     El encintado del arn&eacute;s del GPS es un paso esencial para proteger las conexiones y asegurar la durabilidad de la instalaci&oacute;n. Para lograr un encintado profesional, siga estas recomendaciones:
+     1. Cubrir Empalmes y Conexiones: Envuelva firmemente cada empalme con cinta aislante, asegur&aacute;ndose de que no queden partes expuestas. Esto protege las conexiones contra la humedad, el polvo y otros factores que puedan deteriorarlas.
+    </div>
+    <div class="img-container">
+     <img src="images/m2_empalmes_6.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m2_empalmes_7.png">
+    </div>
+    <div class="text-block">
+     2. Encintado de Cables Juntos: Una vez encintados los empalmes individuales, recubra el arn&eacute;s completo para mantener los cables juntos y evitar que se desplacen. Esto tambi&eacute;n brinda una apariencia profesional y organizada al arn&eacute;s.
+     3. Asegurar el Encintado Final: Finalice el encintado con una vuelta adicional en cada extremo para evitar que la cinta se despegue. Esto garantiza que el arn&eacute;s permanezca firmemente cubierto y seguro en cualquier condici&oacute;n de uso.
+     T&eacute;cnicas de encintado:
+     Fijaci&oacute;n Inicial de la Cinta: Aseg&uacute;rese de que la cinta no pierda adherencia en la primera vuelta. Utilice el pulgar para fijar el inicio de la cinta de forma firme, evitando que se desplace. Mantenga una tensi&oacute;n uniforme alrededor del arn&eacute;s para una cobertura s&oacute;lida, y procure no tocar la superficie adhesiva con los dedos para conservar su adherencia.
+     Corte Preciso de la Cinta: Evite rasgar la cinta con los dedos al finalizar el encintado, ya que esto puede reducir su adherencia y causar zonas flojas que podr&iacute;an desenrollarse con el tiempo. En su lugar, use una t&eacute;cnica de "corte mec&aacute;nico": presione el arn&eacute;s con la &uacute;ltima vuelta de la cinta, luego, sin dejar espacio, estire la cinta firmemente en un movimiento r&aacute;pido para cortarla limpiamente. Este m&eacute;todo reduce el contacto con la parte adhesiva y mejora la durabilidad del encintado.
+     Es recomendable practicar esta t&eacute;cnica para obtener mejores resultados.
+     Encintado de Empalmes: Corte un trozo peque&ntilde;o de cinta aislante suficiente para cubrir el empalme completamente y asegurar la conexi&oacute;n con la guarda de goma de los cables. Use la t&eacute;cnica de corte mec&aacute;nico para optimizar la cinta. Presione firmemente el inicio de la cinta sobre el empalme y envu&eacute;lvala manteniendo una tensi&oacute;n firme para lograr un encintado apretado y duradero.
+     Siguiendo estos pasos, el arn&eacute;s del GPS estar&aacute; adecuadamente protegido,
+    </div>
+    <div class="img-container">
+     <img src="images/m2_empalmes_8.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m2_empalmes_9.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m2_empalmes_10.png">
+    </div>
+    <div class="text-block">
+     garantizando una instalaci&oacute;n segura y de calidad.
+    </div>
+   </div>
+   <button class="accordion">
+    12. Uso de Terminales Remachables
+   </button>
+   <div class="panel" id="m2_uso_de_terminales_remachables">
+    <div class="text-block">
+     Uso de Terminales Remachables
+     Los terminales remachables son fundamentales en instalaciones el&eacute;ctricas, ya que permiten conexiones seguras y duraderas. Su aplicaci&oacute;n va desde asegurar cables y personalizar configuraciones de rel&eacute;s hasta unir cables de manera confiable. A continuaci&oacute;n, algunas recomendaciones sobre el uso adecuado de estos terminales:
+     Terminales hembra
+     Aseguran Conexiones: Los terminales remachables ofrecen una sujeci&oacute;n firme que evita que los cables se suelten, incluso en condiciones de vibraci&oacute;n o movimiento. Esto es esencial en conexiones cr&iacute;ticas, como aquellas utilizadas en rel&eacute;s de corte de ignici&oacute;n.
+     Personalizaci&oacute;n de Configuraciones: Permiten adaptar configuraciones de un rel&eacute; seg&uacute;n los requisitos espec&iacute;ficos de la instalaci&oacute;n, facilitando la organizaci&oacute;n y disposici&oacute;n de los cables en el sistema el&eacute;ctrico.
+     Proceso de Remachado: Aseg&uacute;rese de utilizar una remachadora de buena calidad y el terminal adecuado para el calibre del cable. Un remachado adecuado asegura un contacto confiable y minimiza el riesgo de fallas.
+     T&eacute;cnicas para remachar
+     Para lograr un remache confiable, es importante colocar el "diente" de la tenaza remachadora en el lado adecuado del terminal. Este lado corresponde a la parte opuesta a la fisura del remache, permitiendo una presi&oacute;n &oacute;ptima sobre los cables y garantizando una conexi&oacute;n duradera.
+     Cuando se deban remachar dos cables juntos, es recomendable entrelazar sus hebras y peinarlas uniformemente. Esto asegura que ambos cables se deslicen sin problemas dentro del orificio del remache, facilitando un ajuste firme y seguro.
+    </div>
+    <div class="img-container">
+     <img src="images/m2_uso_de_terminales_remachables_1.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m2_uso_de_terminales_remachables_2.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m2_uso_de_terminales_remachables_3.png">
+    </div>
+    <div class="text-block">
+     Al realizar un empalme en el que el cable derivado tiene un calibre menor que el cable fuente, es recomendable remachar el cable de mayor calibre para que este ejerza presi&oacute;n sobre el de menor calibre. Esto ayuda a asegurar una conexi&oacute;n firme y confiable, garantizando la estabilidad de la uni&oacute;n.
+     En casos donde tanto el cable fuente como el derivado tienen el mismo calibre peque&ntilde;o, se recomienda retirar el aislante de una terminal tipo uni&oacute;n. Luego, con un probador de l&iacute;nea, expanda la terminal lo suficiente para permitir un remachado firme de ambos cables de bajo calibre, asegurando as&iacute; una conexi&oacute;n adecuada y segura.
+     Es importante recordar que la aplicaci&oacute;n de la cinta aislante debe de ser la apropiada cuando se realice esta t&eacute;cnica.
+     El uso de terminales es crucial para asegurar conexiones firmes y seguras, especialmente en puntos de conexi&oacute;n que no son cables. En el caso de instalaciones en el chasis o directamente en los bornes de las bater&iacute;as, las terminales ofrecen un contacto s&oacute;lido que minimiza la resistencia el&eacute;ctrica y asegura la estabilidad de la conexi&oacute;n.
+     Importancia de las Terminales en Conexiones Especiales:
+     Al conectar cables al chasis, las terminales de anillo o de horquilla son ideales para asegurar un buen contacto. Estas terminales permiten fijar el cable al metal con tornillos, asegurando una conexi&oacute;n firme y sin riesgo de aflojamiento por vibraci&oacute;n.
+     Es importante asegurarse de que el tornillo est&eacute; en contacto directo con el metal del chasis para lograr una conexi&oacute;n a tierra efectiva. En algunos casos, si el chasis est&aacute; pintado o cubierto con alg&uacute;n recubrimiento, esto puede interferir con la conductividad y causar fallas en la conexi&oacute;n
+    </div>
+    <div class="img-container">
+     <img src="images/m2_uso_de_terminales_remachables_4.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m2_uso_de_terminales_remachables_5.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m2_uso_de_terminales_remachables_6.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m2_uso_de_terminales_remachables_7.png">
+    </div>
+    <div class="text-block">
+     Para conexiones directas a los bornes de la bater&iacute;a, las terminales aseguran una conexi&oacute;n estable y evitan el deslizamiento o el aflojamiento, lo cual es fundamental en sistemas de GPS y otros dispositivos que requieren alimentaci&oacute;n continua y confiable.
+     Recomendaciones: Es importante utilizar m&eacute;todo donde no se requiera desconectar la terminal de la bater&iacute;a o una terminal del chasis, para en casos que no contemos con la terminal adecuada, podemos utilizar una terminal redonda donde cortemos una porci&oacute;n lo suficientemente aplica para que el tornillo de la terminal pueda pasar, asegur&aacute;ndonos siempre que la terminal no pierda contacto con el chasis o la bater&iacute;a. Tambi&eacute;n seleccione el tipo de terminal adecuado (anillo, horquilla, etc.) seg&uacute;n el tipo de conexi&oacute;n. Asegure que las terminales est&eacute;n correctamente crimadas para evitar desconexiones accidentales, y que el remachado no haya cortado el cable. Usar terminales correctamente ayuda a garantizar una instalaci&oacute;n segura, estable y de calidad en sistemas el&eacute;ctricos automotrices, estas pr&aacute;cticas optimizan la funcionalidad y seguridad de las instalaciones el&eacute;ctricas en veh&iacute;culos, asegurando que las conexiones permanezcan firmes y confiables.
+    </div>
+   </div>
+   <button class="accordion">
+    13. Instalaci&oacute;n de Perif&eacute;ricos: Bot&oacute;n de P&aacute;nico
+   </button>
+   <div class="panel" id="m2_boton_de_panico">
+    <div class="text-block">
+     <p>
+      Bot&oacute;n de P&aacute;nico
+     Estos pulsadores funcionan como dispositivos de alerta al ser presionados, emitiendo generalmente una se&ntilde;al negativa. Al activarse, el pulsador env&iacute;a un pulso negativo que dura &uacute;nicamente mientras se mantiene presionado.
+     Caracter&iacute;sticas principales: Funci&oacute;n temporal La se&ntilde;al se env&iacute;a solo durante el tiempo de presi&oacute;n, lo que permite alertas moment&aacute;neas o se&ntilde;ales intermitente El bot&oacute;n incluye terminales con cables de longitud suficiente para una instalaci&oacute;n sin problemas. Es recomendable seleccionar cuidadosamente la ubicaci&oacute;n de instalaci&oacute;n antes de cortar o ajustar el cable. Polaridad: Generalmente, estos pulsadores no est&aacute;n polarizados, lo que significa que cualquiera de sus dos terminales puede funcionar como entrada o salida, sin importar el tipo de corriente utilizada. Esto los hace vers&aacute;tiles en distintas aplicaciones, ya que no requieren una conexi&oacute;n espec&iacute;fica de polaridad.
+     Sin embargo, en sistemas de alarma o GPS, estos pulsadores suelen emplearse para enviar un pulso de se&ntilde;al negativa. Esto es &uacute;til en sistemas que
+     </p>
+    </div>
+    <div class="img-container">
+     <img src="images/m2_boton_de_panico_1.png">
+    </div>
+    <div class="text-block">
+     <p>
+      requieren esta polaridad para activarse o generar una alerta, facilitando una integraci&oacute;n adecuada con el resto de componentes del sistema.
+     <strong>Instalaci&oacute;n:</strong> La integraci&oacute;n b&aacute;sica de este perif&eacute;rico consiste en el empalme de una de sus terminales al cable del GPS destinado a la se&ntilde;al de entrada negativa de p&aacute;nico (Naranja en la mayoría de modelos). La otra terminal debe conectarse a una se&ntilde;al negativa constante (tierra).
+     Si el pulsador tiene un c&oacute;digo de colores para identificar las terminales (como rojo y negro), es recomendable seguir esta identificaci&oacute;n, conectando cada terminal de acuerdo con su color: el negro generalmente debe ir a un negativo constante.
+     Adem&aacute;s, en muchos casos, la terminal para la se&ntilde;al negativa constante suele empalmarse con el negativo del GPS, permitiendo que ambos dispositivos compartan la misma conexi&oacute;n a tierra. Esto asegura una instalaci&oacute;n ordenada y confiable, reduciendo posibles problemas de conexi&oacute;n y mejorando la estabilidad del sistema, como se puede apreciar en la imagen.
+     Es importante recordar que este perif&eacute;rico debe estar oculto pero accesible para el conductor del veh&iacute;culo. Esto requiere un enfoque creativo e intuitivo para encontrar un lugar pr&aacute;ctico donde el bot&oacute;n est&eacute; disponible cuando se necesite, pero fuera de la vista para mantener su discreci&oacute;n y evitar manipulaciones no autorizadas
+     A continuaci&oacute;n, algunas t&eacute;cnicas para ocultar el bot&oacute;n en lugares ideales fuera de la vista y accesibles:
+     </p>
+     <ol>
+      <li>
+       Debajo del volante: Coloca el bot&oacute;n en la parte inferior del tablero, cerca del volante. Este lugar permite f&aacute;cil acceso para el piloto mientras permanece fuera de la vista.
+      </li>
+     </ol>
+    </div>
+    <div class="img-container">
+     <img src="images/m2_boton_de_panico_2.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m2_boton_de_panico_3.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m2_boton_de_panico_4.png">
+    </div>
+    <div class="text-block">
+     <ol start="2">
+      <li><strong>Detr&aacute;s de una tapa o panel desmontable:</strong> Aprovechando cubiertas o tapas de fusibles.</li>
+      <li><strong>En la base del asiento:</strong> En la parte lateral, discreto pero accesible para el piloto.</li>
+      <li><strong>Dentro de la consola central:</strong> Permite acceso directo sin comprometer la visibilidad exterior.</li>
+     </ol>
+
+     <h3>Configuraci&oacute;n de Instalaci&oacute;n Est&aacute;ndar</h3>
+     <p>
+      Para una instalaci&oacute;n limpia, se recomienda:
+     </p>
+     <ul>
+      <li>Tomar medidas precisas de donde estar&aacute; oculto el dispositivo antes de cortar cables.</li>
+      <li>Separar los cables que no se utilizar&aacute;n y cortarlos en &aacute;ngulo diagonal para evitar contactos accidentales.</li>
+      <li>Mantener una longitud de reserva para permitir futuras expansiones o mantenimientos.</li>
+     </ul>
+    </div>
+   </div>
+   <button class="accordion">
+    14. Identificaci&oacute;n Avanzada de Conductores y Se&ntilde;ales
+   </button>
+   <div class="panel" id="m2_identificacion_de_los_cables">
+    <div class="text-block">
+     <h3>
+      Identificaci&oacute;n T&eacute;cnica de Conductores y Se&ntilde;ales
+     </h3>
+     <p>
+      La correcta identificaci&oacute;n de las l&iacute;neas el&eacute;ctricas y de se&ntilde;al es un paso cr&iacute;tico para garantizar una instalaci&oacute;n segura, funcional y profesional. El t&eacute;cnico debe utilizar siempre equipo de medici&oacute;n adecuado (mult&iacute;metro digital o probador de l&iacute;nea automotriz) y seguir estrictamente los protocolos para prevenir fallos en los sistemas electr&oacute;nicos del veh&iacute;culo.
+     </p>
+     <h4>
+      1. Identificaci&oacute;n del Cable de Alimentaci&oacute;n Positiva Constante (+12V)
+     </h4>
+     <p>
+      Es fundamental localizar un conductor que suministre un voltaje constante de 12V directamente desde la bater&iacute;a o un punto de distribuci&oacute;n principal. Se debe asegurar que este voltaje no desaparezca ni inmediatamente ni varios minutos despu&eacute;s de apagar el veh&iacute;culo (evitando l&iacute;neas con retardo o temporizadas).
+     </p>
+     <h5>
+      Procedimiento recomendado para veh&iacute;culos con sistema de cierre centralizado (Central Lock):
+     </h5>
+     <ol>
+      <li>
+       Apagar el veh&iacute;culo y retirar la llave del interruptor de encendido.
+      </li>
+      <li>
+       Asegurarse de que todas las puertas y el maletero est&eacute;n completamente cerrados.
+      </li>
+      <li>
+       Para veh&iacute;culos con bot&oacute;n sensor de puerta en el marco: retirar temporalmente el tornillo que lo sujeta para que el veh&iacute;culo detecte el cierre total de las puertas.
+      </li>
+      <li>
+       Para veh&iacute;culos sin sensor visible: introducir cuidadosamente un destornillador (preferiblemente de cabeza plana) en el pestillo de la cerradura de la puerta abierta para simular mec&aacute;nicamente que se ha cerrado.
+      </li>
+      <li>
+       Utilizando el control remoto original del veh&iacute;culo, presionar dos (2) veces el bot&oacute;n de cierre de seguros.
+      </li>
+      <li>
+       Tras escuchar la confirmaci&oacute;n sonora de activaci&oacute;n de la alarma, esperar un tiempo prudente de entre
+       <strong>
+        3 y 5 minutos
+       </strong>
+       .
+      </li>
+     </ol>
+     <p>
+      Una vez transcurrido este tiempo, la mayor&iacute;a de los m&oacute;dulos electr&oacute;nicos del veh&iacute;culo entrar&aacute;n en modo de reposo (Sleep Mode), permaneciendo activas &uacute;nicamente las l&iacute;neas de alimentaci&oacute;n constante aut&eacute;ntica.
+     </p>
+     <p>
+      <strong>
+       Recomendaci&oacute;n de b&uacute;squeda:
+      </strong>
+      Inicie la inspecci&oacute;n en los cables de mayor calibre del mazo principal. Antes de intervenir, verifique que el conductor
+      <strong>
+       NO
+      </strong>
+      corresponda a ninguno de los siguientes tipos:
+     </p>
+     <ul>
+      <li>
+       Cable coaxial.
+      </li>
+      <li>
+       Cable entrelazado de comunicaci&oacute;n (Twisted pair).
+      </li>
+      <li>
+       Fibra &oacute;ptica.
+      </li>
+      <li>
+       L&iacute;neas de red CAN (CAN Bus) o sistemas de comunicaci&oacute;n multiplexada.
+      </li>
+     </ul>
+     <h4>
+      2. Identificaci&oacute;n del Cable de Apertura de Seguros
+     </h4>
+     <p>
+      Muchos veh&iacute;culos modernos incorporan sistemas de Central Lock avanzados donde la se&ntilde;al de apertura de seguros puede variar sustancialmente dependiendo de si el veh&iacute;culo se encuentra encendido o apagado.
+     </p>
+     <p>
+      Para identificar correctamente el cable de apertura funcional con el veh&iacute;culo apagado, debe realizarse el mismo procedimiento de simulaci&oacute;n de cierre y espera (Sleep Mode) utilizado para localizar la alimentaci&oacute;n constante.
+     </p>
+     <h5>
+      Procedimiento de verificaci&oacute;n de doble estado:
+     </h5>
+     <p>
+      Una vez que haya identificado el cable funcional con el veh&iacute;culo apagado, realice la siguiente validaci&oacute;n:
+     </p>
+     <ol>
+      <li>
+       Encender el veh&iacute;culo.
+      </li>
+      <li>
+       Cerrar nuevamente todas las puertas.
+      </li>
+      <li>
+       Verificar si el mismo cable identificado contin&uacute;a realizando la funci&oacute;n de apertura de seguros con el veh&iacute;culo encendido.
+      </li>
+     </ol>
+     <p>
+      Si el cable deja de funcionar cuando el veh&iacute;culo est&aacute; encendido, ser&aacute; necesario repetir el procedimiento de b&uacute;squeda con el veh&iacute;culo en marcha para identificar la segunda l&iacute;nea de apertura necesaria para este estado.
+     </p>
+     <h5>
+      Consideraciones importantes sobre la conexi&oacute;n:
+     </h5>
+     <ul>
+      <li>
+       <strong>
+        No se recomienda unir ambos cables directamente
+       </strong>
+       a la misma salida de apertura del dispositivo GPS.
+      </li>
+      <li>
+       Aunque en algunos veh&iacute;culos esta uni&oacute;n directa puede parecer funcionar, en otros puede provocar fallos cr&iacute;ticos en el m&oacute;dulo de cierre centralizado o impedir el funcionamiento correcto de los seguros.
+      </li>
+      <li>
+       En caso de ser estrictamente necesario elegir, se recomienda utilizar &uacute;nicamente el cable que permita la apertura de seguros con el veh&iacute;culo apagado.
+      </li>
+      <li>
+       Si se requiere compatibilidad total en ambos estados (encendido y apagado), deber&aacute; utilizarse un
+       <strong>
+        rel&eacute; (relay) configurado como conmutador
+       </strong>
+       , permitiendo enviar la se&ntilde;al de apertura al cable correspondiente seg&uacute;n el estado de la ignici&oacute;n del veh&iacute;culo.
+      </li>
+     </ul>
+     <p>
+      <strong>
+       Nota t&eacute;cnica adicional:
+      </strong>
+      Durante las pruebas de apertura con el veh&iacute;culo encendido, es posible que la alarma del veh&iacute;culo se active mientras el veh&iacute;culo permanece apagado. En esos casos, &uacute;nicamente ser&aacute; necesario presionar dos veces el bot&oacute;n de apertura de seguros del control remoto para desactivar nuevamente la alarma.
+     </p>
+     <h4>
+      3. Identificaci&oacute;n de Se&ntilde;ales en el Interruptor de Encendido (Llav&iacute;n)
+     </h4>
+     <p>
+      Para la correcta conexi&oacute;n de las funciones de ignici&oacute;n y bloqueo de motor, identifique los siguientes cables en el interruptor principal:
+     </p>
+     <ul>
+      <li>
+       <strong>
+        Positivo de Entrada (12V+):
+       </strong>
+       Presenta voltaje constante incluso sin la llave insertada. Se identifica conectando el probador a tierra y tocando los cables con el veh&iacute;culo apagado.
+      </li>
+      <li>
+       <strong>
+        Accesorio (ACC):
+       </strong>
+       Se activa cuando la llave gira a la primera posici&oacute;n. Alimenta sistemas no cr&iacute;ticos como el radio y el ventilador.
+      </li>
+      <li>
+       <strong>
+        Ignici&oacute;n (IGN):
+       </strong>
+       Se activa en la posici&oacute;n ON. Es el cable responsable de mantener el veh&iacute;culo encendido. Para validarlo, verifique que la se&ntilde;al sea constante y
+       <strong>
+        no parpadee ni se interrumpa
+       </strong>
+       cuando se gira la llave a la posici&oacute;n de arranque (START). Si parpadea, es una se&ntilde;al de accesorios o falsa ignici&oacute;n.
+      </li>
+      <li>
+       <strong>
+        Arranque (START):
+       </strong>
+       Proporciona un pulso de 12V &uacute;nicamente mientras se mantiene la llave en la posici&oacute;n de arranque para accionar el motor.
+      </li>
+     </ul>
+     <p>
+      <strong>
+       Prueba de confirmaci&oacute;n de Ignici&oacute;n:
+      </strong>
+      Si tiene dudas, realice una prueba de corte. Con el veh&iacute;culo apagado, corte el cable sospechoso e intente encenderlo. Si el veh&iacute;culo no arranca o se apaga inmediatamente, ha identificado el cable correcto para el corte de motor.
+     </p>
+    </div>
+   </div>
+  </div>
+  <script>
+   var acc = document.getElementsByClassName("accordion");
+        var i;
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+  </script>
+ </body>
+</html>
