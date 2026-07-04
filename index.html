@@ -48,7 +48,7 @@
             border-bottom: 1px solid #e0e0e0;
             margin-bottom: 10px;
         }
-        .text-block {
+        .text-block { text-align: justify;
             margin: 15px 0;
             line-height: 1.6;
             text-align: justify;
@@ -115,6 +115,9 @@
        </tr>
       </tbody>
      </table>
+
+     <h3>Pol&iacute;tica de Actualizaciones</h3>
+     <p>Este manual es un documento vivo. Las actualizaciones se realizar&aacute;n semestralmente o cuando se introduzca una nueva tecnolog&iacute;a de rastreo o un cambio significativo en la arquitectura el&eacute;ctrica de los veh&iacute;culos soportados. Es responsabilidad del t&eacute;cnico verificar siempre la versi&oacute;n m&aacute;s reciente en el repositorio central.</p>
      <h2>Tabla de Contenido</h2>
      <ol>
       <li>Cubierta y Tabla de Contenido</li>
@@ -137,6 +140,7 @@
       <li>Casos Especiales: Veh&iacute;culos H&iacute;bridos y Start-Stop</li>
       <li>Diagn&oacute;stico T&eacute;cnico y Resoluci&oacute;n de Fallas</li>
       <li>Est&aacute;ndares de Calidad y Protocolo de Entrega Final</li>
+      <li>Experiencia de Campo y Casos Reales</li>
      </ol>
     </div>
     <div class="text-block">
@@ -154,6 +158,9 @@
         <li><strong>GNSS (Global Navigation Satellite System):</strong> Captaci&oacute;n de se&ntilde;ales de m&uacute;ltiples constelaciones (GPS de EE.UU., GLONASS de Rusia, Galileo de la UE, BeiDou de China) para obtener coordenadas de alta precisi&oacute;n.</li>
         <li><strong>A-GPS (Assisted GPS):</strong> Tecnolog&iacute;a que utiliza la red celular para descargar r&aacute;pidamente los datos orbitales de los sat&eacute;lites (Efem&eacute;rides), permitiendo una localizaci&oacute;n r&aacute;pida (TTFF).</li>
         <li><strong>Redes M&oacute;viles (GSM/LTE):</strong> El GPS utiliza un m&oacute;dem celular para enviar datos a la plataforma de monitoreo. Requiere un <strong>APN (Access Point Name)</strong> v&aacute;lido de la operadora.</li>
+
+        <li><strong>Frecuencia de Reporte y Latencia:</strong> La latencia es el retraso entre la captura del dato y su visualizaci&oacute;n en la plataforma. La frecuencia de reporte (ej. cada 30 segundos) influye en la precisi&oacute;n de la ruta y en el consumo de datos de la SIM.</li>
+        <li><strong>Protocolos de Comunicaci&oacute;n:</strong> Los dispositivos utilizan principalmente <strong>TCP (Transmission Control Protocol)</strong> para asegurar que cada paquete de datos llegue íntegro al servidor, o <strong>UDP (User Datagram Protocol)</strong> para transmisiones m&aacute;s r&aacute;pidas pero con menor control de errores.</li>
         <li><strong>LBS (Location Based Services):</strong> Triangulaci&oacute;n por antenas de telefon&iacute;a m&oacute;vil, que permite obtener una ubicaci&oacute;n aproximada en s&oacute;tanos o t&uacute;neles sin GPS.</li>
        </ol>
       </li>
@@ -201,106 +208,89 @@
      </p>
      <ul>
       <li>
-       <strong>
-        1. Instalaci&oacute;n Nueva:
+       <strong>1. Instalaci&oacute;n Nueva:
        </strong>
        Proceso de montar y configurar un dispositivo GPS por primera vez en un veh&iacute;culo o equipo. Esto incluye la conexi&oacute;n del dispositivo a la fuente de alimentaci&oacute;n y la integraci&oacute;n con el sistema el&eacute;ctrico del veh&iacute;culo.
       </li>
       <li>
-       <strong>
-        2. Desinstalaci&oacute;n:
+       <strong>2. Desinstalaci&oacute;n:
        </strong>
        Procedimiento para retirar un dispositivo GPS previamente instalado. Este proceso debe hacerse cuidadosamente para evitar da&ntilde;ar el veh&iacute;culo o el propio dispositivo.
       </li>
       <li>
-       <strong>
-        3. Reinstalaci&oacute;n:
+       <strong>3. Reinstalaci&oacute;n:
        </strong>
        Implica volver a instalar un dispositivo GPS que ha sido desinstalado. Esto puede requerir ajustes en el cableado y la configuraci&oacute;n del dispositivo.
       </li>
       <li>
-       <strong>
-        4. Traspaso:
+       <strong>4. Traspaso:
        </strong>
        Proceso mediante el cual se transfiere un dispositivo GPS de un veh&iacute;culo a otro. Este procedimiento puede implicar la desinstalaci&oacute;n del GPS del primer veh&iacute;culo y su reinstalaci&oacute;n en el nuevo, as&iacute; como la actualizaci&oacute;n de la informaci&oacute;n de configuraci&oacute;n y usuario en el sistema del dispositivo. Es importante asegurarse de que todas las configuraciones y datos previos se transfieran correctamente para mantener la funcionalidad y la continuidad en el seguimiento.
       </li>
       <li>
-       <strong>
-        6. Revisi&oacute;n por Falla:
+       <strong>5. Revisi&oacute;n por Falla:
        </strong>
        Inspecci&oacute;n y diagn&oacute;stico de un dispositivo GPS que no est&aacute; funcionando correctamente. Esto puede incluir pruebas de conexi&oacute;n, verificaci&oacute;n de configuraci&oacute;n y an&aacute;lisis de posibles da&ntilde;os en el equipo.
       </li>
       <li>
-       <strong>
-        7. Revisi&oacute;n Preventiva:
+       <strong>6. Revisi&oacute;n Preventiva:
        </strong>
        (Mantenimiento preventivo) Mantenimiento programado para asegurar que el dispositivo GPS funcione de manera &oacute;ptima. Incluye la verificaci&oacute;n de conexiones, actualizaciones de software y comprobaci&oacute;n del estado general del sistema.
       </li>
       <li>
-       <strong>
-        8. Bloqueo de Motor (Apagado Remoto):
+       <strong>7. Bloqueo de Motor (Apagado Remoto):
        </strong>
        Funci&oacute;n que permite al usuario desactivar el motor de un veh&iacute;culo de forma remota a trav&eacute;s de la plataforma del GPS. Esta caracter&iacute;stica es especialmente &uacute;til en casos de robo.
       </li>
       <li>
-       <strong>
-        9. Apertura de Seguros:
+       <strong>8. Apertura de Seguros:
        </strong>
        Opci&oacute;n que permite desbloquear o abrir las puertas de un veh&iacute;culo a distancia mediante el sistema GPS. Esto se puede hacer a
      trav&eacute;s de una aplicaci&oacute;n m&oacute;vil o un comando remoto.
       </li>
       <li>
-       <strong>
-        10. Bot&oacute;n de P&aacute;nico:
+       <strong>9. Bot&oacute;n de P&aacute;nico:
        </strong>
        Dispositivo de seguridad que, al ser activado, env&iacute;a una se&ntilde;al de alerta a un centro de monitoreo o a contactos predeterminados. Este bot&oacute;n es esencial para situaciones de emergencia.
       </li>
       <li>
-       <strong>
-        11. Ubicaci&oacute;n y Telem&aacute;tica:
+       <strong>10. Ubicaci&oacute;n y Telem&aacute;tica:
        </strong>
        Capacidad de determinar la posici&oacute;n exacta mediante GNSS y transmitir datos de sensores del veh&iacute;culo a trav&eacute;s de redes celulares para su visualizaci&oacute;n en mapas y reportes.
       </li>
       <li>
-       <strong>
-        12. GSM/LTE:
+       <strong>11. GSM/LTE:
        </strong>
        Est&aacute;ndares de comunicaci&oacute;n m&oacute;vil utilizados por el dispositivo para enviar informaci&oacute;n y recibir comandos de la plataforma de monitoreo.
       </li>
       <li>
-       <strong>
-        13. LBS (Location Based Services):
+       <strong>12. LBS (Location Based Services):
        </strong>
        M&eacute;todo de posicionamiento alternativo basado en la proximidad a antenas de telefon&iacute;a, usado como respaldo cuando la se&ntilde;al satelital es bloqueada.
       </li>
       <li>
-       <strong>
-        14. Plataforma de Monitoreo:
+       <strong>13. Plataforma de Monitoreo:
        </strong>
        Software centralizado que recibe, procesa y muestra la informaci&oacute;n enviada por los dispositivos de rastreo.
       </li>
       <li>
-       <strong>
-        15. Pruebas manuales:
+       <strong>14. Pruebas manuales:
        </strong>
        implica realizar las pruebas de funcionamiento directamente, utilizando el probador de l&iacute;nea.
       </li>
       <li>
-       <strong>
-        16. Pruebas:
+       <strong>15. Pruebas:
        </strong>
        Conjunto de procedimientos para verificar el correcto funcionamiento del dispositivo de rastreo una vez instalado. Incluye pruebas de localizaci&oacute;n, transmisi&oacute;n de datos y ejecuci&oacute;n de comandos remotos.
       </li>
       <li>
-       <strong>
-        17. Orden de Trabajo:
+       <strong>16. Orden de Trabajo:
        </strong>
        Documento que detalla las tareas a realizar por el
      t&eacute;cnico, incluyendo la instalaci&oacute;n, desinstalaci&oacute;n, mantenimiento o reparaci&oacute;n de un dispositivo GPS. Suele contener informaci&oacute;n sobre el cliente, el equipo a trabajar y los tiempos estimados.
       </li>
       <li>
-       <strong>
-        18. Datos de Orden de Trabajo:
+       <strong>17. Datos de Orden de Trabajo:
        </strong>
        Informaci&oacute;n espec&iacute;fica que incluye el nombre
      del cliente, la direcci&oacute;n, el tipo de servicio solicitado, los dispositivos involucrados, los costos estimados y cualquier nota adicional que el t&eacute;cnico deba considerar antes de llevar a cabo la tarea.
@@ -345,6 +335,9 @@
     </div>
     <div class="img-container">
      <img src="images/m1_modelos_de_gps_y_sus_funciones_4.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m1_modelos_de_gps_y_sus_funciones_5.png">
     </div>
     <div class="text-block">
      <h3>Serie GV300</h3>
@@ -416,7 +409,7 @@
      <div class="warning-box"><img src="images/warning_icon.png" class="warning-icon"><div><strong>PRECAUCI&Oacute;N:</strong><p>Aseg&uacute;rese de conectar siempre la terminal negativa (Negro) antes de cualquier otra conexi&oacute;n de potencia o se&ntilde;al.</p></div></div>
     </div>
     <div class="img-container">
-     <img src="images/m1_modelos_de_gps_y_sus_funciones_9.png">
+     <img src="images/m1_modelos_de_gps_y_sus_funciones_8.png">
     </div>
 
     <div class="text-block">
@@ -437,10 +430,9 @@
      <div class="warning-box"><img src="images/warning_icon.png" class="warning-icon"><div><strong>PRECAUCION:</strong><p>Esta unidad presenta una falla en el conector, es recomendable eliminar el conector y hacer las conexiones directas.</p></div></div>
     </div>
     <div class="img-container">
-     <img src="images/m1_modelos_de_gps_y_sus_funciones_12.png">
+     <img src="images/m1_modelos_de_gps_y_sus_funciones_11.png">
     </div>
-    <div class="text-block">
-    </div>
+
     <div class="img-container">
      <img src="images/m1_modelos_de_gps_y_sus_funciones_6.png">
     </div>
@@ -456,6 +448,9 @@
       <li><strong>Voltaje (V):</strong> Diferencia de potencial. 12V en livianos, 24V en pesados.</li>
       <li><strong>Corriente (I):</strong> Flujo de electrones, medido en Amperios (A).</li>
       <li><strong>Resistencia (R):</strong> Oposici&oacute;n al paso de la corriente, medida en Ohmios (&Omega;).</li>
+
+      <li><strong>Ca&iacute;da de Voltaje:</strong> Ocurre cuando la energ&iacute;a se pierde en forma de calor debido a cables muy delgados o conexiones flojas. Una ca&iacute;da excesiva puede causar que el GPS se reinicie al intentar transmitir por GPRS.</li>
+      <li><strong>Protecci&oacute;n ESD (Descarga Electroest&aacute;tica):</strong> La electricidad est&aacute;tica del cuerpo humano puede da&ntilde;ar los microprocesadores del GPS. <strong>Regla:</strong> Toque una parte met&aacute;lica del chasis antes de manipular la placa interna del dispositivo.</li>
       <li><strong>Ley de Ohm:</strong> V = I &times; R. Explica por qu&eacute; una mala conexi&oacute;n causa ca&iacute;das de voltaje.</li>
      </ul>
      <h3>Se&ntilde;ales del Veh&iacute;culo</h3>
@@ -537,14 +532,26 @@
      <img src="images/m1_herramientas_necesarias_4.png">
     </div>
     <div class="img-container">
-     <img src="images/m1_herramientas_necesarias_6.png">
+     <img src="images/m1_herramientas_necesarias_5.png">
     </div>
-    <div class="img-container">
-     <img src="images/m1_herramientas_necesarias_7.png">
-    </div>
+    <div class="img-container"><img src="images/m1_herramientas_necesarias_6.png"></div>
+<div class="text-block">
 
-    <div class="text-block">
-     <div class="warning-box"><img src="images/warning_icon.png" class="warning-icon"><div><strong>IMPORTANTE:</strong><p>Se debe asegurar mantener las herramientas en un estado de &oacute;ptimas condiciones para asegurar una instalaci&oacute;n apropiada.</p></div></div>
+     <h4>Equipos de Diagn&oacute;stico Avanzado</h4>
+     <ul>
+      <li><strong>Scanner Automotriz (OBD-II):</strong> Esencial para leer y borrar códigos de error (DTC) que puedan generarse durante las pruebas de bloqueo o por desconexi&oacute;n de sensores.</li>
+      <li><strong>Power Probe:</strong> Permite inyectar voltaje o tierra de forma controlada y medir polaridad instant&aacute;neamente. <strong>ADVERTENCIA:</strong> No usar en redes de datos (CAN/LIN).</li>
+      <li><strong>Osciloscopio:</strong> Herramienta avanzada para visualizar se&ntilde;ales digitales y PWM en tiempo real, vital para identificar l&iacute;neas de datos complejas.</li>
+     </ul>
+
+     <h3>Buenas Pr&aacute;cticas y Mantenimiento</h3>
+     <p>La precisi&oacute;n de una instalaci&oacute;n depende de la fiabilidad de las herramientas:</p>
+     <ul>
+      <li><strong>Calibraci&oacute;n:</strong> Verifique su mult&iacute;metro compar&aacute;ndolo con una fuente de voltaje conocida. Reemplace las puntas si presentan desgaste.</li>
+      <li><strong>Almacenamiento:</strong> Guarde las herramientas en un lugar seco. El caut&iacute;n debe limpiarse despu&eacute;s de cada uso para evitar la oxidaci&oacute;n de la punta.</li>
+     </ul>
+
+    <div class="warning-box"><img src="images/warning_icon.png" class="warning-icon"><div><strong>IMPORTANTE:</strong><p>Se debe asegurar mantener las herramientas en un estado de &oacute;ptimas condiciones para asegurar una instalaci&oacute;n apropiada.</p></div></div>
      <h4>
       Otros materiales utilizados
      </h4>
@@ -564,7 +571,7 @@
       Para asegurar una instalaci&oacute;n eficiente y sin contratiempos, es fundamental reunir todos los componentes antes de iniciar el trabajo:
      </p>
      <p>
-      - Dispositivo GPS. - Datos de orden de trabajo. - Herramientas. - Materiales consumibles: cinta aislante, conectores, fusibles, bridas. - Relay y pulsador: necesarios para el bloqueo de encendido y el bot&oacute;n de p&aacute;nico. Es indispensable disponer de todos estos elementos antes de iniciar la recepci&oacute;n del veh&iacute;culo.
+      - Dispositivo GPS. - Datos de orden de trabajo. - Herramientas. - Materiales consumibles: cinta aislante, conectores, fusibles, bridas. - Rel&eacute; y pulsador: necesarios para el bloqueo de encendido y el bot&oacute;n de p&aacute;nico. Es indispensable disponer de todos estos elementos antes de iniciar la recepci&oacute;n del veh&iacute;culo.
      </p>
     </div>
     <div class="warning-box"><img src="images/warning_icon.png" class="warning-icon"><div><strong>NOTA DE SEGURIDAD CR&Iacute;TICA:</strong>
@@ -613,7 +620,7 @@
      <div class="warning-box"><img src="images/warning_icon.png" class="warning-icon"><div><strong>PRECAUCI&Oacute;N:</strong><p>Es muy importante llenar las ordenes correctamente con toda la informaci&oacute;n solicitada en el formulario.</p></div></div>
     </div>
     <div class="img-container">
-     <img src="images/m1_inspeccion_de_vehiculo_6.png">
+     <img src="images/m1_inspeccion_de_vehiculo_5.png">
     </div>
     <div class="text-block">
      <p>
@@ -665,15 +672,13 @@
      Es fundamental identificar el voltaje operativo del veh&iacute;culo, ya que este influir&aacute; directamente en la selecci&oacute;n de los componentes adecuados para la instalaci&oacute;n, como el rel&eacute;. Es especialmente importante en el caso de veh&iacute;culos pesados, que generalmente operan a 24 voltios, frente a los veh&iacute;culos ligeros que utilizan sistemas de 12 voltios.
      Verificaci&oacute;n del Sistema de Bater&iacute;as
      Para determinar el voltaje en caso de ser veh&iacute;culo pesado, primero se debe inspeccionar el sistema de bater&iacute;as del veh&iacute;culo:
-     Veh&iacute;culos de 24 voltios: Si el veh&iacute;culo utiliza dos bater&iacute;as conectadas en serie, el voltaje total ser&aacute; de 24V, ya que las bater&iacute;as conectadas en serie suman su voltaje, pero mantienen la corriente.
+     Veh&iacute;culos de 24 voltios: Si el veh&iacute;culo utiliza dos bater&iacute;as conectadas en serie, el voltaje total ser&aacute; de 24V
+    <div class="img-container"><img src="images/m1_inspeccion_de_vehiculo_8.png"></div>, ya que las bater&iacute;as conectadas en serie suman su voltaje, pero mantienen la corriente.
+    <div class="img-container"><img src="images/m1_inspeccion_de_vehiculo_10.png"></div>
      </p>
     </div>
-    <div class="img-container">
-     <img src="images/m1_inspeccion_de_vehiculo_8.png">
-    </div>
-    <div class="img-container">
-     <img src="images/m1_inspeccion_de_vehiculo_9.png">
-    </div>
+_TEMP
+_TEMP
 
     <div class="text-block">
      <p>
@@ -701,7 +706,13 @@
      <img src="images/m1_inspeccion_de_vehiculo_12.png">
     </div>
     <div class="img-container">
-     <img src="images/m1_inspeccion_de_vehiculo_13.png">
+     <img src="images/m1_inspeccion_de_vehiculo_14.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m1_inspeccion_de_vehiculo_12.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m1_inspeccion_de_vehiculo_14.png">
     </div>
 
     <div class="text-block">
@@ -743,7 +754,13 @@
      <img src="images/m1_inspeccion_de_vehiculo_19.png">
     </div>
     <div class="img-container">
-     <img src="images/m1_inspeccion_de_vehiculo_20.png">
+     <img src="images/m1_inspeccion_de_vehiculo_21.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m1_inspeccion_de_vehiculo_19.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m1_inspeccion_de_vehiculo_21.png">
     </div>
 
     <div class="text-block">
@@ -782,7 +799,7 @@
      </p>
     </div>
     <div class="img-container">
-     <img src="images/m1_inspeccion_de_vehiculo_24.png">
+     <img src="images/m1_inspeccion_de_vehiculo_23.png">
     </div>
    </div>
    <button class="accordion">
@@ -816,6 +833,9 @@
      <ul>
       <li><strong>Identificaci&oacute;n:</strong> Los cables del SRS son de color <strong>AMARILLO</strong> por norma internacional.</li>
       <li><strong>Prohibiciones:</strong> NUNCA use probadores de l&iacute;nea en cables amarillos. NUNCA intente medir resistencia en detonadores de airbag.</li>
+
+      <li><strong>Sensores de Impacto:</strong> Ubicados generalmente en el frente (viga del parachoques) o en los pilares laterales. Su manipulaci&oacute;n con el veh&iacute;culo encendido puede causar detonaci&oacute;n instant&aacute;nea.</li>
+      <li><strong>Pretensores de Cintur&oacute;n:</strong> Tambi&eacute;n forman parte del SRS. Sus conectores son amarillos y est&aacute;n ubicados en la base de los pilares B.</li>
       <li><strong>Tiempos:</strong> Si debe trabajar cerca del sistema, espere al menos 15 minutos despu&eacute;s de desconectar la bater&iacute;a para que se descarguen los capacitores.</li>
      </ul>
      <div class="warning-box">
@@ -844,8 +864,7 @@
      <img src="images/m2_tecnicas_de_prevencion_de_accidentes_1.png">
     </div>
 
-    <div class="text-block">
-    </div>
+
    </div>
    <button class="accordion">
     10. Prevenci&oacute;n de Cortocircuito y Manejo de Herramientas
@@ -878,6 +897,9 @@
      <img src="images/m2_prevencion_de_corto_circuito_4.png">
     </div>
     <div class="img-container">
+     <img src="images/m2_prevencion_de_corto_circuito_5.png">
+    </div>
+    <div class="img-container">
      <img src="images/m2_prevencion_de_corto_circuito_6.png">
     </div>
     <div class="text-block">
@@ -886,13 +908,19 @@
     <div class="img-container">
      <img src="images/m2_prevencion_de_corto_circuito_7.png">
     </div>
+    <div class="img-container">
+     <img src="images/m2_prevencion_de_corto_circuito_9.png">
+    </div>
     <div class="text-block">
      Identificaci&oacute;n de Cables Una t&eacute;cnica fundamental para evitar accidentes y da&ntilde;os en los componentes del veh&iacute;culo es la correcta identificaci&oacute;n de los cables y el procedimiento adecuado para identificarlos. Aunque este tema se detallar&aacute; m&aacute;s adelante, es importante destacar que se deben evitar cortes o pruebas con el probador de l&iacute;nea en ciertos cables. Esto podr&iacute;a causar problemas que van desde el da&ntilde;o del cable (como en el caso de fibras &oacute;pticas o cables coaxiales de c&aacute;maras de reversa) hasta activar un testigo (si se trata de un sensor de retroalimentaci&oacute;n), o, en el peor de los casos, provocar la detonaci&oacute;n de una bolsa de aire.
      Para diferenciar un cable coaxial de un cable de fibra &oacute;ptica en un arn&eacute;s de veh&iacute;culo, puedes observar las siguientes caracter&iacute;sticas:
      Cable Coaxial: Estructura: Tiene un conductor central de cobre, rodeado por un aislante de pl&aacute;stico, una malla met&aacute;lica o trenzado de cobre (pantalla) y una cubierta exterior. Es m&aacute;s grueso que la mayor&iacute;a de los cables el&eacute;ctricos.
     </div>
     <div class="img-container">
-     <img src="images/m2_prevencion_de_corto_circuito_8.png">
+     <img src="images/m2_prevencion_de_corto_circuito_7.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m2_prevencion_de_corto_circuito_9.png">
     </div>
     <div class="text-block">
      Conector: Suele usar conectores espec&iacute;ficos, como BNC o F-type, y puede tener una forma cil&iacute;ndrica en sus extremos.
@@ -960,12 +988,9 @@
     <div class="img-container">
      <img src="images/m2_prevencion_de_corto_circuito_16.png">
     </div>
-    <div class="img-container">
-     <img src="images/m2_prevencion_de_corto_circuito_17.png">
     </div>
 
-    <div class="text-block">
-    </div>
+
    </div>
    <button class="accordion">
     11. Ensamble del Arn&eacute;s El&eacute;ctrico
@@ -996,9 +1021,17 @@
       <li><strong>Pin 3 (Blanco):</strong> Conexi&oacute;n a la se&ntilde;al de ignici&oacute;n del veh&iacute;culo.</li>
       <li><strong>Pin 12 (Naranja):</strong> Conexi&oacute;n al bot&oacute;n de p&aacute;nico.</li>
      </ul>
+     <h3>Planificaci&oacute;n y Ubicaci&oacute;n del GPS</h3>
+     <p>La ubicaci&oacute;n f&iacute;sica del dispositivo es determinante para la calidad de la se&ntilde;al y la durabilidad del hardware:</p>
+     <ul>
+      <li><strong>Orientaci&oacute;n de la Antena:</strong> La cara superior del GPS (marcada habitualmente con "This side skywards") debe apuntar siempre hacia el cielo. Evite colocarla debajo de superficies met&aacute;licas densas que bloqueen la recepci&oacute;n satelital.</li>
+      <li><strong>Interferencia Electromagn&eacute;tica:</strong> Mantenga el dispositivo alejado de radios, altavoces potentes o m&oacute;dulos de control de motor para evitar ruido en la transmisi&oacute;n de datos.</li>
+      <li><strong>Protecci&oacute;n Ambiental:</strong> Nunca instale el equipo en zonas con riesgo de humedad (desag&uuml;es del aire acondicionado) o calor extremo (cerca de ductos de calefacci&oacute;n). Fije la unidad firmemente con bridas para neutralizar las vibraciones mec&aacute;nicas del veh&iacute;culo.</li>
+     </ul>
+
     </div>
     <div class="img-container">
-     <img src="images/m2_boton_de_panico_6.png">
+     <img src="images/m2_boton_de_panico_5.png">
     </div>
    </div>
    <button class="accordion">
@@ -1007,15 +1040,15 @@
    <div class="panel" id="m2_configuracion_del_relee">
     <div class="text-block">
      Configuraci&oacute;n del Relee
-     Un relay de 5 pines es un interruptor el&eacute;ctrico controlado por una se&ntilde;al, que permite abrir o cerrar circuitos de manera remota. Es ideal para el corte de ignici&oacute;n en sistemas de seguridad de veh&iacute;culos, ya que permite apagar el veh&iacute;culo e impedir que se encienda hasta que se desactive el relay.
+     Un rel&eacute; de 5 pines es un interruptor el&eacute;ctrico controlado por una se&ntilde;al, que permite abrir o cerrar circuitos de manera remota. Es ideal para el corte de ignici&oacute;n en sistemas de seguridad de veh&iacute;culos, ya que permite apagar el veh&iacute;culo e impedir que se encienda hasta que se desactive el rel&eacute;.
      Descripci&oacute;n de los Pines
      - Pin 30: Entrada de corriente. Es el pin al que normalmente se conecta el suministro de corriente que se desea controlar.
-     - Pin 87: Salida normalmente abierta (NO). Cuando el relay est&aacute; activado, este pin se conecta al pin 30, permitiendo el paso de corriente.
-     - Pin 87a: Salida normalmente cerrada (NC). Cuando el relay est&aacute; desactivado, este pin est&aacute; conectado al pin 30, permitiendo el flujo de corriente por defecto.
-     - Pin 85: Tierra (negativo). Este pin se conecta a tierra y permite que el relay funcione adecuadamente cuando recibe se&ntilde;al de activaci&oacute;n.
-     - Pin 86: Activaci&oacute;n del relay (positivo). Recibe una se&ntilde;al de corriente para activar el relay y cambiar el estado de los pines 87 y 87a.
+     - Pin 87: Salida normalmente abierta (NO). Cuando el rel&eacute; est&aacute; activado, este pin se conecta al pin 30, permitiendo el paso de corriente.
+     - Pin 87a: Salida normalmente cerrada (NC). Cuando el rel&eacute; est&aacute; desactivado, este pin est&aacute; conectado al pin 30, permitiendo el flujo de corriente por defecto.
+     - Pin 85: Tierra (negativo). Este pin se conecta a tierra y permite que el rel&eacute; funcione adecuadamente cuando recibe se&ntilde;al de activaci&oacute;n.
+     - Pin 86: Activaci&oacute;n del rel&eacute; (positivo). Recibe una se&ntilde;al de corriente para activar el rel&eacute; y cambiar el estado de los pines 87 y 87a.
      <h3>
-      Operaci&oacute;n Detallada del Rel&eacute; (Relay) de 5 Pines
+      Operaci&oacute;n Detallada del Rel&eacute; (Rel&eacute;) de 5 Pines
      </h3>
      <p>
       El rel&eacute; es un interruptor electromec&aacute;nico fundamental para el corte de ignici&oacute;n. Su funcionamiento se basa en una bobina que, al ser energizada, genera un campo magn&eacute;tico que mueve un contacto f&iacute;sico.
@@ -1055,34 +1088,34 @@
     </div>
     <div class="text-block">
      Configuraci&oacute;n B&aacute;sica para Corte de Ignici&oacute;n
-     En esta configuraci&oacute;n, el relay cortar&aacute; la alimentaci&oacute;n de la l&iacute;nea de ignici&oacute;n cuando est&eacute; activado, evitando que el veh&iacute;culo arranque.
-     1. Pin 30: Con&eacute;ctalo a la l&iacute;nea de alimentaci&oacute;n de ignici&oacute;n del veh&iacute;culo. Este pin es la entrada de corriente al relay. 2. Pin 87a: Con&eacute;ctalo al circuito de ignici&oacute;n del veh&iacute;culo (por ejemplo, a la l&iacute;nea que lleva la corriente al encendido). En estado desactivado (cuando el relay est&aacute; sin activaci&oacute;n), el veh&iacute;culo puede arrancar normalmente porque la corriente fluye de pin 30 a pin 87a. 3. Pin 87: Deja este pin desconectado o &uacute;salo para una funci&oacute;n adicional si se requiere (en esta configuraci&oacute;n, no ser&aacute; necesario para el corte de ignici&oacute;n). 4. Pin 85: Realiza un puente con el pin 30 para que reciba la corriente de ignici&oacute;n. Cuando el relay recibe una se&ntilde;al de activaci&oacute;n (por ejemplo, desde un sistema de seguridad), el circuito se activa y cambia el flujo de corriente de 87a a 87, adem&aacute;s podremos conectar nuestra se&ntilde;al de ignici&oacute;n (cable blanco) en el pin 85 5. Pin 86: Este pin ser&aacute; nuestro activador, aqu&iacute; conectaremos la salida de se&ntilde;al negativa de nuestro GPS. (cable azul GV300, Cable verde Gv58lau)
+     En esta configuraci&oacute;n, el rel&eacute; cortar&aacute; la alimentaci&oacute;n de la l&iacute;nea de ignici&oacute;n cuando est&eacute; activado, evitando que el veh&iacute;culo arranque.
+     1. Pin 30: Con&eacute;ctalo a la l&iacute;nea de alimentaci&oacute;n de ignici&oacute;n del veh&iacute;culo. Este pin es la entrada de corriente al rel&eacute;. 2. Pin 87a: Con&eacute;ctalo al circuito de ignici&oacute;n del veh&iacute;culo (por ejemplo, a la l&iacute;nea que lleva la corriente al encendido). En estado desactivado (cuando el rel&eacute; est&aacute; sin activaci&oacute;n), el veh&iacute;culo puede arrancar normalmente porque la corriente fluye de pin 30 a pin 87a. 3. Pin 87: Deja este pin desconectado o &uacute;salo para una funci&oacute;n adicional si se requiere (en esta configuraci&oacute;n, no ser&aacute; necesario para el corte de ignici&oacute;n). 4. Pin 85: Realiza un puente con el pin 30 para que reciba la corriente de ignici&oacute;n. Cuando el rel&eacute; recibe una se&ntilde;al de activaci&oacute;n (por ejemplo, desde un sistema de seguridad), el circuito se activa y cambia el flujo de corriente de 87a a 87, adem&aacute;s podremos conectar nuestra se&ntilde;al de ignici&oacute;n (cable blanco) en el pin 85 5. Pin 86: Este pin ser&aacute; nuestro activador, aqu&iacute; conectaremos la salida de se&ntilde;al negativa de nuestro GPS. (cable azul GV300, Cable verde Gv58lau)
      Diagrama:
      Funcionamiento
-     1. Relay desactivado: En este estado, el pin 30 se conecta al pin 87a, permitiendo el flujo de corriente hacia la l&iacute;nea de ignici&oacute;n del veh&iacute;culo. Esto permite que el veh&iacute;culo encienda y funcione normalmente.
-     2. Relay activado: Cuando el sistema de seguridad activa el relay (por ejemplo, enviando una se&ntilde;al a trav&eacute;s del pin 86), el pin 30 se conecta al pin 87 y se interrumpe la conexi&oacute;n con 87a, cortando el flujo de corriente hacia la ignici&oacute;n y apagando el veh&iacute;culo.
+     1. Rel&eacute; desactivado: En este estado, el pin 30 se conecta al pin 87a, permitiendo el flujo de corriente hacia la l&iacute;nea de ignici&oacute;n del veh&iacute;culo. Esto permite que el veh&iacute;culo encienda y funcione normalmente.
+     2. Rel&eacute; activado: Cuando el sistema de seguridad activa el rel&eacute; (por ejemplo, enviando una se&ntilde;al a trav&eacute;s del pin 86), el pin 30 se conecta al pin 87 y se interrumpe la conexi&oacute;n con 87a, cortando el flujo de corriente hacia la ignici&oacute;n y apagando el veh&iacute;culo.
     </div>
     <div class="img-container">
      <img src="images/m2_configuracion_del_relee_3.png">
     </div>
     <div class="text-block">
-     Cabe aclarar que para algunos modelos de veh&iacute;culos se utiliza una configuraci&oacute;n modificada del relay que depende de la situaci&oacute;n, se debe configurar, por ejemplo, en los modelos l200 2025 de llave, donde la corriente que llega al llav&iacute;n, es negativa, que, por tanto, no se hace el puente entre los pines 30 y 87.
+     Cabe aclarar que para algunos modelos de veh&iacute;culos se utiliza una configuraci&oacute;n modificada del rel&eacute; que depende de la situaci&oacute;n, se debe configurar, por ejemplo, en los modelos l200 2025 de llave, donde la corriente que llega al llav&iacute;n, es negativa, que, por tanto, no se hace el puente entre los pines 30 y 87.
      A continuaci&oacute;n, una configuraci&oacute;n sobre el caso del modelo Mitsubishi L200
      2025 de llave.
      Funcionamiento:
-     En este caso en particular podemos observar que el pin 85 y pin 30 ya no comparten un puente, lo que significa que la alimentaci&oacute;n bobina debe ser independiente, recomendablemente un positivo constante. Otra observaci&oacute;n es la inversi&oacute;n de los pines 30 y 87a los cuales la direcci&oacute;n cambia, donde el pin 30 sol&iacute;a ser la corriente que entraba al relay ahora es la que sale, y lo mismo para el pin 87a.
-     Es importante tener en cuenta que tanto la se&ntilde;al que entra al relay como la se&ntilde;al de salida deben de ser correctamente se&ntilde;alizadas para no confundir los cables que salen del llav&iacute;n con la se&ntilde;al que va al encendido, esto se puede realizar con solo retirar un poco del aislante de uno de los cables que salen de los pines 30 y 87a, se recomienda marcar &uacute;nicamente solo uno, tradicionalmente el cable del pin 30.
+     En este caso en particular podemos observar que el pin 85 y pin 30 ya no comparten un puente, lo que significa que la alimentaci&oacute;n bobina debe ser independiente, recomendablemente un positivo constante. Otra observaci&oacute;n es la inversi&oacute;n de los pines 30 y 87a los cuales la direcci&oacute;n cambia, donde el pin 30 sol&iacute;a ser la corriente que entraba al rel&eacute; ahora es la que sale, y lo mismo para el pin 87a.
+     Es importante tener en cuenta que tanto la se&ntilde;al que entra al rel&eacute; como la se&ntilde;al de salida deben de ser correctamente se&ntilde;alizadas para no confundir los cables que salen del llav&iacute;n con la se&ntilde;al que va al encendido, esto se puede realizar con solo retirar un poco del aislante de uno de los cables que salen de los pines 30 y 87a, se recomienda marcar &uacute;nicamente solo uno, tradicionalmente el cable del pin 30.
     </div>
     <div class="img-container">
      <img src="images/m2_configuracion_del_relee_4.png">
     </div>
     <div class="img-container">
-     <img src="images/m2_configuracion_del_relee_6.png">
+     <img src="images/m2_configuracion_del_relee_5.png">
     </div>
 
     <div class="text-block">
-     Relay para algunos modelos de motocicletas
-     En algunos modelos de motocicletas, el apagado se realiza enviando un pulso negativo al bot&oacute;n corta corriente, o a la bobina de alta, cabe aclarar que, si bien el apagado podr&iacute;a funcionar sin el relay, se recomienda utilizar el relay para aislar la se&ntilde;al de GPS y la del apagado de la moto, de lo contrario podr&iacute;a ocurrir apagados inesperados.
+     Rel&eacute; para algunos modelos de motocicletas
+     En algunos modelos de motocicletas, el apagado se realiza enviando un pulso negativo al bot&oacute;n corta corriente, o a la bobina de alta, cabe aclarar que, si bien el apagado podr&iacute;a funcionar sin el rel&eacute;, se recomienda utilizar el rel&eacute; para aislar la se&ntilde;al de GPS y la del apagado de la moto, de lo contrario podr&iacute;a ocurrir apagados inesperados.
      A continuaci&oacute;n, una configuraci&oacute;n sobre el caso de motos con apagado con negativo
      Funcionamiento: Como se puede observar en el diagrama, el pin 87a ya no se utiliza, debido a que en este caso lo que necesitamos enviar un pulso negativo contante al sistema de apagado de la motocicleta, en este caso ya no es necesario realizar ning&uacute;n corte en los cables de la motocicleta.
      Se recomienda tomar la se&ntilde;al negativa de la bater&iacute;a de la motocicleta, esto es para minimizar problemas.
@@ -1094,7 +1127,10 @@
    <div class="panel" id="m2_empalmes">
     <div class="text-block">
      Empalmes
-     Ahora que sabemos lo necesario sobre los relays y las configuraciones utilizadas, a continuaci&oacute;n, veremos brevemente sobre los empalmes recomendados en la instalaci&oacute;n de GPS. Empalme Wester Short es una t&eacute;cnica de empalme de cables que se utiliza com&uacute;nmente en instalaciones el&eacute;ctricas para hacer conexiones seguras y duraderas. Es especialmente &uacute;til en aplicaciones de baja tensi&oacute;n y en trabajos de mantenimiento. Este tipo de empalme es parecido al empalme tradicional Wester, pero m&aacute;s corto y simple de realizar.
+     Ahora que sabemos lo necesario sobre los rel&eacute;s y las configuraciones utilizadas, a continuaci&oacute;n, veremos brevemente sobre los empalmes recomendados en la instalaci&oacute;n de GPS.
+     <h4>Empalme Western Union</h4>
+     <p>Para unir dos cables en l&iacute;nea que estar&aacute;n sometidos a tensi&oacute;n mec&aacute;nica, se debe usar el Western Union: se entrelazan los n&uacute;cleos y se enrollan firmemente sobre el cable opuesto antes de esta&ntilde;ar.</p>
+     Empalme Wester Short es una t&eacute;cnica de empalme de cables que se utiliza com&uacute;nmente en instalaciones el&eacute;ctricas para hacer conexiones seguras y duraderas. Es especialmente &uacute;til en aplicaciones de baja tensi&oacute;n y en trabajos de mantenimiento. Este tipo de empalme es parecido al empalme tradicional Wester, pero m&aacute;s corto y simple de realizar.
     </div>
     <div class="img-container">
      <img src="images/m2_empalmes_1.png">
@@ -1121,6 +1157,9 @@
     </div>
     <div class="img-container">
      <img src="images/m2_empalmes_4.png">
+    </div>
+    <div class="img-container">
+     <img src="images/m2_empalmes_6.png">
     </div>
 
     <div class="text-block">
@@ -1154,11 +1193,16 @@
     <div class="img-container">
      <img src="images/m2_empalmes_10.png">
     </div>
-    <div class="img-container">
-     <img src="images/m2_empalmes_11.png">
-    </div>
     <div class="text-block">
-     garantizando una instalaci&oacute;n segura y de calidad.
+
+     <h3>Soldadura y Aislamiento Avanzado</h3>
+     <p>Para instalaciones que requieren la m&aacute;xima fiabilidad mec&aacute;nica y el&eacute;ctrica, se debe aplicar soldadura de esta&ntilde;o:</p>
+     <ul>
+      <li><strong>Esta&ntilde;ado:</strong> Aplique calor al cable, no a la soldadura directamente. Use soldadura de n&uacute;cleo de resina (rosin core) para evitar la corrosi&oacute;n.</li>
+      <li><strong>Uso de Flux:</strong> Aplique una peque&ntilde;a cantidad de fundente (flux) para asegurar que el esta&ntilde;o penetre uniformemente en todas las hebras del cobre.</li>
+      <li><strong>Termoretr&aacute;ctil (Heat Shrink):</strong> El m&eacute;todo superior de aislamiento. Deslice el tubo antes de realizar el empalme y use una pistola de calor para sellar. Proporciona protecci&oacute;n contra la humedad y el roce.</li>
+     </ul>
+    garantizando una instalaci&oacute;n segura y de calidad.
     </div>
    </div>
    <button class="accordion">
@@ -1198,13 +1242,13 @@
      <img src="images/m2_uso_de_terminales_remachables_4.png">
     </div>
     <div class="img-container">
+     <img src="images/m2_uso_de_terminales_remachables_5.png">
+    </div>
+    <div class="img-container">
      <img src="images/m2_uso_de_terminales_remachables_6.png">
     </div>
     <div class="img-container">
      <img src="images/m2_uso_de_terminales_remachables_7.png">
-    </div>
-    <div class="img-container">
-     <img src="images/m2_uso_de_terminales_remachables_8.png">
     </div>
     <div class="text-block">
      Para conexiones directas a los bornes de la bater&iacute;a, las terminales aseguran una conexi&oacute;n estable y evitan el deslizamiento o el aflojamiento, lo cual es fundamental en sistemas de GPS y otros dispositivos que requieren alimentaci&oacute;n continua y confiable.
@@ -1212,7 +1256,7 @@
     </div>
    </div>
    <button class="accordion">
-    15. Instalaci&oacute;n de Perif&eacute;ricos: Bot&oacute;n de P&aacute;nico
+    15. Instalaci&oacute;n de Perif&eacute;ricos: Bot&oacute;n de P&aacute;nico y Sensores
    </button>
    <div class="panel" id="m2_boton_de_panico">
     <div class="text-block">
@@ -1366,7 +1410,7 @@
       <li>
        Si se requiere compatibilidad total en ambos estados (encendido y apagado), deber&aacute; utilizarse un
        <strong>
-        rel&eacute; (relay) configurado como conmutador
+        rel&eacute; (rel&eacute;) configurado como conmutador
        </strong>
        , permitiendo enviar la se&ntilde;al de apertura al cable correspondiente seg&uacute;n el estado de la ignici&oacute;n del veh&iacute;culo.
       </li>
@@ -1467,6 +1511,34 @@
    <div class="panel" id="m3_diagnostico">
     <div class="text-block">
      <h3>Gu&iacute;a de Diagn&oacute;stico</h3>
+     <h4>Tabla de Resoluci&oacute;n de Problemas</h4>
+     <table class="control-table">
+      <thead>
+       <tr>
+        <th>S&iacute;ntoma</th>
+        <th>Causa Probable</th>
+        <th>Acci&oacute;n Correctiva</th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td>GPS no reporta (LED Rojo apagado)</td>
+        <td>Falta de alimentaci&oacute;n.</td>
+        <td>Revisar fusible del equipo y voltajes en Pin 11 y 6.</td>
+       </tr>
+       <tr>
+        <td>Veh&iacute;culo no arranca</td>
+        <td>Rel&eacute; bloqueado o mal conectado.</td>
+        <td>Verificar conexi&oacute;n en pines 30 y 87a. Probar puente manual.</td>
+       </tr>
+       <tr>
+        <td>Posici&oacute;n GPS est&aacute;tica o incorrecta</td>
+        <td>Interferencia met&aacute;lica o antena invertida.</td>
+        <td>Reubicar equipo con visi&oacute;n al cielo. Verificar cara superior.</td>
+       </tr>
+      </tbody>
+     </table>
+
      <ul>
       <li><strong>GPS no reporta:</strong> Verificar alimentaci&oacute;n (Pin 11 y 6) y se&ntilde;al celular (LEDs).</li>
       <li><strong>Consumo Parasitario:</strong> Un GPS normal consume 10-50mA. Si consume >150mA, descargar&aacute; la bater&iacute;a.</li>
@@ -1479,6 +1551,14 @@
    </button>
    <div class="panel" id="m3_calidad">
     <div class="text-block">
+
+     <h3>Est&aacute;ndares Visuales OEM Style</h3>
+     <p>Una instalaci&oacute;n de alta calidad debe ser invisible para el ojo no entrenado:</p>
+     <ul>
+      <li><strong>Ocultamiento:</strong> El GPS y el rel&eacute; deben fijarse con bridas detr&aacute;s de estructuras met&aacute;licas o pl&aacute;sticos profundos. Nunca deje cables colgando cerca de los pedales.</li>
+      <li><strong>Cinta de Tela (Fleece):</strong> Para un acabado id&eacute;ntico al original, use cinta de tela en lugar de cinta aislante de vinilo en las zonas visibles del arn&eacute;s.</li>
+      <li><strong>Rutas de Arn&eacute;s:</strong> Siga siempre los mazos de cables originales del veh&iacute;culo.</li>
+     </ul>
      <h3>Checklist de Entrega</h3>
      <ol>
       <li>Verificar reporte en plataforma (Ignici&oacute;n On/Off).</li>
@@ -1487,6 +1567,28 @@
       <li>Verificar que no queden testigos (Check Engine, Airbag) encendidos.</li>
       <li>Limpieza del &aacute;rea de trabajo y restauraci&oacute;n de paneles.</li>
      </ol>
+    </div>
+   </div>
+
+   <button class="accordion">
+    21. Experiencia de Campo y Casos Reales
+   </button>
+   <div class="panel" id="m4_casos_reales">
+    <div class="text-block">
+     <h3>Lecciones Aprendidas en Instalaciones</h3>
+     <p>La experiencia acumulada nos permite prevenir errores comunes que afectan la operaci&oacute;n:</p>
+
+     <h4>Caso 1: Falsa Ignici&oacute;n por Ruido en el Alternador</h4>
+     <p>En algunos veh&iacute;culos, conectar el cable de ignici&oacute;n a una se&ntilde;al con mucho ruido el&eacute;ctrico causa que el GPS reporte encendidos y apagados constantes.
+     <strong>Soluci&oacute;n:</strong> Instalar un condensador de desacoplo o cambiar el punto de toma a una l&iacute;nea m&aacute;s limpia proveniente directamente de la fusiblera.</p>
+
+     <h4>Caso 2: Interferencia GNSS por Parabrisas T&eacute;rmicos</h4>
+     <p>Ciertos veh&iacute;culos de alta gama poseen una malla met&aacute;lica en el parabrisas para el desempa&ntilde;ado, lo que bloquea la se&ntilde;al satelital.
+     <strong>Soluci&oacute;n:</strong> Reubicar el GPS en el pilar A o en el parachoques pl&aacute;stico (si la unidad es Waterproof).</p>
+
+     <h4>Caso 3: Descarga de Bater&iacute;a por punto de Tierra Inadecuado</h4>
+     <p>Una tierra con alta resistencia impide que el equipo entre en Sleep Mode correctamente, manteniendo el m&oacute;dem GSM al m&aacute;ximo consumo.
+     <strong>Soluci&oacute;n:</strong> Limpiar la pintura del punto de contacto al chasis y usar una terminal de anillo remachada.</p>
     </div>
    </div>
   </div>
