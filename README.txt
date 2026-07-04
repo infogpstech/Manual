@@ -22,6 +22,9 @@ DETALLES TÉCNICOS RELEVANTES:
 - La lógica de los acordeones se maneja mediante JavaScript nativo, eliminando dependencias externas y asegurando una carga rápida.
 - Se ha prestado especial atención a la coherencia en la redacción, uniendo oraciones fragmentadas por la extracción de PDF original.
 
+NORMAS DE DESARROLLO:
+El proyecto se rige por un proceso de desarrollo estándar obligatorio detallado en NORMAS_DESARROLLO.md. Este proceso incluye fases de auditoría, registro de hallazgos, respaldos previos y revisiones de código para garantizar la máxima calidad y trazabilidad.
+
 ---
 CHECKLIST DE OBJETIVOS Y TAREAS PENDIENTES
 
