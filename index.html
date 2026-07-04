@@ -97,6 +97,10 @@
       <li>Uso de Terminales Remachables</li>
       <li>Instalaci&oacute;n de Perif&eacute;ricos: Bot&oacute;n de P&aacute;nico</li>
       <li>Identificaci&oacute;n Avanzada de Conductores y Se&ntilde;ales</li>
+      <li>Electr&oacute;nica Automotriz Moderna: Redes CAN BUS y LIN BUS</li>
+      <li>Casos Especiales: Veh&iacute;culos H&iacute;bridos y Start-Stop</li>
+      <li>Diagn&oacute;stico T&eacute;cnico y Resoluci&oacute;n de Fallas</li>
+      <li>Est&aacute;ndares de Calidad y Protocolo de Entrega Final</li>
      </ol>
     </div>
     <div class="text-block">
@@ -1352,6 +1356,160 @@
       </strong>
       Si tiene dudas, realice una prueba de corte. Con el veh&iacute;culo apagado, corte el cable sospechoso e intente encenderlo. Si el veh&iacute;culo no arranca o se apaga inmediatamente, ha identificado el cable correcto para el corte de motor.
      </p>
+    </div>
+   </div>
+   <button class="accordion">
+    15. Electr&oacute;nica Automotriz Moderna: Redes CAN BUS y LIN BUS
+   </button>
+   <div class="panel" id="m3_can_bus">
+    <div class="text-block">
+     <h3>Introducci&oacute;n a las Redes de Datos Vehiculares</h3>
+     <p>
+      En los veh&iacute;culos modernos, la comunicaci&oacute;n entre los diferentes m&oacute;dulos electr&oacute;nicos (ECU, BCM, ABS, SRS) no se realiza mediante cables individuales para cada se&ntilde;al, sino a trav&eacute;s de redes de datos multiplexadas. Para un t&eacute;cnico instalador, identificar y respetar estas redes es cr&iacute;tico, ya que una intervenci&oacute;n incorrecta puede inhabilitar el veh&iacute;culo por completo o generar fallos intermitentes dif&iacute;ciles de diagnosticar.
+     </p>
+     <h4>1. CAN BUS (Controller Area Network)</h4>
+     <p>
+      Es el est&aacute;ndar de comunicaci&oacute;n m&aacute;s extendido. Se basa en un par de cables trenzados entre s&iacute; para minimizar la interferencia electromagn&eacute;tica:
+     </p>
+     <ul>
+      <li><strong>CAN High (CAN H):</strong> Generalmente presenta un voltaje de 2.5V en reposo y sube a 3.5V durante la transmisi&oacute;n.</li>
+      <li><strong>CAN Low (CAN L):</strong> Presenta un voltaje de 2.5V en reposo y baja a 1.5V durante la transmisi&oacute;n.</li>
+     </ul>
+     <p>
+      <strong>Identificaci&oacute;n Visual:</strong> Siempre busque pares de cables de calibre delgado trenzados con una frecuencia constante. No se confunda con los pares trenzados de los altavoces, que suelen ser de mayor calibre.
+     </p>
+     <div class="warning-box">
+      <img src="images/warning_icon.png" class="warning-icon">
+      <div>
+       <strong>PROHIBICI&Oacute;N CR&Iacute;TICA:</strong>
+       <p>NUNCA utilice un probador de l&iacute;nea (l&aacute;mpara de prueba) en cables trenzados de red CAN. La baja resistencia de la l&aacute;mpara puede inyectar o derivar corriente suficiente para "tumbar" la red, provocando que el veh&iacute;culo entre en modo de emergencia o bloquee el encendido.</p>
+      </div>
+     </div>
+     <h4>2. LIN BUS (Local Interconnect Network)</h4>
+     <p>
+      Es una red de un solo cable, m&aacute;s lenta y econ&oacute;mica que CAN, utilizada para funciones no cr&iacute;ticas como controles de ventanas, espejos o sensores de lluvia. Aunque es menos sensible que CAN, una derivaci&oacute;n a tierra o a 12V en este cable anular&aacute; todas las funciones asociadas a ese nodo.
+     </p>
+     <h3>Riesgos de Intervenci&oacute;n</h3>
+     <ul>
+      <li><strong>Generaci&oacute;n de DTC:</strong> Al intervenir una l&iacute;nea de datos, se pueden generar códigos de error (Diagnostic Trouble Codes) que quedar&aacute;n registrados en la memoria de los m&oacute;dulos, requiriendo un esc&aacute;ner para su borrado.</li>
+      <li><strong>Incompatibilidad de Alarmas:</strong> Si el dispositivo GPS intenta leer datos CAN (como estado de puertas o ignici&oacute;n) y no est&aacute; correctamente configurado para el protocolo del veh&iacute;culo, puede generar "ruido" en la red.</li>
+     </ul>
+     <p>
+      <strong>Recomendaci&oacute;n Profesional:</strong> Si no es estrictamente necesario para la funcionalidad solicitada (como lectura de combustible por CAN), evite cualquier conexi&oacute;n o empalme en estas l&iacute;neas. Utilice siempre se&ntilde;ales anal&oacute;gicas tradicionales cuando est&eacute;n disponibles.
+     </p>
+    </div>
+   </div>
+   <button class="accordion">
+    16. Casos Especiales: Veh&iacute;culos H&iacute;bridos y Start-Stop
+   </button>
+   <div class="panel" id="m3_casos_especiales">
+    <div class="text-block">
+     <h3>1. Veh&iacute;culos H&iacute;bridos y El&eacute;ctricos (EV/HEV)</h3>
+     <p>
+      La instalaci&oacute;n en veh&iacute;culos de propulsi&oacute;n el&eacute;ctrica requiere un nivel de precauci&oacute;n superior debido a los sistemas de alto voltaje (HV).
+     </p>
+     <div class="warning-box">
+      <img src="images/warning_icon.png" class="warning-icon">
+      <div>
+       <strong>PELIGRO DE MUERTE:</strong>
+       <p>NUNCA intervenga, corte o pruebe cables de color <strong>NARANJA</strong>. Este color es el estándar universal para cables de alta tensión (desde 200V hasta más de 600V DC). El contacto accidental puede provocar electrocución fatal o daños irreparables al inversor del vehículo.</p>
+      </div>
+     </div>
+     <p><strong>Recomendaciones para H&iacute;bridos:</strong></p>
+     <ul>
+      <li>Busque siempre la bater&iacute;a de servicio (12V) para la alimentaci&oacute;n del GPS.</li>
+      <li>No realice cortes de ignici&oacute;n en l&iacute;neas de alta potencia. Prefiera el corte en el rel&eacute; de la bomba de combustible o l&iacute;neas de se&ntilde;al de bajo voltaje (si el procedimiento est&aacute; homologado).</li>
+     </ul>
+     <h3>2. Sistemas Start-Stop y Smart Key (Push Start)</h3>
+     <p>
+      Los veh&iacute;culos con bot&oacute;n de encendido no tienen un llav&iacute;n mec&aacute;nico tradicional, lo que cambia la forma de identificar la ignici&oacute;n.
+     </p>
+     <ul>
+      <li><strong>Identificaci&oacute;n de Ignici&oacute;n:</strong> La se&ntilde;al suele encontrarse detr&aacute;s del bot&oacute;n Start/Stop o en el m&oacute;dulo BCM. Tenga cuidado, ya que muchas veces estas son se&ntilde;ales de datos o pulsos l&oacute;gicos de 5V.</li>
+      <li><strong>Bloqueo de Motor:</strong> En estos veh&iacute;culos, es m&aacute;s seguro realizar el corte en el sistema de arranque (Starter) o en el m&oacute;dulo de combustible, evitando interferir con el sistema de proximidad de la llave.</li>
+     </ul>
+     <h3>3. Veh&iacute;culos de 24V (Carga Pesada)</h3>
+     <p>
+      Aunque la mayor&iacute;a de los GPS modernos soportan hasta 36V, el punto cr&iacute;tico es el rel&eacute; (relay).
+     </p>
+     <div class="warning-box">
+      <img src="images/warning_icon.png" class="warning-icon">
+      <div>
+       <strong>REGLA T&Eacute;CNICA:</strong>
+       <p>Si el vehículo opera a 24V (común en camiones y maquinaria pesada), DEBE utilizar un relé diseñado específicamente para 24V. El uso de un relé de 12V en un sistema de 24V provocará que la bobina se queme en pocos minutos, dejando el vehículo inmovilizado o provocando un incendio menor por sobrecalentamiento.</p>
+      </div>
+     </div>
+    </div>
+   </div>
+   <button class="accordion">
+    17. Diagn&oacute;stico T&eacute;cnico y Resoluci&oacute;n de Fallas
+   </button>
+   <div class="panel" id="m3_diagnostico">
+    <div class="text-block">
+     <h3>Gu&iacute;a de Diagn&oacute;stico R&aacute;pido</h3>
+     <p>
+      El &eacute;xito de un t&eacute;cnico no solo reside en la instalaci&oacute;n, sino en su capacidad para resolver problemas de forma l&oacute;gica y eficiente.
+     </p>
+     <h4>1. El GPS no reporta a la plataforma</h4>
+     <ul>
+      <li><strong>Causa 1: Falta de alimentaci&oacute;n.</strong> Verifique con un mult&iacute;metro que el Pin 11 (Positivo) tenga 12V/24V constantes y que el Pin 6 (Negativo) tenga buena continuidad a tierra.</li>
+      <li><strong>Causa 2: Problemas de Red Celular (GSM/LTE).</strong> Verifique los LEDs del dispositivo. Si el LED de red parpadea r&aacute;pido, podr&iacute;a ser falta de cr&eacute;dito en la SIM, APN mal configurado o falta de cobertura.</li>
+      <li><strong>Causa 3: Dispositivo en Sleep Mode.</strong> Algunos equipos dejan de reportar si no detectan movimiento o ignici&oacute;n. Mueva el veh&iacute;culo o encienda el motor para "despertar" el equipo.</li>
+     </ul>
+     <h4>2. El veh&iacute;culo no arranca despu&eacute;s de la instalaci&oacute;n</h4>
+     <ul>
+      <li><strong>Causa 1: Rel&eacute; mal conectado.</strong> Verifique que los cables de ignici&oacute;n est&eacute;n en los pines 30 y 87a del rel&eacute;.</li>
+      <li><strong>Causa 2: Fusible del veh&iacute;culo quemado.</strong> Revise la caja de fusibles principal. Es posible que durante la b&uacute;squeda de se&ntilde;ales se haya provocado un cortocircuito accidental.</li>
+      <li><strong>Causa 3: Bloqueo activo.</strong> Verifique si se envi&oacute; un comando de bloqueo por error desde la plataforma.</li>
+     </ul>
+     <h3>Consumo Parasitario y Bater&iacute;a</h3>
+     <p>
+      Un GPS instalado incorrectamente puede descargar la bater&iacute;a del veh&iacute;culo en pocos d&iacute;as.
+     </p>
+     <ul>
+      <li><strong>Consumo Normal:</strong> Un dispositivo en reposo debe consumir entre 10mA y 50mA.</li>
+      <li><strong>Problema:</strong> Si el GPS est&aacute; mal configurado y nunca entra en "Sleep Mode", o si se conect&oacute; la ignici&oacute;n (Pin 3) a un positivo constante, el equipo se mantendr&aacute; a m&aacute;xima potencia consumiendo m&aacute;s de 150mA, lo que agotar&aacute; una bater&iacute;a d&eacute;bil en menos de 48 horas.</li>
+     </ul>
+     <div class="warning-box">
+      <img src="images/warning_icon.png" class="warning-icon">
+      <div>
+       <strong>CONSEJO T&Eacute;CNICO:</strong>
+       <p>Siempre verifique la se&ntilde;al de ignici&oacute;n. Si el GPS cree que el veh&iacute;culo está encendido (cuando no lo está), no entrará en modo de ahorro de energía.</p>
+      </div>
+     </div>
+    </div>
+   </div>
+   <button class="accordion">
+    18. Est&aacute;ndares de Calidad y Protocolo de Entrega Final
+   </button>
+   <div class="panel" id="m3_calidad">
+    <div class="text-block">
+     <h3>Est&aacute;ndares de Calidad de Instalaci&oacute;n</h3>
+     <p>
+      Una instalaci&oacute;n profesional no solo debe funcionar, sino parecer parte original del veh&iacute;culo (estilo OEM).
+     </p>
+     <ul>
+      <li><strong>Ocultamiento:</strong> El dispositivo y el rel&eacute; deben estar en un lugar no visible sin desmontar paneles. Evite dejarlos cerca de la columna de direcci&oacute;n o zonas f&aacute;cilmente accesibles desde abajo del tablero.</li>
+      <li><strong>Organizaci&oacute;n del Arn&eacute;s:</strong> Los cables excedentes deben enrollarse de forma estética y sujetarse con bridas (cinchos) para evitar ruidos por vibraci&oacute;n.</li>
+      <li><strong>Integraci&oacute;n:</strong> Siempre que sea posible, siga las rutas de los mazos de cables originales del veh&iacute;culo.</li>
+     </ul>
+     <h3>Protocolo de Verificaci&oacute;n Post-Instalaci&oacute;n</h3>
+     <p>
+      Antes de cerrar los paneles y entregar el veh&iacute;culo, es obligatorio realizar el siguiente checklist:
+     </p>
+     <ol>
+      <li><strong>Prueba de Ignici&oacute;n:</strong> Verifique que en la plataforma el estado cambie de "Apagado" a "Encendido" en tiempo real.</li>
+      <li><strong>Prueba de Bloqueo:</strong> Con el motor encendido, env&iacute;e el comando de bloqueo. El veh&iacute;culo debe apagarse de forma segura. <em>Nota: Realice esta prueba en un lugar seguro y con el veh&iacute;culo detenido.</em></li>
+      <li><strong>Prueba de P&aacute;nico:</strong> Presione el bot&oacute;n de p&aacute;nico y confirme la recepci&oacute;n de la alerta en el centro de monitoreo o aplicaci&oacute;n.</li>
+      <li><strong>Revisi&oacute;n de Testigos:</strong> Aseg&uacute;rese de que no hayan quedado luces de advertencia (Check Engine, Airbag, ABS) encendidas en el tablero.</li>
+      <li><strong>Escaneo de DTC:</strong> Si dispone de un esc&aacute;ner OBD-II, realice un borrado de códigos de error que pudieron generarse durante las pruebas.</li>
+     </ol>
+     <h3>Entrega Final al Cliente</h3>
+     <ul>
+      <li><strong>Limpieza:</strong> Retire restos de cables, trozos de cinta o pl&aacute;sticos del interior del veh&iacute;culo.</li>
+      <li><strong>Restauraci&oacute;n:</strong> Verifique que todos los paneles, tapas y tornillos hayan sido colocados en su posici&oacute;n original y que no queden piezas flojas.</li>
+      <li><strong>Firma de Conformidad:</strong> Solicite al cliente la firma de la orden de trabajo, confirmando que el veh&iacute;culo se entrega en perfectas condiciones y el sistema funciona correctamente.</li>
+     </ul>
     </div>
    </div>
   </div>
