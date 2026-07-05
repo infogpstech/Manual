@@ -20,7 +20,7 @@
         }
         .cover-page h1 {
             text-align: center;
-            font-size: 3.2em;
+            font-size: 2.5em;
             margin: 20px 0;
             color: #1a73e8;
             line-height: 1.1;
@@ -34,7 +34,7 @@
         }
         .doc-metadata {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
             max-width: 600px;
             margin: 40px auto;
@@ -74,6 +74,9 @@
             font-size: 1.6em;
         }
 
+
+        ol li a { color: #333; text-decoration: none; transition: 0.2s; display: block; padding: 2px 0; }
+        ol li a:hover { color: #1a73e8; padding-left: 5px; }
   </style>
  </head>
  <body>
@@ -93,7 +96,7 @@
     <div class="img-container" style="margin-bottom: 0;">
      <img alt="Veh&iacute;culos" src="images/intro_manual_borrador_i_2.png" style="max-width: 100%; border-radius: 12px;">
     </div>
-    <div class="back-to-top"><a href="#">↑ Volver al &Iacute;ndice</a></div>
+    <div class="back-to-top"><a href="#intro_manual_borrador_i">↑ Volver al &Iacute;ndice</a></div>
    </div>
    <button class="accordion">
     1. Cubierta y Tabla de Contenido
@@ -120,31 +123,39 @@
 
      <h2>Tabla de Contenido</h2>
      <ol>
-      <li>Cubierta y Tabla de Contenido</li>
-      <li>Introducci&oacute;n T&eacute;cnica</li>
-      <li>Glosario de T&eacute;rminos y Conceptos Claves</li>
-      <li>Arquitectura de Hardware: Modelos de GPS</li>
-      <li>Fundamentos de Electr&oacute;nica Vehicular</li>
-      <li>Herramientas y Equipo de Medici&oacute;n</li>
-      <li>Protocolo de Inspecci&oacute;n y Recepci&oacute;n del Veh&iacute;culo</li>
-      <li>Medidas de Seguridad Personal y Vehicular</li>
-      <li>Prevenci&oacute;n de Accidentes</li>
-      <li>Prevenci&oacute;n de Cortocircuito y Manejo de Herramientas</li>
-      <li>Ensamble del Arn&eacute;s El&eacute;ctrico</li>
-      <li>Configuraci&oacute;n y Conexi&oacute;n de Rel&eacute;s (Corte de Ignici&oacute;n)</li>
-      <li>T&eacute;cnicas de Empalme y Encintado</li>
-      <li>Uso de Terminales Remachables</li>
-      <li>Instalaci&oacute;n de Perif&eacute;ricos: Bot&oacute;n de P&aacute;nico y Sensores</li>
-      <li>Identificaci&oacute;n Avanzada de Conductores y Se&ntilde;ales</li>
-      <li>Electr&oacute;nica Automotriz Moderna: Redes CAN/LIN</li>
-      <li>Casos Especiales: H&iacute;bridos y Start-Stop</li>
-      <li>Diagn&oacute;stico T&eacute;cnico y Resoluci&oacute;n de Fallas</li>
-      <li>Est&aacute;ndares de Calidad y Protocolo de Entrega</li>
-      <li>Experiencia de Campo y Casos Reales</li>
+      <li><a href="#intro_manual_borrador_i" onclick="openSection('intro_manual_borrador_i')">Cubierta y Tabla de Contenido</a></li>
+      <li><a href="#m1_introduccion" onclick="openSection('m1_introduccion')">Introducci&oacute;n T&eacute;cnica</a></li>
+      <li><a href="#m1_terminos_y_conceptos_claves" onclick="openSection('m1_terminos_y_conceptos_claves')">Glosario de T&eacute;rminos y Conceptos Claves</a></li>
+      <li><a href="#m1_modelos_de_gps_y_sus_funciones" onclick="openSection('m1_modelos_de_gps_y_sus_funciones')">Arquitectura de Hardware: Modelos de GPS</a></li>
+      <li><a href="#m1_fundamentos_electronica" onclick="openSection('m1_fundamentos_electronica')">Fundamentos de Electr&oacute;nica Vehicular</a></li>
+      <li><a href="#m1_herramientas_necesarias" onclick="openSection('m1_herramientas_necesarias')">Herramientas y Equipo de Medici&oacute;n</a></li>
+      <li><a href="#m1_inspeccion_de_vehiculo" onclick="openSection('m1_inspeccion_de_vehiculo')">Protocolo de Inspecci&oacute;n y Recepci&oacute;n del Veh&iacute;culo</a></li>
+      <li><a href="#m2_i_medidas_de_seguridad" onclick="openSection('m2_i_medidas_de_seguridad')">Medidas de Seguridad Personal y Vehicular</a></li>
+      <li><a href="#m2_tecnicas_de_prevencion_de_accidentes" onclick="openSection('m2_tecnicas_de_prevencion_de_accidentes')">Prevenci&oacute;n de Accidentes</a></li>
+      <li><a href="#m2_prevencion_de_corto_circuito" onclick="openSection('m2_prevencion_de_corto_circuito')">Prevenci&oacute;n de Cortocircuito y Manejo de Herramientas</a></li>
+      <li><a href="#m2_ensamble_del_arnes_electrico" onclick="openSection('m2_ensamble_del_arnes_electrico')">Ensamble del Arn&eacute;s El&eacute;ctrico</a></li>
+      <li><a href="#m2_configuracion_del_relee" onclick="openSection('m2_configuracion_del_relee')">Configuraci&oacute;n y Conexi&oacute;n de Rel&eacute;s (Corte de Ignici&oacute;n)</a></li>
+      <li><a href="#m2_empalmes" onclick="openSection('m2_empalmes')">T&eacute;cnicas de Empalme y Encintado</a></li>
+      <li><a href="#m2_uso_de_terminales_remachables" onclick="openSection('m2_uso_de_terminales_remachables')">Uso de Terminales Remachables</a></li>
+      <li><a href="#m2_boton_de_panico" onclick="openSection('m2_boton_de_panico')">Instalaci&oacute;n de Perif&eacute;ricos: Bot&oacute;n de P&aacute;nico y Sensores</a></li>
+      <li><a href="#m2_identificacion_de_los_cables" onclick="openSection('m2_identificacion_de_los_cables')">Identificaci&oacute;n Avanzada de Conductores y Se&ntilde;ales</a></li>
+      <li><a href="#m3_can_bus" onclick="openSection('m3_can_bus')">Electr&oacute;nica Automotriz Moderna: Redes CAN/LIN</a></li>
+      <li><a href="#m3_casos_especiales" onclick="openSection('m3_casos_especiales')">Casos Especiales: H&iacute;bridos y Start-Stop</a></li>
+      <li><a href="#m3_diagnostico" onclick="openSection('m3_diagnostico')">Diagn&oacute;stico T&eacute;cnico y Resoluci&oacute;n de Fallas</a></li>
+      <li><a href="#m3_calidad" onclick="openSection('m3_calidad')">Est&aacute;ndares de Calidad y Protocolo de Entrega</a></li>
+      <li><a href="#m4_casos_reales" onclick="openSection('m4_casos_reales')">Experiencia de Campo y Casos Reales</a></li>
      </ol>
     </div>
     <div class="text-block">
      <h3>Fundamentos y Conocimientos Previos (Presaberes)</h3>
+
+     <h4>Configuraci&oacute;n via SMS (Ejemplos Est&aacute;ndar)</h4>
+     <p>Antes de que el equipo reporte a plataforma, se debe configurar via SMS:</p>
+     <ul>
+      <li><strong>APN:</strong> <code>AT+APN=nombre.apn,usuario,clave</code> (Permite salida a internet).</li>
+      <li><strong>Servidor/IP:</strong> <code>AT+SERVER=1,ip.del.servidor,puerto</code> (Destino de los datos).</li>
+      <li><strong>Frecuencia:</strong> <code>AT+REPORT=frecuencia_segundos</code> (Intervalo de env&iacute;o).</li>
+     </ul>
      <h4>GPS vs. Rastreador (Tracker)</h4>
      <p>Un navegador GPS s&oacute;lo recibe se&ntilde;ales. Un <strong>Rastreador</strong> recibe y <strong>transmite</strong> datos via celular (GSM/LTE). Sin SIM o cobertura, el equipo no reporta.</p>
      <ul>
@@ -180,7 +191,7 @@
       </li>
      </ul>
     </div>
-    <div class="back-to-top"><a href="#">↑ Volver al &Iacute;ndice</a></div>
+    <div class="back-to-top"><a href="#intro_manual_borrador_i">↑ Volver al &Iacute;ndice</a></div>
    </div>
    <button class="accordion">
     2. Introducci&oacute;n T&eacute;cnica
@@ -197,7 +208,7 @@
       La capacitaci&oacute;n abarca el manejo de herramientas especializadas, la interpretaci&oacute;n de diagramas complejos y la aplicaci&oacute;n de protocolos de seguridad rigurosos. Al finalizar este manual, se incluye una secci&oacute;n dedicada a las particularidades de los veh&iacute;culos con los que operamos habitualmente, proporcionando un conocimiento pr&aacute;ctico directo para el campo de trabajo.
      </p>
     </div>
-    <div class="back-to-top"><a href="#">↑ Volver al &Iacute;ndice</a></div>
+    <div class="back-to-top"><a href="#intro_manual_borrador_i">↑ Volver al &Iacute;ndice</a></div>
    </div>
    <button class="accordion">
     3. Glosario de T&eacute;rminos y Conceptos Claves
@@ -234,6 +245,12 @@
         4. Traspaso:
        </strong>
        Proceso mediante el cual se transfiere un dispositivo GPS de un veh&iacute;culo a otro. Este procedimiento puede implicar la desinstalaci&oacute;n del GPS del primer veh&iacute;culo y su reinstalaci&oacute;n en el nuevo, as&iacute; como la actualizaci&oacute;n de la informaci&oacute;n de configuraci&oacute;n y usuario en el sistema del dispositivo. Es importante asegurarse de que todas las configuraciones y datos previos se transfieran correctamente para mantener la funcionalidad y la continuidad en el seguimiento.
+      </li>
+      <li>
+       <strong>
+        5. Homologaci&oacute;n:
+       </strong>
+       Verificaci&oacute;n de que el equipo instalado cumple con los est&aacute;ndares t&eacute;cnicos y protocolos de comunicaci&oacute;n requeridos por la plataforma de monitoreo y la normativa local.
       </li>
       <li>
        <strong>
@@ -282,7 +299,7 @@
        <strong>
         13. LBS (Location Based Services):
        </strong>
-       M&eacute;todo de posicionamiento alternativo basado en la proximidad a antenas de telefon&iacute;a, usado como respaldo cuando la se&ntilde;al satelital es bloqueada.
+       M&eacute;todo de posicionamiento aLTErnativo basado en la proximidad a antenas de telefon&iacute;a, usado como respaldo cuando la se&ntilde;al satelital es bloqueada.
       </li>
       <li>
        <strong>
@@ -318,7 +335,7 @@
       </li>
      </ul>
     </div>
-    <div class="back-to-top"><a href="#">↑ Volver al &Iacute;ndice</a></div>
+    <div class="back-to-top"><a href="#intro_manual_borrador_i">↑ Volver al &Iacute;ndice</a></div>
    </div>
    <button class="accordion">
     4. Arquitectura de Hardware: Modelos de GPS
@@ -459,7 +476,7 @@
    </div>
 
    <button class="accordion">5. Fundamentos de Electr&oacute;nica Vehicular</button>
-   <div class="panel">
+   <div class="panel" id="m1_fundamentos_electronica">
     <div class="text-block">
      <h3>Magnitudes El&eacute;ctricas</h3>
      <ul>
@@ -472,6 +489,9 @@
      <ul>
       <li><strong>BAT+ (Constante):</strong> Siempre presente.</li>
       <li><strong>IGN (Ignici&oacute;n):</strong> Presente en ON/START.</li>
+
+      <li><strong>Se&ntilde;ales Anal&oacute;gicas:</strong> Var&iacute;an de forma continua (0V a 12V). Ejemplo: Flotador de combustible anal&oacute;gico.</li>
+      <li><strong>Se&ntilde;ales Digitales:</strong> Tienen s&oacute;lo dos estados (ON/OFF o 0/1). Ejemplo: Bot&oacute;n de p&aacute;nico o sensor de puerta.</li>
       <li><strong>PWM:</strong> Se&ntilde;al pulsante (Luces modernas). No usar para reporte de ignici&oacute;n.</li>
      </ul>
      <div class="warning-box">
@@ -479,7 +499,7 @@
       <div><strong>REGLA DE FUSIBLES:</strong><p>Micro2, Mini y JCASE son est&aacute;ndares modernos. Use siempre Add-a-Fuse.</p></div>
      </div>
     </div>
-    <div class="back-to-top"><a href="#">↑ Volver al &Iacute;ndice</a></div>
+    <div class="back-to-top"><a href="#intro_manual_borrador_i">↑ Volver al &Iacute;ndice</a></div>
    </div>
 <button class="accordion">
     6. Herramientas y Equipo de Medici&oacute;n
@@ -554,7 +574,7 @@
       Otros materiales utilizados
      </h4>
     </div>
-    <div class="back-to-top"><a href="#">↑ Volver al &Iacute;ndice</a></div>
+    <div class="back-to-top"><a href="#intro_manual_borrador_i">↑ Volver al &Iacute;ndice</a></div>
    </div>
    <button class="accordion">
     7. Protocolo de Inspecci&oacute;n y Recepci&oacute;n del Veh&iacute;culo
@@ -739,7 +759,7 @@ A continuaci&oacute;n, se dar&aacute;n instrucciones para la Aproximaci&oacute;n
      I. Condiciones Generales del Interior:
      </h4>
      <p>
-      - Revisar que no falten elementos como pl&aacute;sticos, tapas o paneles. Es fundamental verificar el estado f&iacute;sico de la cabina antes de realizar la instalaci&oacute;n del GPS. revisar que los pl&aacute;sticos internos est&eacute;n en buen estado, sin rayaduras, fracturas o se&ntilde;ales de manipulaci&oacute;n.
+      - Revisar que no faLTEn elementos como pl&aacute;sticos, tapas o paneles. Es fundamental verificar el estado f&iacute;sico de la cabina antes de realizar la instalaci&oacute;n del GPS. revisar que los pl&aacute;sticos internos est&eacute;n en buen estado, sin rayaduras, fracturas o se&ntilde;ales de manipulaci&oacute;n.
      - Inspeccionar el parabrisas
      Se verifica el estado del parabrisas para detectar fisuras o astillamientos, as&iacute; como el estado del polarizado, para detectar burbujas, rayones o quemaduras
      - Inspecci&oacute;n de Tapizados y Alfombras:
@@ -800,7 +820,7 @@ A continuaci&oacute;n, se dar&aacute;n instrucciones para la Aproximaci&oacute;n
     <div class="img-container">
      <img src="images/m1_inspeccion_de_vehiculo_23.png">
     </div>
-    <div class="back-to-top"><a href="#">↑ Volver al &Iacute;ndice</a></div>
+    <div class="back-to-top"><a href="#intro_manual_borrador_i">↑ Volver al &Iacute;ndice</a></div>
    </div>
    <button class="accordion">
     8. Medidas de Seguridad Personal y Vehicular
@@ -810,7 +830,7 @@ A continuaci&oacute;n, se dar&aacute;n instrucciones para la Aproximaci&oacute;n
      I. Medidas de Seguridad.
      Procedimientos y cuidados al desarmar cualquier parte del veh&iacute;culo que se debe de tener en cuenta antes de iniciar el desarmado de cualquier parte del veh&iacute;culo, es fundamental tener precauci&oacute;n con los accesorios o herramientas que podr&iacute;an da&ntilde;ar o rayar la carrocer&iacute;a y los pl&aacute;sticos. Para ello, aseg&uacute;rese de cumplir con las siguientes condiciones:
      1. Espacio de trabajo adecuado: Verifique que haya suficiente espacio alrededor del veh&iacute;culo para realizar el trabajo de forma segura, especialmente cerca de la puerta del conductor o de la puerta donde se realizar&aacute; la instalaci&oacute;n. Aseg&uacute;rese de que la puerta pueda abrirse completamente y de que haya suficiente separaci&oacute;n entre veh&iacute;culos para facilitar la instalaci&oacute;n.
-     2. Informaci&oacute;n del modelo del veh&iacute;culo: Re&uacute;na todos los datos necesarios sobre el modelo y las &aacute;reas espec&iacute;ficas donde se puede trabajar sin riesgos, especialmente si es la primera instalaci&oacute;n en ese modelo en particular. Para obtener esta informaci&oacute;n, consulte fuentes confiables, como otros t&eacute;cnicos con experiencia, el manual del veh&iacute;culo o investigaciones en internet. Esto asegurar&aacute; una instalaci&oacute;n adecuada y segura, adaptada a las particularidades de cada veh&iacute;culo.
+     2. Informaci&oacute;n del modelo del veh&iacute;culo: Re&uacute;na todos los datos necesarios sobre el modelo y las &aacute;reas espec&iacute;ficas donde se puede trabajar sin riesgos, especialmente si es la primera instalaci&oacute;n en ese modelo en particular. Para obtener esta informaci&oacute;n, consuLTE fuentes confiables, como otros t&eacute;cnicos con experiencia, el manual del veh&iacute;culo o investigaciones en internet. Esto asegurar&aacute; una instalaci&oacute;n adecuada y segura, adaptada a las particularidades de cada veh&iacute;culo.
      Utilizaci&oacute;n de Guantes y Gabardina
      Es de mucha importaci&oacute;n utilizar guantes de seguridad para las heridas en la manos, y la gabardina para el cuidado del uniforme.
     </div>
@@ -827,7 +847,7 @@ A continuaci&oacute;n, se dar&aacute;n instrucciones para la Aproximaci&oacute;n
      3. Precauciones con la vestimenta: Si usa pantalones de mezclilla o jeans, verifique que no tengan pines met&aacute;licos en los bolsillos. Evite llevar llaves, l&aacute;pices o bol&iacute;grafos en los bolsillos, ya que podr&iacute;an rayar los pl&aacute;sticos del veh&iacute;culo. Se recomienda el uso de un overol o gabacha para mayor protecci&oacute;n.
      Estos cuidados garantizan que el trabajo se realice de forma segura, evitando da&ntilde;os en el veh&iacute;culo y manteniendo los est&aacute;ndares de calidad.
     </div>
-    <div class="back-to-top"><a href="#">↑ Volver al &Iacute;ndice</a></div>
+    <div class="back-to-top"><a href="#intro_manual_borrador_i">↑ Volver al &Iacute;ndice</a></div>
    </div>
    <button class="accordion">
     9. Prevenci&oacute;n de Accidentes
@@ -848,7 +868,7 @@ A continuaci&oacute;n, se dar&aacute;n instrucciones para la Aproximaci&oacute;n
 
     <div class="text-block">
     </div>
-    <div class="back-to-top"><a href="#">↑ Volver al &Iacute;ndice</a></div>
+    <div class="back-to-top"><a href="#intro_manual_borrador_i">↑ Volver al &Iacute;ndice</a></div>
    </div>
    <button class="accordion">
     8.1. Prevenci&oacute;n de Cortocircuito y Manejo de Herramientas
@@ -903,7 +923,7 @@ A continuaci&oacute;n, se dar&aacute;n instrucciones para la Aproximaci&oacute;n
      Rigidez y textura: Es relativamente r&iacute;gido en comparaci&oacute;n con cables el&eacute;ctricos comunes, a menudo estos cables se sienten al tacto con una textura &aacute;spera o con grumos.
      Cable de Fibra &Oacute;ptica:
      Aun que pocos modelos tienen cables de comunicaci&oacute;n de fibra &oacute;ptica, no
-     esta de mas algunas caracter&iacute;sticas sobre estos cables.
+     est&aacute; de m&aacute;s algunas caracter&iacute;sticas sobre estos cables.
      - Estructura: No tiene metal. La fibra &oacute;ptica usa un n&uacute;cleo de vidrio o pl&aacute;stico que transmite luz, protegido por varias capas de recubrimiento (refuerzo de aramida, amortiguadores y chaqueta aislante exterior).
      - Di&aacute;metro: Puede ser m&aacute;s fino que el coaxial. Al tacto, la fibra &oacute;ptica puede sentirse m&aacute;s delicada y flexible. - Color y Marcas: Suele ser de colores vivos (como amarillo o verde) y a menudo lleva marcas de advertencia o etiquetas indicando "fibra &oacute;ptica".
      - Conectores: Usan conectores especiales como SC, LC o ST, dise&ntilde;ados para alinear los n&uacute;cleos de las fibras. No tienen el mismo tipo de blindaje met&aacute;lico que los coaxiales.
@@ -969,7 +989,7 @@ A continuaci&oacute;n, se dar&aacute;n instrucciones para la Aproximaci&oacute;n
 
     <div class="text-block">
     </div>
-    <div class="back-to-top"><a href="#">↑ Volver al &Iacute;ndice</a></div>
+    <div class="back-to-top"><a href="#intro_manual_borrador_i">↑ Volver al &Iacute;ndice</a></div>
    </div>
    <button class="accordion">
     10. Ensamble del Arn&eacute;s El&eacute;ctrico
@@ -1004,7 +1024,7 @@ A continuaci&oacute;n, se dar&aacute;n instrucciones para la Aproximaci&oacute;n
     <div class="img-container">
      <img src="images/m2_boton_de_panico_5.png">
     </div>
-    <div class="back-to-top"><a href="#">↑ Volver al &Iacute;ndice</a></div>
+    <div class="back-to-top"><a href="#intro_manual_borrador_i">↑ Volver al &Iacute;ndice</a></div>
    </div>
    <button class="accordion">
     11. Configuraci&oacute;n y Conexi&oacute;n de Rel&eacute;s (Corte de Ignici&oacute;n)
@@ -1061,7 +1081,13 @@ A continuaci&oacute;n, se dar&aacute;n instrucciones para la Aproximaci&oacute;n
     <div class="text-block">
      Configuraci&oacute;n B&aacute;sica para Corte de Ignici&oacute;n
      En esta configuraci&oacute;n, el relay cortar&aacute; la alimentaci&oacute;n de la l&iacute;nea de ignici&oacute;n cuando est&eacute; activado, evitando que el veh&iacute;culo arranque.
-     1. Pin 30: Con&eacute;ctalo a la l&iacute;nea de alimentaci&oacute;n de ignici&oacute;n del veh&iacute;culo. Este pin es la entrada de corriente al relay. 2. Pin 87a: Con&eacute;ctalo al circuito de ignici&oacute;n del veh&iacute;culo (por ejemplo, a la l&iacute;nea que lleva la corriente al encendido). En estado desactivado (cuando el relay est&aacute; sin activaci&oacute;n), el veh&iacute;culo puede arrancar normalmente porque la corriente fluye de pin 30 a pin 87a. 3. Pin 87: Deja este pin desconectado o &uacute;salo para una funci&oacute;n adicional si se requiere (en esta configuraci&oacute;n, no ser&aacute; necesario para el corte de ignici&oacute;n). 4. Pin 85: Realiza un puente con el pin 30 para que reciba la corriente de ignici&oacute;n. Cuando el relay recibe una se&ntilde;al de activaci&oacute;n (por ejemplo, desde un sistema de seguridad), el circuito se activa y cambia el flujo de corriente de 87a a 87, adem&aacute;s podremos conectar nuestra se&ntilde;al de ignici&oacute;n (cable blanco) en el pin 85 6. Pin 86: Este pin ser&aacute; nuestro activador, aqu&iacute; conectaremos la salida de se&ntilde;al negativa de nuestro GPS. (cable azul GV300, Cable verde Gv58lau)
+     <ul>
+      <li><strong>1. Pin 30:</strong> Con&eacute;ctalo a la l&iacute;nea de alimentaci&oacute;n de ignici&oacute;n del veh&iacute;culo. Este pin es la entrada de corriente al relay.</li>
+      <li><strong>2. Pin 87a:</strong> Con&eacute;ctalo al circuito de ignici&oacute;n del veh&iacute;culo (por ejemplo, a la l&iacute;nea que lleva la corriente al encendido).</li>
+      <li><strong>3. Pin 87:</strong> Deja este pin desconectado o &uacute;salo para una funci&oacute;n adicional.</li>
+      <li><strong>4. Pin 85:</strong> Realiza un puente con el pin 30 para que reciba la corriente de ignici&oacute;n.</li>
+      <li><strong>5. Pin 86:</strong> Este pin ser&aacute; nuestro activador, aqu&iacute; conectaremos la salida de se&ntilde;al negativa de nuestro GPS.</li>
+     </ul>
      Diagrama:
      Funcionamiento
      1. Relay desactivado: En este estado, el pin 30 se conecta al pin 87a, permitiendo el flujo de corriente hacia la l&iacute;nea de ignici&oacute;n del veh&iacute;culo. Esto permite que el veh&iacute;culo encienda y funcione normalmente.
@@ -1098,7 +1124,7 @@ A continuaci&oacute;n, se dar&aacute;n instrucciones para la Aproximaci&oacute;n
      Funcionamiento: Como se puede observar en el diagrama, el pin 87a ya no se utiliza, debido a que en este caso lo que necesitamos enviar un pulso negativo contante al sistema de apagado de la motocicleta, en este caso ya no es necesario realizar ning&uacute;n corte en los cables de la motocicleta.
      Se recomienda tomar la se&ntilde;al negativa de la bater&iacute;a de la motocicleta, esto es para minimizar problemas.
     </div>
-    <div class="back-to-top"><a href="#">↑ Volver al &Iacute;ndice</a></div>
+    <div class="back-to-top"><a href="#intro_manual_borrador_i">↑ Volver al &Iacute;ndice</a></div>
    </div>
    <button class="accordion">
     12. T&eacute;cnicas de Empalme y Encintado
@@ -1172,7 +1198,7 @@ A continuaci&oacute;n, se dar&aacute;n instrucciones para la Aproximaci&oacute;n
     <div class="text-block">
      garantizando una instalaci&oacute;n segura y de calidad.
     </div>
-    <div class="back-to-top"><a href="#">↑ Volver al &Iacute;ndice</a></div>
+    <div class="back-to-top"><a href="#intro_manual_borrador_i">↑ Volver al &Iacute;ndice</a></div>
    </div>
    <button class="accordion">
     13. Uso de Terminales Remachables
@@ -1182,7 +1208,7 @@ A continuaci&oacute;n, se dar&aacute;n instrucciones para la Aproximaci&oacute;n
      Uso de Terminales Remachables
      Los terminales remachables son fundamentales en instalaciones el&eacute;ctricas, ya que permiten conexiones seguras y duraderas. Su aplicaci&oacute;n va desde asegurar cables y personalizar configuraciones de rel&eacute;s hasta unir cables de manera confiable. A continuaci&oacute;n, algunas recomendaciones sobre el uso adecuado de estos terminales:
      Terminales hembra
-     Aseguran Conexiones: Los terminales remachables ofrecen una sujeci&oacute;n firme que evita que los cables se suelten, incluso en condiciones de vibraci&oacute;n o movimiento. Esto es esencial en conexiones cr&iacute;ticas, como aquellas utilizadas en rel&eacute;s de corte de ignici&oacute;n.
+     Aseguran Conexiones: Los terminales remachables ofrecen una sujeci&oacute;n firme que evita que los cables se sueLTEn, incluso en condiciones de vibraci&oacute;n o movimiento. Esto es esencial en conexiones cr&iacute;ticas, como aquellas utilizadas en rel&eacute;s de corte de ignici&oacute;n.
      Personalizaci&oacute;n de Configuraciones: Permiten adaptar configuraciones de un rel&eacute; seg&uacute;n los requisitos espec&iacute;ficos de la instalaci&oacute;n, facilitando la organizaci&oacute;n y disposici&oacute;n de los cables en el sistema el&eacute;ctrico.
      Proceso de Remachado: Aseg&uacute;rese de utilizar una remachadora de buena calidad y el terminal adecuado para el calibre del cable. Un remachado adecuado asegura un contacto confiable y minimiza el riesgo de fallas.
      T&eacute;cnicas para remachar
@@ -1223,7 +1249,7 @@ A continuaci&oacute;n, se dar&aacute;n instrucciones para la Aproximaci&oacute;n
      Para conexiones directas a los bornes de la bater&iacute;a, las terminales aseguran una conexi&oacute;n estable y evitan el deslizamiento o el aflojamiento, lo cual es fundamental en sistemas de GPS y otros dispositivos que requieren alimentaci&oacute;n continua y confiable.
      Recomendaciones: Es importante utilizar m&eacute;todo donde no se requiera desconectar la terminal de la bater&iacute;a o una terminal del chasis, para en casos que no contemos con la terminal adecuada, podemos utilizar una terminal redonda donde cortemos una porci&oacute;n lo suficientemente aplica para que el tornillo de la terminal pueda pasar, asegur&aacute;ndonos siempre que la terminal no pierda contacto con el chasis o la bater&iacute;a. Tambi&eacute;n seleccione el tipo de terminal adecuado (anillo, horquilla, etc.) seg&uacute;n el tipo de conexi&oacute;n. Asegure que las terminales est&eacute;n correctamente crimadas para evitar desconexiones accidentales, y que el remachado no haya cortado el cable. Usar terminales correctamente ayuda a garantizar una instalaci&oacute;n segura, estable y de calidad en sistemas el&eacute;ctricos automotrices, estas pr&aacute;cticas optimizan la funcionalidad y seguridad de las instalaciones el&eacute;ctricas en veh&iacute;culos, asegurando que las conexiones permanezcan firmes y confiables.
     </div>
-    <div class="back-to-top"><a href="#">↑ Volver al &Iacute;ndice</a></div>
+    <div class="back-to-top"><a href="#intro_manual_borrador_i">↑ Volver al &Iacute;ndice</a></div>
    </div>
    <button class="accordion">
     14. Instalaci&oacute;n de Perif&eacute;ricos: Bot&oacute;n de P&aacute;nico
@@ -1281,7 +1307,7 @@ A continuaci&oacute;n, se dar&aacute;n instrucciones para la Aproximaci&oacute;n
       <li>Mantener una longitud de reserva para permitir futuras expansiones o mantenimientos.</li>
      </ul>
     </div>
-    <div class="back-to-top"><a href="#">↑ Volver al &Iacute;ndice</a></div>
+    <div class="back-to-top"><a href="#intro_manual_borrador_i">↑ Volver al &Iacute;ndice</a></div>
    </div>
    <button class="accordion">
     16. Identificaci&oacute;n Avanzada de Conductores y Se&ntilde;ales
@@ -1459,7 +1485,7 @@ A continuaci&oacute;n, se dar&aacute;n instrucciones para la Aproximaci&oacute;n
    </div>
 
    <button class="accordion">17. Electr&oacute;nica Automotriz Moderna: Redes CAN/LIN</button>
-   <div class="panel">
+   <div class="panel" id="m3_can_bus">
     <div class="text-block">
      <p>Los veh&iacute;culos modernos usan redes multiplexadas para reducir cableado.</p>
      <ul>
@@ -1467,22 +1493,22 @@ A continuaci&oacute;n, se dar&aacute;n instrucciones para la Aproximaci&oacute;n
       <li><strong>BCM:</strong> M&oacute;dulo de habit&aacute;culo. Fuente ideal de se&ntilde;ales de seguros.</li>
      </ul>
     </div>
-    <div class="back-to-top"><a href="#">↑ Volver al &Iacute;ndice</a></div>
+    <div class="back-to-top"><a href="#intro_manual_borrador_i">↑ Volver al &Iacute;ndice</a></div>
    </div>
 
    <button class="accordion">18. Casos Especiales: H&iacute;bridos y Start-Stop</button>
-   <div class="panel">
+   <div class="panel" id="m3_casos_especiales">
     <div class="text-block">
      <div class="warning-box">
       <img src="images/warning_icon.png" class="warning-icon">
       <div><strong>ALTO VOLTAJE:</strong><p>Nunca toque cables <strong>NARANJA</strong>. Peligro de electrocuci&oacute;n.</p></div>
      </div>
     </div>
-    <div class="back-to-top"><a href="#">↑ Volver al &Iacute;ndice</a></div>
+    <div class="back-to-top"><a href="#intro_manual_borrador_i">↑ Volver al &Iacute;ndice</a></div>
    </div>
 
    <button class="accordion">19. Diagn&oacute;stico T&eacute;cnico y Resoluci&oacute;n de Fallas</button>
-   <div class="panel">
+   <div class="panel" id="m3_diagnostico">
     <div class="text-block">
      <h4>Tabla de Fallas Comunes</h4>
      <table class="control-table">
@@ -1493,39 +1519,51 @@ A continuaci&oacute;n, se dar&aacute;n instrucciones para la Aproximaci&oacute;n
       </tbody>
      </table>
     </div>
-    <div class="back-to-top"><a href="#">↑ Volver al &Iacute;ndice</a></div>
+    <div class="back-to-top"><a href="#intro_manual_borrador_i">↑ Volver al &Iacute;ndice</a></div>
    </div>
 
    <button class="accordion">20. Est&aacute;ndares de Calidad y Protocolo de Entrega</button>
-   <div class="panel">
+   <div class="panel" id="m3_calidad">
     <div class="text-block">
      <h3>Fotos de Certificaci&oacute;n</h3>
      <ul><li>Toma de energ&iacute;a</li><li>Corte de motor</li><li>Tierra chasis</li></ul>
     </div>
-    <div class="back-to-top"><a href="#">↑ Volver al &Iacute;ndice</a></div>
+    <div class="back-to-top"><a href="#intro_manual_borrador_i">↑ Volver al &Iacute;ndice</a></div>
    </div>
 
    <button class="accordion">21. Experiencia de Campo y Casos Reales</button>
-   <div class="panel">
+   <div class="panel" id="m4_casos_reales">
     <div class="text-block">
      <p><strong>Caso 1:</strong> Interferencia por parabrisas t&eacute;rmicos (malla met&aacute;lica).</p>
     </div>
-    <div class="back-to-top"><a href="#">↑ Volver al &Iacute;ndice</a></div>
+    <div class="back-to-top"><a href="#intro_manual_borrador_i">↑ Volver al &Iacute;ndice</a></div>
    </div>
+  </div>
   <script>
    var acc = document.getElementsByClassName("accordion");
-        var i;
-        for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                if (panel.style.display === "block") {
-                    panel.style.display = "none";
-                } else {
-                    panel.style.display = "block";
-                }
-            });
-        }
+   var i;
+   for (i = 0; i < acc.length; i++) {
+     acc[i].addEventListener("click", function() {
+       this.classList.toggle("active");
+       var panel = this.nextElementSibling;
+       if (panel.style.display === "block") {
+         panel.style.display = "none";
+       } else {
+         panel.style.display = "block";
+       }
+     });
+   }
+
+   function openSection(id) {
+     var panel = document.getElementById(id);
+     if (panel) {
+       panel.style.display = "block";
+       var accordion = panel.previousElementSibling;
+       if (accordion && accordion.classList.contains("accordion")) {
+         accordion.classList.add("active");
+       }
+     }
+   }
   </script>
  </body>
 </html>
