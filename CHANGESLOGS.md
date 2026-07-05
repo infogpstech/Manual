@@ -7,3 +7,8 @@
 | 2025-05-22 | index.html | 1450-1550 | Implementaci&oacute;n de Secciones 17-21 (CAN/LIN, H&iacute;bridos, Diagn&oacute;stico, Calidad, Casos). |
 | 2025-05-22 | index.html | Global | Adici&oacute;n de navegaci&oacute;n interna 'Volver al &Iacute;ndice' en todos los paneles. |
 | 2025-05-22 | README.txt | Global | Actualizaci&oacute;n de checklist de tareas completadas. |
+| 2025-07-05 | Project | Global | Modularizaci&oacute;n del manual en 10 archivos HTML independientes. |
+| 2025-07-05 | style.css | Global | Creaci&oacute;n de hoja de estilos centralizada y responsiva. |
+| 2025-07-05 | modulo5.html | Expansion | Adici&oacute;n de riesgos t&eacute;cnicos por desconexi&oacute;n de bater&iacute;a. |
+| 2025-07-05 | modulo4.html | Expansion | Adici&oacute;n de fundamentos contra el uso de soldadura en automotriz. |
+| 2025-07-05 | modulo7.html | Expansion | Gu&iacute;as paso a paso para identificaci&oacute;n de se&ntilde;ales IGN/START/Push. |

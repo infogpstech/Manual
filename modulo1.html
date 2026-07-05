@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Técnico GPS - Módulo 1 — Introducción y Fundamentos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="index.html">← Volver al Índice Principal</a>
+            </nav>
+            <h1>Módulo 1 — Introducción y Fundamentos</h1>
+        </header>
+
+        <main>
+            <button class="accordion">
+    1. Cubierta y Tabla de Contenido
+   </button>
+<div class="panel" id="intro_manual_borrador_i">
+<div class="text-block">
+<h2>Control de Versiones</h2>
+<table class="control-table">
+<thead>
+<tr>
+<th>Versión</th>
+<th>Fecha</th>
+<th>Descripción del Cambio</th>
+<th>Autor/Revisor</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>1.0.0</td><td>15/05/2025</td><td>Extracción inicial PDF.</td><td>Ingeniería</td></tr>
+<tr><td>2.0.0</td><td>22/05/2025</td><td>Expansión de Capítulos Técnicos.</td><td>Depto. Técnico</td></tr>
+<tr><td>3.0.0</td><td>22/05/2025</td><td>Rediseño profesional, flujos y casos reales.</td><td>Operaciones</td></tr>
+</tbody>
+</table>
+<h2>Tabla de Contenido</h2>
+<ol>
+<li><a href="#intro_manual_borrador_i" onclick="openSection('intro_manual_borrador_i')">Cubierta y Tabla de Contenido</a></li>
+<li><a href="#m1_introduccion" onclick="openSection('m1_introduccion')">Introducción Técnica</a></li>
+<li><a href="#m1_terminos_y_conceptos_claves" onclick="openSection('m1_terminos_y_conceptos_claves')">Glosario de Términos y Conceptos Claves</a></li>
+<li><a href="#m1_modelos_de_gps_y_sus_funciones" onclick="openSection('m1_modelos_de_gps_y_sus_funciones')">Arquitectura de Hardware: Modelos de GPS</a></li>
+<li><a href="#m1_fundamentos_electronica" onclick="openSection('m1_fundamentos_electronica')">Fundamentos de Electrónica Vehicular</a></li>
+<li><a href="#m1_herramientas_necesarias" onclick="openSection('m1_herramientas_necesarias')">Herramientas y Equipo de Medición</a></li>
+<li><a href="#m1_inspeccion_de_vehiculo" onclick="openSection('m1_inspeccion_de_vehiculo')">Protocolo de Inspección y Recepción del Vehículo</a></li>
+<li><a href="#m2_i_medidas_de_seguridad" onclick="openSection('m2_i_medidas_de_seguridad')">Medidas de Seguridad Personal y Vehicular</a></li>
+<li><a href="#m2_tecnicas_de_prevencion_de_accidentes" onclick="openSection('m2_tecnicas_de_prevencion_de_accidentes')">Prevención de Accidentes</a></li>
+<li><a href="#m2_prevencion_de_corto_circuito" onclick="openSection('m2_prevencion_de_corto_circuito')">Prevención de Cortocircuito y Manejo de Herramientas</a></li>
+<li><a href="#m2_ensamble_del_arnes_electrico" onclick="openSection('m2_ensamble_del_arnes_electrico')">Ensamble del Arnés Eléctrico</a></li>
+<li><a href="#m2_configuracion_del_relee" onclick="openSection('m2_configuracion_del_relee')">Configuración y Conexión de Relés (Corte de Ignición)</a></li>
+<li><a href="#m2_empalmes" onclick="openSection('m2_empalmes')">Técnicas de Empalme y Encintado</a></li>
+<li><a href="#m2_uso_de_terminales_remachables" onclick="openSection('m2_uso_de_terminales_remachables')">Uso de Terminales Remachables</a></li>
+<li><a href="#m2_boton_de_panico" onclick="openSection('m2_boton_de_panico')">Instalación de Periféricos: Botón de Pánico y Sensores</a></li>
+<li><a href="#m2_identificacion_de_los_cables" onclick="openSection('m2_identificacion_de_los_cables')">Identificación Avanzada de Conductores y Señales</a></li>
+<li><a href="#m3_can_bus" onclick="openSection('m3_can_bus')">Electrónica Automotriz Moderna: Redes CAN/LIN</a></li>
+<li><a href="#m3_casos_especiales" onclick="openSection('m3_casos_especiales')">Casos Especiales: Híbridos y Start-Stop</a></li>
+<li><a href="#m3_diagnostico" onclick="openSection('m3_diagnostico')">Diagnóstico Técnico y Resolución de Fallas</a></li>
+<li><a href="#m3_calidad" onclick="openSection('m3_calidad')">Estándares de Calidad y Protocolo de Entrega</a></li>
+<li><a href="#m4_casos_reales" onclick="openSection('m4_casos_reales')">Experiencia de Campo y Casos Reales</a></li>
+</ol>
+</div>
+<div class="text-block">
+<h3>Fundamentos y Conocimientos Previos (Presaberes)</h3>
+<h4>Configuración via SMS (Ejemplos Estándar)</h4>
+<p>Antes de que el equipo reporte a plataforma, se debe configurar via SMS:</p>
+<ul>
+<li><strong>APN:</strong> <code>AT+APN=nombre.apn,usuario,clave</code> (Permite salida a internet).</li>
+<li><strong>Servidor/IP:</strong> <code>AT+SERVER=1,ip.del.servidor,puerto</code> (Destino de los datos).</li>
+<li><strong>Frecuencia:</strong> <code>AT+REPORT=frecuencia_segundos</code> (Intervalo de envío).</li>
+</ul>
+<h4>GPS vs. Rastreador (Tracker)</h4>
+<p>Un navegador GPS sólo recibe señales. Un <strong>Rastreador</strong> recibe y <strong>transmite</strong> datos via celular (GSM/LTE). Sin SIM o cobertura, el equipo no reporta.</p>
+<ul>
+<li><strong>GNSS:</strong> Constelaciones GPS (EEUU), GLONASS (Rusia), Galileo (UE) y BeiDou (China).</li>
+<li><strong>A-GPS:</strong> Usa la red celular para acelerar la fijación de satélites (TTFF).</li>
+<li><strong>Identificadores:</strong> <strong>IMEI</strong> (Serie del equipo) e <strong>ICCID</strong> (Serie del SIM).</li>
+</ul>
+<p>
+      Antes de proceder con la práctica de instalación, es imperativo que el técnico domine los conceptos fundamentales de los sistemas de rastreo y seguridad vehicular. A diferencia de los navegadores GPS convencionales, los dispositivos abordados en este manual son unidades de telemática diseñadas para el monitoreo de ubicación, rastreo en tiempo real, inmovilización remota y gestión de flotas.
+     </p>
+<ul>
+<li>
+<strong>Posicionamiento Híbrido y Comunicación:</strong>
+       Estos equipos no dependen exclusivamente de la señal satelital GPS. Funcionan mediante una arquitectura de tres pilares:
+       <ol>
+<li><strong>GNSS (GPS/GLONASS):</strong> Captación de señales satelitales para obtener coordenadas de alta precisión.</li>
+<li><strong>Redes Móviles (GSM/LTE):</strong> Uso de módem celular integrado para transmitir los datos recolectados hacia servidores centrales y recibir comandos de control.</li>
+<li><strong>LBS (Location Based Services):</strong> Triangulación por antenas de telefonía móvil, que permite obtener una ubicación aproximada incluso en lugares sin visión al cielo (sótanos, túneles) donde el GPS pierde señal.</li>
+</ol>
+</li>
+<li>
+<strong>Interacción de Sistemas y Seguridad:</strong>
+       La unidad de rastreo procesa constantemente las coordenadas y el estado de los sensores (ignición, pánico). Esta información es enviada mediante la red celular hacia una plataforma de monitoreo. En caso de requerir seguridad activa, la plataforma envía un comando de vuelta al dispositivo que, mediante un relé externo, permite la inmovilización o apagado remoto del vehículo de forma segura.
+      </li>
+<li>
+<strong>Electrónica Automotriz:</strong>
+       Se requiere comprensión profunda de la Ley de Ohm, identificación de circuitos (ignición, accesorios, constante) y el uso correcto del multímetro y probador de línea.
+      </li>
+<li>
+<strong>Sistemas del Vehículo:</strong>
+       Conocimiento de la arquitectura eléctrica, ubicación de cajas de fusibles y protocolos de desarmado de interiores para evitar daños estéticos o estructurales.
+      </li>
+</ul>
+</div>
+<div class="back-to-top"><a href="#intro_manual_borrador_i">↑ Volver al Índice</a></div>
+</div><button class="accordion">
+    3. Glosario de Términos y Conceptos Claves
+   </button>
+<div class="panel" id="m1_terminos_y_conceptos_claves">
+<div class="text-block">
+<h3>
+      Términos y Conceptos Claves
+     </h3>
+<p>
+      Al momento de realizar un trabajo se debe de conocer los términos y conceptos claves que se utilizan en el ámbito del técnico instalador de GPS.
+     </p>
+<ul>
+<li>
+<strong>
+        1. Instalación Nueva:
+       </strong>
+       Proceso de montar y configurar un dispositivo GPS por primera vez en un vehículo o equipo. Esto incluye la conexión del dispositivo a la fuente de alimentación y la integración con el sistema eléctrico del vehículo.
+      </li>
+<li>
+<strong>
+        2. Desinstalación:
+       </strong>
+       Procedimiento para retirar un dispositivo GPS previamente instalado. Este proceso debe hacerse cuidadosamente para evitar dañar el vehículo o el propio dispositivo.
+      </li>
+<li>
+<strong>
+        3. Reinstalación:
+       </strong>
+       Implica volver a instalar un dispositivo GPS que ha sido desinstalado. Esto puede requerir ajustes en el cableado y la configuración del dispositivo.
+      </li>
+<li>
+<strong>
+        4. Traspaso:
+       </strong>
+       Proceso mediante el cual se transfiere un dispositivo GPS de un vehículo a otro. Este procedimiento puede implicar la desinstalación del GPS del primer vehículo y su reinstalación en el nuevo, así como la actualización de la información de configuración y usuario en el sistema del dispositivo. Es importante asegurarse de que todas las configuraciones y datos previos se transfieran correctamente para mantener la funcionalidad y la continuidad en el seguimiento.
+      </li>
+<li>
+<strong>
+        5. Homologación:
+       </strong>
+       Verificación de que el equipo instalado cumple con los estándares técnicos y protocolos de comunicación requeridos por la plataforma de monitoreo y la normativa local.
+      </li>
+<li>
+<strong>
+        6. Revisión por Falla:
+       </strong>
+       Inspección y diagnóstico de un dispositivo GPS que no está funcionando correctamente. Esto puede incluir pruebas de conexión, verificación de configuración y análisis de posibles daños en el equipo.
+      </li>
+<li>
+<strong>
+        7. Revisión Preventiva:
+       </strong>
+       (Mantenimiento preventivo) Mantenimiento programado para asegurar que el dispositivo GPS funcione de manera óptima. Incluye la verificación de conexiones, actualizaciones de software y comprobación del estado general del sistema.
+      </li>
+<li>
+<strong>
+        8. Bloqueo de Motor (Apagado Remoto):
+       </strong>
+       Función que permite al usuario desactivar el motor de un vehículo de forma remota a través de la plataforma del GPS. Esta característica es especialmente útil en casos de robo.
+      </li>
+<li>
+<strong>
+        9. Apertura de Seguros:
+       </strong>
+       Opción que permite desbloquear o abrir las puertas de un vehículo a distancia mediante el sistema GPS. Esto se puede hacer a
+     través de una aplicación móvil o un comando remoto.
+      </li>
+<li>
+<strong>
+        10. Botón de Pánico:
+       </strong>
+       Dispositivo de seguridad que, al ser activado, envía una señal de alerta a un centro de monitoreo o a contactos predeterminados. Este botón es esencial para situaciones de emergencia.
+      </li>
+<li>
+<strong>
+        11. Ubicación y Telemática:
+       </strong>
+       Capacidad de determinar la posición exacta mediante GNSS y transmitir datos de sensores del vehículo a través de redes celulares para su visualización en mapas y reportes.
+      </li>
+<li>
+<strong>
+        12. GSM/LTE:
+       </strong>
+       Estándares de comunicación móvil utilizados por el dispositivo para enviar información y recibir comandos de la plataforma de monitoreo.
+      </li>
+<li>
+<strong>
+        13. LBS (Location Based Services):
+       </strong>
+       Método de posicionamiento aLTErnativo basado en la proximidad a antenas de telefonía, usado como respaldo cuando la señal satelital es bloqueada.
+      </li>
+<li>
+<strong>
+        14. Plataforma de Monitoreo:
+       </strong>
+       Software centralizado que recibe, procesa y muestra la información enviada por los dispositivos de rastreo.
+      </li>
+<li>
+<strong>
+        16. Pruebas manuales:
+       </strong>
+       implica realizar las pruebas de funcionamiento directamente, utilizando el probador de línea.
+      </li>
+<li>
+<strong>
+        17. Pruebas:
+       </strong>
+       Conjunto de procedimientos para verificar el correcto funcionamiento del dispositivo de rastreo una vez instalado. Incluye pruebas de localización, transmisión de datos y ejecución de comandos remotos.
+      </li>
+<li>
+<strong>
+        17. Orden de Trabajo:
+       </strong>
+       Documento que detalla las tareas a realizar por el
+     técnico, incluyendo la instalación, desinstalación, mantenimiento o reparación de un dispositivo GPS. Suele contener información sobre el cliente, el equipo a trabajar y los tiempos estimados.
+      </li>
+<li>
+<strong>
+        18. Datos de Orden de Trabajo:
+       </strong>
+       Información específica que incluye el nombre
+     del cliente, la dirección, el tipo de servicio solicitado, los dispositivos involucrados, los costos estimados y cualquier nota adicional que el técnico deba considerar antes de llevar a cabo la tarea.
+      </li>
+</ul>
+</div>
+<div class="back-to-top"><a href="#intro_manual_borrador_i">↑ Volver al Índice</a></div>
+</div><button class="accordion">5. Fundamentos de Electrónica Vehicular</button>
+<div class="panel" id="m1_fundamentos_electronica">
+<div class="text-block">
+<h3>Magnitudes Eléctricas</h3>
+<ul>
+<li><strong>Voltaje (V):</strong> Diferencia de potencial. 12V (Ligeros), 24V (Pesados).</li>
+<li><strong>Corriente (I):</strong> Flujo de electrones (Amperios).</li>
+<li><strong>Potencia (P):</strong> P = V × I (Vatios).</li>
+<li><strong>Ley de Ohm:</strong> V = I × R. Explica por qué una mala tierra causa caídas de voltaje.</li>
+</ul>
+<h3>Señales Críticas</h3>
+<ul>
+<li><strong>BAT+ (Constante):</strong> Siempre presente.</li>
+<li><strong>IGN (Ignición):</strong> Presente en ON/START.</li>
+<li><strong>Señales Analógicas:</strong> Varían de forma continua (0V a 12V). Ejemplo: Flotador de combustible analógico.</li>
+<li><strong>Señales Digitales:</strong> Tienen sólo dos estados (ON/OFF o 0/1). Ejemplo: Botón de pánico o sensor de puerta.</li>
+<li><strong>PWM:</strong> Señal pulsante (Luces modernas). No usar para reporte de ignición.</li>
+</ul>
+<div class="warning-box">
+<img class="warning-icon" src="images/warning_icon.png"/>
+<div><strong>REGLA DE FUSIBLES:</strong><p>Micro2, Mini y JCASE son estándares modernos. Use siempre Add-a-Fuse.</p></div>
+</div>
+</div>
+<div class="back-to-top"><a href="#intro_manual_borrador_i">↑ Volver al Índice</a></div>
+</div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Manual de Capacitación Técnica GPS</p>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
