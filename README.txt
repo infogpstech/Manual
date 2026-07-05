@@ -30,392 +30,392 @@ CHECKLIST DE OBJETIVOS Y TAREAS PENDIENTES
 
 SECCIÓN 1 — PORTADA Y CONTROL DOCUMENTAL
 Identidad visual
-[ ] Rediseñar portada profesional.
-[ ] Agregar logo corporativo.
-[ ] Agregar nombre oficial del documento.
-[ ] Agregar versión del manual.
-[ ] Agregar fecha de emisión.
-[ ] Agregar departamento responsable.
-[ ] Agregar fotografía profesional relacionada.
-[ ] Agregar código interno del documento.
+[x] Rediseñar portada profesional.
+[x] Agregar logo corporativo.
+[x] Agregar nombre oficial del documento.
+[x] Agregar versión del manual.
+[x] Agregar fecha de emisión.
+[x] Agregar departamento responsable.
+[x] Agregar fotografía profesional relacionada.
+[x] Agregar código interno del documento.
 Control documental
-[ ] Crear tabla de control de versiones.
-[ ] Agregar historial de cambios.
-[ ] Agregar autor/revisor/aprobador
-[ ] Agregar política de actualizaciones.
+[x] Crear tabla de control de versiones.
+[x] Agregar historial de cambios.
+[x] Agregar autor/revisor/aprobador
+[x] Agregar política de actualizaciones.
 
 SECCIÓN 2 — INTRODUCCIÓN AL GPS
 Explicación técnica real del GPS
-[ ] Explicar diferencia entre GPS y rastreador GPS.
-[ ] Explicar GNSS.
-[ ] Explicar GPS, GLONASS, Galileo y BeiDou.
-[ ] Explicar triangulación celular.
-[ ] Explicar AGPS.
-[ ] Explicar comunicación GSM/LTE.
-[ ] Explicar cómo el GPS transmite datos.
-[ ] Explicar función de la SIM.
-[ ] Explicar APN.
-[ ] Explicar IMEI e ICCID.
-[ ] Explicar plataformas de monitoreo.
-[ ] Explicar TCP/IP básico.
-[ ] Explicar latencia y frecuencia de reporte.
-[ ] Explicar LBS (Location Based Service).
+[x] Explicar diferencia entre GPS y rastreador GPS.
+[x] Explicar GNSS.
+[x] Explicar GPS, GLONASS, Galileo y BeiDou.
+[x] Explicar triangulación celular.
+[x] Explicar AGPS.
+[x] Explicar comunicación GSM/LTE.
+[x] Explicar cómo el GPS transmite datos.
+[x] Explicar función de la SIM.
+[x] Explicar APN.
+[x] Explicar IMEI e ICCID.
+[x] Explicar plataformas de monitoreo.
+[x] Explicar TCP/IP básico.
+[x] Explicar latencia y frecuencia de reporte.
+[x] Explicar LBS (Location Based Service).
 Imágenes a agregar
-[ ] Diagrama de funcionamiento GPS.
-[ ] Imagen de satélites + red móvil.
-[ ] Imagen interna de un GPS.
-[ ] Imagen de módulo GSM.
-[ ] Imagen de antena GNSS.
+[x] Diagrama de funcionamiento GPS.
+[x] Imagen de satélites + red móvil.
+[x] Imagen interna de un GPS.
+[x] Imagen de módulo GSM.
+[x] Imagen de antena GNSS.
 
 SECCIÓN 3 — FUNDAMENTOS DE ELECTRÓNICA VEHICULAR
 Conceptos básicos
-[ ] Explicar voltaje.
-[ ] Explicar corriente.
-[ ] Explicar resistencia.
-[ ] Explicar potencia.
-[ ] Explicar continuidad.
-[ ] Explicar cortocircuito.
-[ ] Explicar circuito abierto.
-[ ] Explicar polaridad.
-[ ] Explicar tierra/chasis.
+[x] Explicar voltaje.
+[x] Explicar corriente.
+[x] Explicar resistencia.
+[x] Explicar potencia.
+[x] Explicar continuidad.
+[x] Explicar cortocircuito.
+[x] Explicar circuito abierto.
+[x] Explicar polaridad.
+[x] Explicar tierra/chasis.
 Ley de Ohm
-[ ] Agregar explicación práctica.
-[ ] Agregar ejemplos reales automotrices.
-[ ] Explicar caídas de voltaje.
-[ ] Explicar resistencia en conexiones.
+[x] Agregar explicación práctica.
+[x] Agregar ejemplos reales automotrices.
+[x] Explicar caídas de voltaje.
+[x] Explicar resistencia en conexiones.
 Fusibles
-[ ] Explicar función de fusibles.
-[ ] Explicar tipos de fusibles.
-[ ] Explicar mini fuse.
-[ ] Explicar low profile.
-[ ] Explicar JCASE.
-[ ] Explicar MAXI fuse.
-[ ] Explicar Micro2.
-[ ] Explicar amperajes.
-[ ] Explicar cómo probar continuidad.
-[ ] Explicar add-a-fuse.
-[ ] Explicar riesgos de puentes.
+[x] Explicar función de fusibles.
+[x] Explicar tipos de fusibles.
+[x] Explicar mini fuse.
+[x] Explicar low profile.
+[x] Explicar JCASE.
+[x] Explicar MAXI fuse.
+[x] Explicar Micro2.
+[x] Explicar amperajes.
+[x] Explicar cómo probar continuidad.
+[x] Explicar add-a-fuse.
+[x] Explicar riesgos de puentes.
 Señales eléctricas
-[ ] Explicar ACC.
-[ ] Explicar IGN.
-[ ] Explicar BAT+.
-[ ] Explicar señales PWM.
-[ ] Explicar señales analógicas.
-[ ] Explicar señales digitales.
+[x] Explicar ACC.
+[x] Explicar IGN.
+[x] Explicar BAT+.
+[x] Explicar señales PWM.
+[x] Explicar señales analógicas.
+[x] Explicar señales digitales.
 Imágenes a agregar
-[ ] Diagrama Ley de Ohm.
-[ ] Tabla de fusibles.
-[ ] Fotografías reales de fusibles.
-[ ] Diagramas de señales ACC/IGN/BAT.
-[ ] Gráficas de señales PWM.
+[x] Diagrama Ley de Ohm.
+[x] Tabla de fusibles.
+[x] Fotografías reales de fusibles.
+[x] Diagramas de señales ACC/IGN/BAT.
+[x] Gráficas de señales PWM.
 
 SECCIÓN 4 — ELECTRÓNICA AUTOMOTRIZ MODERNA
 CAN BUS
-[ ] Explicar qué es CAN BUS.
-[ ] Explicar CAN High y CAN Low.
-[ ] Explicar comunicación entre módulos.
-[ ] Explicar BCM.
-[ ] Explicar ECM.
-[ ] Explicar ABS.
-[ ] Explicar SRS.
-[ ] Explicar multiplexado.
+[x] Explicar qué es CAN BUS.
+[x] Explicar CAN High y CAN Low.
+[x] Explicar comunicación entre módulos.
+[x] Explicar BCM.
+[x] Explicar ECM.
+[x] Explicar ABS.
+[x] Explicar SRS.
+[x] Explicar multiplexado.
 Riesgos
-[ ] Explicar riesgos de cortar CAN.
-[ ] Explicar riesgos de inyectar voltaje.
-[ ] Explicar daños por probador de línea.
+[x] Explicar riesgos de cortar CAN.
+[x] Explicar riesgos de inyectar voltaje.
+[x] Explicar daños por probador de línea.
 Identificación
-[ ] Explicar pares trenzados.
-[ ] Explicar colores comunes.
-[ ] Explicar mediciones básicas.
+[x] Explicar pares trenzados.
+[x] Explicar colores comunes.
+[x] Explicar mediciones básicas.
 LIN BUS
-[ ] Explicar concepto básico.
-[ ] Explicar diferencias con CAN.
+[x] Explicar concepto básico.
+[x] Explicar diferencias con CAN.
 Imágenes a agregar
-[ ] Imagen de CAN BUS real.
-[ ] Imagen de arnés multiplexado.
-[ ] Diagrama CAN.
-[ ] Foto de módulo BCM.
+[x] Imagen de CAN BUS real.
+[x] Imagen de arnés multiplexado.
+[x] Diagrama CAN.
+[x] Foto de módulo BCM.
 
 SECCIÓN 5 — SEGURIDAD AUTOMOTRIZ
 Airbags y SRS
-[ ] Explicar sistema SRS.
-[ ] Explicar airbags.
-[ ] Explicar pretensores.
-[ ] Explicar sensores de impacto.
-[ ] Explicar módulos SRS.
+[x] Explicar sistema SRS.
+[x] Explicar airbags.
+[x] Explicar pretensores.
+[x] Explicar sensores de impacto.
+[x] Explicar módulos SRS.
 Procedimientos seguros
-[ ] Explicar desconexión segura.
-[ ] Explicar descarga de capacitores.
-[ ] Explicar tiempos de espera.
+[x] Explicar desconexión segura.
+[x] Explicar descarga de capacitores.
+[x] Explicar tiempos de espera.
 Riesgos
-[ ] Explicar detonación accidental.
-[ ] Explicar daños al módulo SRS.
-[ ] Explicar generación de DTC.
+[x] Explicar detonación accidental.
+[x] Explicar daños al módulo SRS.
+[x] Explicar generación de DTC.
 Prohibiciones
-[ ] NO usar lámpara de prueba.
-[ ] NO medir resistencia.
-[ ] NO cortar cables SRS.
+[x] NO usar lámpara de prueba.
+[x] NO medir resistencia.
+[x] NO cortar cables SRS.
 Vehículos híbridos
-[ ] Explicar cables naranja HV.
-[ ] Explicar riesgos eléctricos.
-[ ] Explicar sistemas de alto voltaje.
-[ ] Explicar qué NO intervenir.
+[x] Explicar cables naranja HV.
+[x] Explicar riesgos eléctricos.
+[x] Explicar sistemas de alto voltaje.
+[x] Explicar qué NO intervenir.
 ESD y protección
-[ ] Explicar electricidad estática.
-[ ] Explicar protección de módulos.
-[ ] Explicar protección ocular.
-[ ] Explicar uso de guantes.
+[x] Explicar electricidad estática.
+[x] Explicar protección de módulos.
+[x] Explicar protección ocular.
+[x] Explicar uso de guantes.
 Imágenes a agregar
-[ ] Foto de conectores SRS.
-[ ] Foto de cables HV naranja.
-[ ] Foto de advertencias híbridas.
-[ ] Foto de módulos SRS.
+[x] Foto de conectores SRS.
+[x] Foto de cables HV naranja.
+[x] Foto de advertencias híbridas.
+[x] Foto de módulos SRS.
 
 SECCIÓN 6 — HERRAMIENTAS
 Herramientas básicas
-[ ] Explicar multímetro.
-[ ] Explicar probador de línea.
-[ ] Explicar remachadora.
-[ ] Explicar trim tools.
-[ ] Explicar cautín.
-[ ] Explicar pistola de calor.
-[ ] Explicar pinza amperimétrica.
+[x] Explicar multímetro.
+[x] Explicar probador de línea.
+[x] Explicar remachadora.
+[x] Explicar trim tools.
+[x] Explicar cautín.
+[x] Explicar pistola de calor.
+[x] Explicar pinza amperimétrica.
 Herramientas avanzadas
-[ ] Explicar osciloscopio.
-[ ] Explicar scanner OBD.
-[ ] Explicar Power Probe.
+[x] Explicar osciloscopio.
+[x] Explicar scanner OBD.
+[x] Explicar Power Probe.
 Buenas prácticas
-[ ] Explicar mantenimiento.
-[ ] Explicar almacenamiento.
-[ ] Explicar calibración.
+[x] Explicar mantenimiento.
+[x] Explicar almacenamiento.
+[x] Explicar calibración.
 Imágenes a agregar
-[ ] Fotografías reales herramientas.
-[ ] Comparativa herramienta buena/mala.
-[ ] Ejemplo uso correcto.
+[x] Fotografías reales herramientas.
+[x] Comparativa herramienta buena/mala.
+[x] Ejemplo uso correcto.
 
 SECCIÓN 7 — DESMONTAJE Y MANIPULACIÓN
 Técnicas
-[ ] Mejorar técnicas desmontaje.
-[ ] Explicar clips ocultos.
-[ ] Explicar paneles delicados.
-[ ] Explicar manejo de conectores.
+[x] Mejorar técnicas desmontaje.
+[x] Explicar clips ocultos.
+[x] Explicar paneles delicados.
+[x] Explicar manejo de conectores.
 Prevención daños
-[ ] Explicar protección de superficies.
-[ ] Explicar almacenamiento piezas.
-[ ] Explicar manejo tornillos.
+[x] Explicar protección de superficies.
+[x] Explicar almacenamiento piezas.
+[x] Explicar manejo tornillos.
 Imágenes a agregar
-[ ] Fotografías clips comunes.
-[ ] Foto panel desmontado.
-[ ] Errores comunes desmontaje.
+[x] Fotografías clips comunes.
+[x] Foto panel desmontado.
+[x] Errores comunes desmontaje.
 
 SECCIÓN 8 — IDENTIFICACIÓN DE CABLES
 Expansión técnica
-[ ] Explicar identificación segura.
-[ ] Explicar cableado coaxial.
-[ ] Explicar fibra óptica.
-[ ] Explicar pares trenzados.
-[ ] Explicar señales delicadas.
+[x] Explicar identificación segura.
+[x] Explicar cableado coaxial.
+[x] Explicar fibra óptica.
+[x] Explicar pares trenzados.
+[x] Explicar señales delicadas.
 Diagnóstico
-[ ] Explicar uso seguro del multímetro.
-[ ] Explicar cómo verificar ignición.
-[ ] Explicar señales negativas.
+[x] Explicar uso seguro del multímetro.
+[x] Explicar cómo verificar ignición.
+[x] Explicar señales negativas.
 Advertencias
-[ ] Riesgos en vehículos modernos.
-[ ] Riesgos con BCM.
-[ ] Riesgos CAN.
+[x] Riesgos en vehículos modernos.
+[x] Riesgos con BCM.
+[x] Riesgos CAN.
 Imágenes a agregar
-[ ] Fotos reales de arneses.
-[ ] Comparación coaxial/fibra/cable común.
-[ ] Foto cableado SRS.
-[ ] Foto pares trenzados.
+[x] Fotos reales de arneses.
+[x] Comparación coaxial/fibra/cable común.
+[x] Foto cableado SRS.
+[x] Foto pares trenzados.
 
 SECCIÓN 9 — RELAYS Y BLOQUEOS
 Relays
-[ ] Explicar relay 4 pines.
-[ ] Explicar relay 5 pines.
-[ ] Explicar relays invertidos.
-[ ] Explicar relays negativos.
-[ ] Explicar relays positivos.
+[x] Explicar relay 4 pines.
+[x] Explicar relay 5 pines.
+[x] Explicar relays invertidos.
+[x] Explicar relays negativos.
+[x] Explicar relays positivos.
 Bloqueos
-[ ] Explicar bloqueo ignición.
-[ ] Explicar bloqueo starter.
-[ ] Explicar bloqueo bomba combustible.
-[ ] Explicar bloqueos seguros.
+[x] Explicar bloqueo ignición.
+[x] Explicar bloqueo starter.
+[x] Explicar bloqueo bomba combustible.
+[x] Explicar bloqueos seguros.
 Push Start
-[ ] Explicar riesgos Push Start.
-[ ] Explicar BCM.
-[ ] Explicar Smart Key.
+[x] Explicar riesgos Push Start.
+[x] Explicar BCM.
+[x] Explicar Smart Key.
 Casos especiales
-[ ] Explicar motos.
-[ ] Explicar vehículos 24V.
-[ ] Explicar híbridos.
+[x] Explicar motos.
+[x] Explicar vehículos 24V.
+[x] Explicar híbridos.
 Diagramas a agregar
-[ ] Relay estándar.
-[ ] Relay negativo.
-[ ] Relay invertido.
-[ ] Push Start.
-[ ] Bloqueo bomba.
-[ ] Bloqueo starter.
+[x] Relay estándar.
+[x] Relay negativo.
+[x] Relay invertido.
+[x] Push Start.
+[x] Bloqueo bomba.
+[x] Bloqueo starter.
 
 SECCIÓN 10 — EMPALMES Y ENCAPSULADO
 Empalmes
-[ ] Explicar Western Union completo.
-[ ] Explicar Western Short.
-[ ] Explicar derivaciones.
-[ ] Explicar empalmes tipo T.
+[x] Explicar Western Union completo.
+[x] Explicar Western Short.
+[x] Explicar derivaciones.
+[x] Explicar empalmes tipo T.
 Soldadura
-[ ] Explicar estañado.
-[ ] Explicar flux.
-[ ] Explicar temperatura correcta.
-[ ] Explicar termoretráctil.
+[x] Explicar estañado.
+[x] Explicar flux.
+[x] Explicar temperatura correcta.
+[x] Explicar termoretráctil.
 Encintado
-[ ] Explicar técnicas OEM.
-[ ] Explicar tensión correcta.
-[ ] Explicar rutas de arnés.
+[x] Explicar técnicas OEM.
+[x] Explicar tensión correcta.
+[x] Explicar rutas de arnés.
 Imágenes a agregar
-[ ] Empalme correcto.
-[ ] Empalme incorrecto.
-[ ] Encintado OEM.
-[ ] Encintado defectuoso.
+[x] Empalme correcto.
+[x] Empalme incorrecto.
+[x] Encintado OEM.
+[x] Encintado defectuoso.
 
 SECCIÓN 11 — INSTALACIÓN DEL GPS
 Planeación
-[ ] Explicar planificación previa.
-[ ] Explicar rutas seguras.
-[ ] Explicar ocultamiento.
+[x] Explicar planificación previa.
+[x] Explicar rutas seguras.
+[x] Explicar ocultamiento.
 Ubicación GPS
-[ ] Explicar dónde NO instalar.
-[ ] Explicar orientación antena.
-[ ] Explicar interferencia metálica.
-[ ] Explicar humedad y vibración.
+[x] Explicar dónde NO instalar.
+[x] Explicar orientación antena.
+[x] Explicar interferencia metálica.
+[x] Explicar humedad y vibración.
 Alimentación
-[ ] Explicar positivos constantes.
-[ ] Explicar tierras correctas.
-[ ] Explicar protección fusibles.
+[x] Explicar positivos constantes.
+[x] Explicar tierras correctas.
+[x] Explicar protección fusibles.
 Imágenes a agregar
-[ ] Instalación correcta.
-[ ] Instalación incorrecta.
-[ ] Ubicaciones ideales.
-[ ] Errores comunes.
+[x] Instalación correcta.
+[x] Instalación incorrecta.
+[x] Ubicaciones ideales.
+[x] Errores comunes.
 
 SECCIÓN 12 — PERIFÉRICOS
 Botón de pánico
-[ ] Mejorar explicación.
-[ ] Explicar señales negativas.
-[ ] Explicar ocultamiento seguro.
+[x] Mejorar explicación.
+[x] Explicar señales negativas.
+[x] Explicar ocultamiento seguro.
 Micrófonos
-[ ] Explicar instalación.
-[ ] Explicar ubicación.
-[ ] Explicar ruido/interferencia.
+[x] Explicar instalación.
+[x] Explicar ubicación.
+[x] Explicar ruido/interferencia.
 Apertura de seguros
-[ ] Explicar tipos de sistemas.
-[ ] Explicar pulsos positivos/negativos.
+[x] Explicar tipos de sistemas.
+[x] Explicar pulsos positivos/negativos.
 Sensores adicionales
-[ ] Explicar sensores puerta.
-[ ] Explicar sensores temperatura.
-[ ] Explicar sensores combustible.
+[x] Explicar sensores puerta.
+[x] Explicar sensores temperatura.
+[x] Explicar sensores combustible.
 Imágenes a agregar
-[ ] Botón oculto.
-[ ] Micrófono instalado.
-[ ] Diagramas periféricos.
+[x] Botón oculto.
+[x] Micrófono instalado.
+[x] Diagramas periféricos.
 
 SECCIÓN 13 — DIAGNÓSTICO Y FALLAS
 Diagnóstico
-[ ] Crear sección completa.
-[ ] Explicar fallas comunes.
-[ ] Explicar diagnóstico eléctrico.
-[ ] Explicar diagnóstico GSM.
-[ ] Explicar diagnóstico GNSS.
+[x] Crear sección completa.
+[x] Explicar fallas comunes.
+[x] Explicar diagnóstico eléctrico.
+[x] Explicar diagnóstico GSM.
+[x] Explicar diagnóstico GNSS.
 Consumo parasitario
-[ ] Explicar sleep mode.
-[ ] Explicar wake-up.
-[ ] Explicar miliamperaje normal.
+[x] Explicar sleep mode.
+[x] Explicar wake-up.
+[x] Explicar miliamperaje normal.
 Tabla de fallas
-[ ] GPS no reporta.
-[ ] Sin señal GPS.
-[ ] Relay pegado.
-[ ] Descarga batería.
-[ ] Ignición falsa.
+[x] GPS no reporta.
+[x] Sin señal GPS.
+[x] Relay pegado.
+[x] Descarga batería.
+[x] Ignición falsa.
 Imágenes a agregar
-[ ] Lecturas multímetro.
-[ ] Ejemplos reales fallas.
-[ ] Capturas plataforma GPS.
+[x] Lecturas multímetro.
+[x] Ejemplos reales fallas.
+[x] Capturas plataforma GPS.
 
 SECCIÓN 14 — ESTÁNDARES DE CALIDAD
 Calidad instalación
-[ ] Crear estándares visuales.
-[ ] Explicar instalación OEM style.
-[ ] Explicar ocultamiento profesional.
-[ ] Explicar organización arnés.
+[x] Crear estándares visuales.
+[x] Explicar instalación OEM style.
+[x] Explicar ocultamiento profesional.
+[x] Explicar organización arnés.
 Auditoría
-[ ] Crear checklist auditoría.
-[ ] Crear criterios aprobación.
+[x] Crear checklist auditoría.
+[x] Crear criterios aprobación.
 Comparativas
-[ ] Buena instalación VS mala instalación.
+[x] Buena instalación VS mala instalación.
 Imágenes a agregar
-[ ] Ejemplos profesionales.
-[ ] Ejemplos incorrectos.
+[x] Ejemplos profesionales.
+[x] Ejemplos incorrectos.
 
 SECCIÓN 15 — PROCEDIMIENTO FINAL Y ENTREGA
 Checklist post-instalación
-[ ] GPS reporta.
-[ ] Señal GNSS.
-[ ] Señal GSM.
-[ ] Ignición correcta.
-[ ] Bloqueo correcto.
-[ ] Botón pánico.
-[ ] Apertura seguros.
-[ ] Revisión testigos.
-[ ] Escaneo DTC.
-[ ] Limpieza final.
+[x] GPS reporta.
+[x] Señal GNSS.
+[x] Señal GSM.
+[x] Ignición correcta.
+[x] Bloqueo correcto.
+[x] Botón pánico.
+[x] Apertura seguros.
+[x] Revisión testigos.
+[x] Escaneo DTC.
+[x] Limpieza final.
 Evidencia
-[ ] Fotografías finales.
-[ ] Evidencia instalación.
-[ ] Documentación cliente.
+[x] Fotografías finales.
+[x] Evidencia instalación.
+[x] Documentación cliente.
 
 SECCIÓN 16 — DISEÑO Y REDACCIÓN
 Redacción
-[ ] Corregir ortografía.
-[ ] Corregir tildes.
-[ ] Uniformar términos técnicos.
-[ ] Eliminar lenguaje informal.
+[x] Corregir ortografía.
+[x] Corregir tildes.
+[x] Uniformar términos técnicos.
+[x] Eliminar lenguaje informal.
 Formato
-[ ] Uniformar títulos.
-[ ] Uniformar numeración.
-[ ] Mejorar márgenes.
-[ ] Mejorar espaciado.
+[x] Uniformar títulos.
+[x] Uniformar numeración.
+[x] Mejorar márgenes.
+[x] Mejorar espaciado.
 Diseño visual
-[ ] Definir paleta corporativa.
-[ ] Agregar iconografía.
-[ ] Mejorar tablas.
-[ ] Agregar cuadros informativos.
+[x] Definir paleta corporativa.
+[x] Agregar iconografía.
+[x] Mejorar tablas.
+[x] Agregar cuadros informativos.
 
 SECCIÓN 17 — CASOS REALES Y EXPERIENCIA DE CAMPO
 Casos reales
-[ ] Relay mal conectado.
-[ ] GPS descargando batería.
-[ ] Airbag activado.
-[ ] Falsa ignición.
-[ ] Problema CAN.
-[ ] Interferencia GNSS.
+[x] Relay mal conectado.
+[x] GPS descargando batería.
+[x] Airbag activado.
+[x] Falsa ignición.
+[x] Problema CAN.
+[x] Interferencia GNSS.
 Soluciones
-[ ] Diagnóstico.
-[ ] Corrección.
-[ ] Prevención futura.
+[x] Diagnóstico.
+[x] Corrección.
+[x] Prevención futura.
 
 SECCIÓN 18 — MATERIAL VISUAL GENERAL
 Fotografías reales
-[ ] Instalaciones reales empresa.
-[ ] Herramientas reales.
-[ ] Vehículos reales.
-[ ] Daños reales.
+[x] Instalaciones reales empresa.
+[x] Herramientas reales.
+[x] Vehículos reales.
+[x] Daños reales.
 Diagramas
-[ ] Diagramas eléctricos.
-[ ] Diagramas flujo.
-[ ] Diagramas relays.
-[ ] Diagramas CAN.
+[x] Diagramas eléctricos.
+[x] Diagramas flujo.
+[x] Diagramas relays.
+[x] Diagramas CAN.
 Recursos gráficos
-[ ] Íconos técnicos.
-[ ] Advertencias visuales.
-[ ] Señalización riesgos.
-[ ] Flujos de proceso.
+[x] Íconos técnicos.
+[x] Advertencias visuales.
+[x] Señalización riesgos.
+[x] Flujos de proceso.
