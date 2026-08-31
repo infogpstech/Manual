@@ -12,3 +12,4 @@
 | 2025-07-05 | modulo5.html | Expansion | Adici&oacute;n de riesgos t&eacute;cnicos por desconexi&oacute;n de bater&iacute;a. |
 | 2025-07-05 | modulo4.html | Expansion | Adici&oacute;n de fundamentos contra el uso de soldadura en automotriz. |
 | 2025-07-05 | modulo7.html | Expansion | Gu&iacute;as paso a paso para identificaci&oacute;n de se&ntilde;ales IGN/START/Push. |
+| 2025-08-31 | Presentaciones/Capacitacion_Tecnica_GPS.html | Global | Creaci&oacute;n de la presentaci&oacute;n de capacitaci&oacute;n t&eacute;cnica para instaladores GPS de TRACKLINK Honduras con los 13 temas requeridos, logo oficial y retirado del cuestionario. |
