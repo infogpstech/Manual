@@ -13,3 +13,4 @@
 | 2025-07-05 | modulo4.html | Expansion | Adici&oacute;n de fundamentos contra el uso de soldadura en automotriz. |
 | 2025-07-05 | modulo7.html | Expansion | Gu&iacute;as paso a paso para identificaci&oacute;n de se&ntilde;ales IGN/START/Push. |
 | 2025-08-31 | Presentaciones/Capacitacion_Tecnica_GPS.html | Global | Creaci&oacute;n de la presentaci&oacute;n de capacitaci&oacute;n t&eacute;cnica para instaladores GPS de TRACKLINK Honduras con los 13 temas requeridos, logo oficial y retirado del cuestionario. |
+| 2025-08-31 | Presentaciones/Capacitacion_Tecnica_GPS.html | 255 | Reemplazo de imagen de Tema 3 a m1_inspeccion_de_vehiculo_4.png (Formulario de Orden de Trabajo TRACKLINK). |
