@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manual Técnico GPS - Módulo 7 — Identificación de Señales</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <nav>
-                <a href="index.html">← Volver al Índice Principal</a>
-            </nav>
-            <h1>Módulo 7 — Identificación de Señales</h1>
-        </header>
-
-        <main>
-            <button class="accordion">
-    11. Configuración y Conexión de Relés (Corte de Ignición)
-   </button>
-<div class="panel" id="m2_configuracion_del_relee">
-<div class="text-block">
-     Configuración del Relee
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Manual Técnico GPS - Módulo 7 — Identificación de Señales
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="container">
+   <header>
+    <nav>
+     <a href="index.html">
+      ← Volver al Índice Principal
+     </a>
+    </nav>
+    <h1>
+     Módulo 7 — Identificación de Señales
+    </h1>
+   </header>
+   <main>
+    <button class="accordion">
+     11. Configuración y Conexión de Relés (Corte de Ignición)
+    </button>
+    <div class="panel" id="m2_configuracion_del_relee">
+     <div class="text-block">
+      Configuración del Relee
      Un relay de 5 pines es un interruptor eléctrico controlado por una señal, que permite abrir o cerrar circuitos de manera remota. Es ideal para el corte de ignición en sistemas de seguridad de vehículos, ya que permite apagar el vehículo e impedir que se encienda hasta que se desactive el relay.
      Descripción de los Pines
      - Pin 30: Entrada de corriente. Es el pin al que normalmente se conecta el suministro de corriente que se desea controlar.
@@ -29,307 +34,388 @@
      - Pin 87a: Salida normalmente cerrada (NC). Cuando el relay está desactivado, este pin está conectado al pin 30, permitiendo el flujo de corriente por defecto.
      - Pin 85: Tierra (negativo). Este pin se conecta a tierra y permite que el relay funcione adecuadamente cuando recibe señal de activación.
      - Pin 86: Activación del relay (positivo). Recibe una señal de corriente para activar el relay y cambiar el estado de los pines 87 y 87a.
-     <h3>
-      Operación Detallada del Relé (Relay) de 5 Pines
-     </h3>
-<p>
-      El relé es un interruptor electromecánico fundamental para el corte de ignición. Su funcionamiento se basa en una bobina que, al ser energizada, genera un campo magnético que mueve un contacto físico.
-     </p>
-<ul>
-<li>
-<strong>
-        Pin 85 y 86:
-       </strong>
-       Corresponden a los extremos de la bobina. En una instalación estándar, el pin 85 se conecta a una señal positiva (12V) y el 86 a la salida de bloqueo del GPS (pulso negativo). Al activarse el bloqueo desde la plataforma, la bobina se energiza.
-      </li>
-<li>
-<strong>
-        Pin 30 (Común):
-       </strong>
-       Es el punto de entrada de la señal que deseamos interrumpir. Debe conectarse al extremo del cable de ignición que proviene del llavín.
-      </li>
-<li>
-<strong>
-        Pin 87a (Normalmente Cerrado - NC):
-       </strong>
-       En reposo, el pin 30 está conectado internamente al 87a. Aquí se conecta el cable que continúa hacia el sistema de encendido del motor. Al activarse el relé, esta conexión se abre, cortando el flujo eléctrico y apagando el vehículo.
-      </li>
-<li>
-<strong>
-        Pin 87 (Normalmente Abierto - NO):
-       </strong>
-       Se utiliza para aplicaciones donde se desea activar un componente (como una sirena o luces) cuando el bloqueo está activo.
-      </li>
-</ul>
-</div>
-<div class="img-container">
-<img src="images/m2_configuracion_del_relee_1.png"/>
-</div>
-<div class="img-container">
-<img src="images/m2_configuracion_del_relee_2.png"/>
-</div>
-<div class="text-block">
-     Configuración Básica para Corte de Ignición
+      <h3>
+       Operación Detallada del Relé (Relay) de 5 Pines
+      </h3>
+      <p>
+       El relé es un interruptor electromecánico fundamental para el corte de ignición. Su funcionamiento se basa en una bobina que, al ser energizada, genera un campo magnético que mueve un contacto físico.
+      </p>
+      <ul>
+       <li>
+        <strong>
+         Pin 85 y 86:
+        </strong>
+        Corresponden a los extremos de la bobina. En una instalación estándar, el pin 85 se conecta a una señal positiva (12V) y el 86 a la salida de bloqueo del GPS (pulso negativo). Al activarse el bloqueo desde la plataforma, la bobina se energiza.
+       </li>
+       <li>
+        <strong>
+         Pin 30 (Común):
+        </strong>
+        Es el punto de entrada de la señal que deseamos interrumpir. Debe conectarse al extremo del cable de ignición que proviene del llavín.
+       </li>
+       <li>
+        <strong>
+         Pin 87a (Normalmente Cerrado - NC):
+        </strong>
+        En reposo, el pin 30 está conectado internamente al 87a. Aquí se conecta el cable que continúa hacia el sistema de encendido del motor. Al activarse el relé, esta conexión se abre, cortando el flujo eléctrico y apagando el vehículo.
+       </li>
+       <li>
+        <strong>
+         Pin 87 (Normalmente Abierto - NO):
+        </strong>
+        Se utiliza para aplicaciones donde se desea activar un componente (como una sirena o luces) cuando el bloqueo está activo.
+       </li>
+      </ul>
+     </div>
+     <div class="img-container">
+      <img src="images/m2_configuracion_del_relee_1.png"/>
+     </div>
+     <div class="img-container">
+      <img src="images/m2_configuracion_del_relee_2.png"/>
+     </div>
+     <div class="text-block">
+      Configuración Básica para Corte de Ignición
      En esta configuración, el relay cortará la alimentación de la línea de ignición cuando esté activado, evitando que el vehículo arranque.
-     <ul>
-<li><strong>1. Pin 30:</strong> Conéctalo a la línea de alimentación de ignición del vehículo. Este pin es la entrada de corriente al relay.</li>
-<li><strong>2. Pin 87a:</strong> Conéctalo al circuito de ignición del vehículo (por ejemplo, a la línea que lleva la corriente al encendido).</li>
-<li><strong>3. Pin 87:</strong> Deja este pin desconectado o úsalo para una función adicional.</li>
-<li><strong>4. Pin 85:</strong> Realiza un puente con el pin 30 para que reciba la corriente de ignición.</li>
-<li><strong>5. Pin 86:</strong> Este pin será nuestro activador, aquí conectaremos la salida de señal negativa de nuestro GPS.</li>
-</ul>
-     Diagrama:
+      <ul>
+       <li>
+        <strong>
+         1. Pin 30:
+        </strong>
+        Conéctalo a la línea de alimentación de ignición del vehículo. Este pin es la entrada de corriente al relay.
+       </li>
+       <li>
+        <strong>
+         2. Pin 87a:
+        </strong>
+        Conéctalo al circuito de ignición del vehículo (por ejemplo, a la línea que lleva la corriente al encendido).
+       </li>
+       <li>
+        <strong>
+         3. Pin 87:
+        </strong>
+        Deja este pin desconectado o úsalo para una función adicional.
+       </li>
+       <li>
+        <strong>
+         4. Pin 85:
+        </strong>
+        Realiza un puente con el pin 30 para que reciba la corriente de ignición.
+       </li>
+       <li>
+        <strong>
+         5. Pin 86:
+        </strong>
+        Este pin será nuestro activador, aquí conectaremos la salida de señal negativa de nuestro GPS.
+       </li>
+      </ul>
+      Diagrama:
      Funcionamiento
      1. Relay desactivado: En este estado, el pin 30 se conecta al pin 87a, permitiendo el flujo de corriente hacia la línea de ignición del vehículo. Esto permite que el vehículo encienda y funcione normalmente.
      2. Relay activado: Cuando el sistema de seguridad activa el relay (por ejemplo, enviando una señal a través del pin 86), el pin 30 se conecta al pin 87 y se interrumpe la conexión con 87a, cortando el flujo de corriente hacia la ignición y apagando el vehículo.
-    </div>
-<div class="img-container">
-<img src="images/m2_configuracion_del_relee_3.png"/>
-</div>
-<div class="text-block">
-     Cabe aclarar que para algunos modelos de vehículos se utiliza una configuración modificada del relay que depende de la situación, se debe configurar, por ejemplo, en los modelos l200 2025 de llave, donde la corriente que llega al llavín, es negativa, que, por tanto, no se hace el puente entre los pines 30 y 86.
+     </div>
+     <div class="img-container">
+      <img src="images/m2_configuracion_del_relee_3.png"/>
+     </div>
+     <div class="text-block">
+      Cabe aclarar que para algunos modelos de vehículos se utiliza una configuración modificada del relay que depende de la situación, se debe configurar, por ejemplo, en los modelos l200 2025 de llave, donde la corriente que llega al llavín, es negativa, que, por tanto, no se hace el puente entre los pines 30 y 86.
      A continuación, una configuración sobre el caso del modelo Mitsubishi L200
      2025 de llave.
      Funcionamiento:
      En este caso en particular podemos observar que el pin 85 y pin 30 ya no comparten un puente, lo que significa que la alimentación bobina debe ser independiente, recomendablemente un positivo constante. Otra observación es la inversión de los pines 30 y 87a los cuales la dirección cambia, donde el pin 30 solía ser la corriente que entraba al relay ahora es la que sale, y lo mismo para el pin 87a.
      Es importante tener en cuenta que tanto la señal que entra al relay como la señal de salida deben de ser correctamente señalizadas para no confundir los cables que salen del llavín con la señal que va al encendido, esto se puede realizar con solo retirar un poco del aislante de uno de los cables que salen de los pines 30 y 87a.
-     <h3>Estrategias de Inmovilización</h3>
-<ul>
-<li><strong>Corte de Ignición:</strong> Inmediato. Puede generar DTC.</li>
-<li><strong>Corte de Bomba:</strong> Gradual y más limpio electrónicamente.</li>
-<li><strong>Corte de Motor de Arranque:</strong> El más seguro en carretera (sólo impide el encendido).</li>
-</ul>
-</div>
-<div class="img-container">
-<img src="images/m2_configuracion_del_relee_4.png"/>
-</div>
-<div class="img-container">
-<img src="images/m2_configuracion_del_relee_5.png"/>
-</div>
-<div class="text-block">
-     Relay para algunos modelos de motocicletas
+      <h3>
+       Estrategias de Inmovilización
+      </h3>
+      <ul>
+       <li>
+        <strong>
+         Corte de Ignición:
+        </strong>
+        Inmediato. Puede generar DTC.
+       </li>
+       <li>
+        <strong>
+         Corte de Bomba:
+        </strong>
+        Gradual y más limpio electrónicamente.
+       </li>
+       <li>
+        <strong>
+         Corte de Motor de Arranque:
+        </strong>
+        El más seguro en carretera (sólo impide el encendido).
+       </li>
+      </ul>
+     </div>
+     <div class="img-container">
+      <img src="images/m2_configuracion_del_relee_4.png"/>
+     </div>
+     <div class="img-container">
+      <img src="images/m2_configuracion_del_relee_5.png"/>
+     </div>
+     <div class="text-block">
+      Relay para algunos modelos de motocicletas
      En algunos modelos de motocicletas, el apagado se realiza enviando un pulso negativo al botón corta corriente, o a la bobina de alta, cabe aclarar que, si bien el apagado podría funcionar sin el relay, se recomienda utilizar el relay para aislar la señal de GPS y la del apagado de la moto, de lo contrario podría ocurrir apagados inesperados.
      A continuación, una configuración sobre el caso de motos con apagado con negativo
      Funcionamiento: Como se puede observar en el diagrama, el pin 87a ya no se utiliza, debido a que en este caso lo que necesitamos enviar un pulso negativo contante al sistema de apagado de la motocicleta, en este caso ya no es necesario realizar ningún corte en los cables de la motocicleta.
      Se recomienda tomar la señal negativa de la batería de la motocicleta, esto es para minimizar problemas.
+     </div>
+     <div class="back-to-top">
+      <a href="#intro_manual_borrador_i">
+       ↑ Volver al Índice
+      </a>
+     </div>
     </div>
-<div class="back-to-top"><a href="#intro_manual_borrador_i">↑ Volver al Índice</a></div>
-</div><button class="accordion">
-    16. Identificación Avanzada de Conductores y Señales
-   </button>
-<div class="panel" id="m2_identificacion_de_los_cables">
-<div class="text-block">
-<h3>
-      Identificación Técnica de Conductores y Señales
+    <button class="accordion">
+     16. Identificación Avanzada de Conductores y Señales
+    </button>
+    <div class="panel" id="m2_identificacion_de_los_cables">
+     <div class="text-block">
+      <h3>
+       Identificación Técnica de Conductores y Señales
+      </h3>
+      <p>
+       La correcta identificación de las líneas eléctricas y de señal es un paso crítico para garantizar una instalación segura, funcional y profesional. El técnico debe utilizar siempre equipo de medición adecuado (multímetro digital o probador de línea automotriz) y seguir estrictamente los protocolos para prevenir fallos en los sistemas electrónicos del vehículo.
+      </p>
+      <h4>
+       1. Identificación del Cable de Alimentación Positiva Constante (+12V)
+      </h4>
+      <p>
+       Es fundamental localizar un conductor que suministre un voltaje constante de 12V directamente desde la batería o un punto de distribución principal. Se debe asegurar que este voltaje no desaparezca ni inmediatamente ni varios minutos después de apagar el vehículo (evitando líneas con retardo o temporizadas).
+      </p>
+      <h5>
+       Procedimiento recomendado para vehículos con sistema de cierre centralizado (Central Lock):
+      </h5>
+      <ol>
+       <li>
+        Apagar el vehículo y retirar la llave del interruptor de encendido.
+       </li>
+       <li>
+        Asegurarse de que todas las puertas y el maletero estén completamente cerrados.
+       </li>
+       <li>
+        Para vehículos con botón sensor de puerta en el marco: retirar temporalmente el tornillo que lo sujeta para que el vehículo detecte el cierre total de las puertas.
+       </li>
+       <li>
+        Para vehículos sin sensor visible: introducir cuidadosamente un destornillador (preferiblemente de cabeza plana) en el pestillo de la cerradura de la puerta abierta para simular mecánicamente que se ha cerrado.
+       </li>
+       <li>
+        Utilizando el control remoto original del vehículo, presionar dos (2) veces el botón de cierre de seguros.
+       </li>
+       <li>
+        Tras escuchar la confirmación sonora de activación de la alarma, esperar un tiempo prudente de entre
+        <strong>
+         3 y 5 minutos
+        </strong>
+        .
+       </li>
+      </ol>
+      <p>
+       Una vez transcurrido este tiempo, la mayoría de los módulos electrónicos del vehículo entrarán en modo de reposo (Sleep Mode), permaneciendo activas únicamente las líneas de alimentación constante auténtica.
+      </p>
+      <p>
+       <strong>
+        Recomendación de búsqueda:
+       </strong>
+       Inicie la inspección en los cables de mayor calibre del mazo principal. Antes de intervenir, verifique que el conductor
+       <strong>
+        NO
+       </strong>
+       corresponda a ninguno de los siguientes tipos:
+      </p>
+      <ul>
+       <li>
+        Cable coaxial.
+       </li>
+       <li>
+        Cable entrelazado de comunicación (Twisted pair).
+       </li>
+       <li>
+        Fibra óptica.
+       </li>
+       <li>
+        Líneas de red CAN (CAN Bus) o sistemas de comunicación multiplexada.
+       </li>
+      </ul>
+      <h4>
+       2. Identificación del Cable de Apertura de Seguros
+      </h4>
+      <p>
+       Muchos vehículos modernos incorporan sistemas de Central Lock avanzados donde la señal de apertura de seguros puede variar sustancialmente dependiendo de si el vehículo se encuentra encendido o apagado.
+      </p>
+      <p>
+       Para identificar correctamente el cable de apertura funcional con el vehículo apagado, debe realizarse el mismo procedimiento de simulación de cierre y espera (Sleep Mode) utilizado para localizar la alimentación constante.
+      </p>
+      <h5>
+       Procedimiento de verificación de doble estado:
+      </h5>
+      <p>
+       Una vez que haya identificado el cable funcional con el vehículo apagado, realice la siguiente validación:
+      </p>
+      <ol>
+       <li>
+        Encender el vehículo.
+       </li>
+       <li>
+        Cerrar nuevamente todas las puertas.
+       </li>
+       <li>
+        Verificar si el mismo cable identificado continúa realizando la función de apertura de seguros con el vehículo encendido.
+       </li>
+      </ol>
+      <p>
+       Si el cable deja de funcionar cuando el vehículo está encendido, será necesario repetir el procedimiento de búsqueda con el vehículo en marcha para identificar la segunda línea de apertura necesaria para este estado.
+      </p>
+      <h5>
+       Consideraciones importantes sobre la conexión:
+      </h5>
+      <ul>
+       <li>
+        <strong>
+         No se recomienda unir ambos cables directamente
+        </strong>
+        a la misma salida de apertura del dispositivo GPS.
+       </li>
+       <li>
+        Aunque en algunos vehículos esta unión directa puede parecer funcionar, en otros puede provocar fallos críticos en el módulo de cierre centralizado o impedir el funcionamiento correcto de los seguros.
+       </li>
+       <li>
+        En caso de ser estrictamente necesario elegir, se recomienda utilizar únicamente el cable que permita la apertura de seguros con el vehículo apagado.
+       </li>
+       <li>
+        Si se requiere compatibilidad total en ambos estados (encendido y apagado), deberá utilizarse un
+        <strong>
+         relé (relay) configurado como conmutador
+        </strong>
+        , permitiendo enviar la señal de apertura al cable correspondiente según el estado de la ignición del vehículo.
+       </li>
+      </ul>
+      <p>
+       <strong>
+        Nota técnica adicional:
+       </strong>
+       Durante las pruebas de apertura con el vehículo encendido, es posible que la alarma del vehículo se active mientras el vehículo permanece apagado. En esos casos, únicamente será necesario presionar dos veces el botón de apertura de seguros del control remoto para desactivar nuevamente la alarma.
+      </p>
+      <h4>
+       3. Identificación de Señales en el Interruptor de Encendido (Llavín)
+      </h4>
+      <p>
+       Para la correcta conexión de las funciones de ignición y bloqueo de motor, identifique los siguientes cables en el interruptor principal:
+      </p>
+      <ul>
+       <li>
+        <strong>
+         Positivo de Entrada (12V+):
+        </strong>
+        Presenta voltaje constante incluso sin la llave insertada. Se identifica conectando el probador a tierra y tocando los cables con el vehículo apagado.
+       </li>
+       <li>
+        <strong>
+         Accesorio (ACC):
+        </strong>
+        Se activa cuando la llave gira a la primera posición. Alimenta sistemas no críticos como el radio y el ventilador.
+       </li>
+       <li>
+        <strong>
+         Ignición (IGN):
+        </strong>
+        Se activa en la posición ON. Es el cable responsable de mantener el vehículo encendido. Para validarlo, verifique que la señal sea constante y
+        <strong>
+         no parpadee ni se interrumpa
+        </strong>
+        cuando se gira la llave a la posición de arranque (START). Si parpadea, es una señal de accesorios o falsa ignición.
+       </li>
+       <li>
+        <strong>
+         Arranque (START):
+        </strong>
+        Proporciona un pulso de 12V únicamente mientras se mantiene la llave en la posición de arranque para accionar el motor.
+       </li>
+      </ul>
+      <p>
+       <strong>
+        Prueba de confirmación de Ignición:
+       </strong>
+       Si tiene dudas, realice una prueba de corte. Con el vehículo apagado, corte el cable sospechoso e intente encenderlo. Si el vehículo no arranca o se apaga inmediatamente, ha identificado el cable correcto para el corte de motor.
+      </p>
+     </div>
+    </div>
+    <section class="text-block">
+     <h3>
+      Procedimientos de Identificación de Señales
      </h3>
-<p>
-      La correcta identificación de las líneas eléctricas y de señal es un paso crítico para garantizar una instalación segura, funcional y profesional. El técnico debe utilizar siempre equipo de medición adecuado (multímetro digital o probador de línea automotriz) y seguir estrictamente los protocolos para prevenir fallos en los sistemas electrónicos del vehículo.
-     </p>
-<h4>
-      1. Identificación del Cable de Alimentación Positiva Constante (+12V)
-     </h4>
-<p>
-      Es fundamental localizar un conductor que suministre un voltaje constante de 12V directamente desde la batería o un punto de distribución principal. Se debe asegurar que este voltaje no desaparezca ni inmediatamente ni varios minutos después de apagar el vehículo (evitando líneas con retardo o temporizadas).
-     </p>
-<h5>
-      Procedimiento recomendado para vehículos con sistema de cierre centralizado (Central Lock):
-     </h5>
-<ol>
-<li>
-       Apagar el vehículo y retirar la llave del interruptor de encendido.
-      </li>
-<li>
-       Asegurarse de que todas las puertas y el maletero estén completamente cerrados.
-      </li>
-<li>
-       Para vehículos con botón sensor de puerta en el marco: retirar temporalmente el tornillo que lo sujeta para que el vehículo detecte el cierre total de las puertas.
-      </li>
-<li>
-       Para vehículos sin sensor visible: introducir cuidadosamente un destornillador (preferiblemente de cabeza plana) en el pestillo de la cerradura de la puerta abierta para simular mecánicamente que se ha cerrado.
-      </li>
-<li>
-       Utilizando el control remoto original del vehículo, presionar dos (2) veces el botón de cierre de seguros.
-      </li>
-<li>
-       Tras escuchar la confirmación sonora de activación de la alarma, esperar un tiempo prudente de entre
-       <strong>
-        3 y 5 minutos
-       </strong>
-       .
-      </li>
-</ol>
-<p>
-      Una vez transcurrido este tiempo, la mayoría de los módulos electrónicos del vehículo entrarán en modo de reposo (Sleep Mode), permaneciendo activas únicamente las líneas de alimentación constante auténtica.
-     </p>
-<p>
-<strong>
-       Recomendación de búsqueda:
-      </strong>
-      Inicie la inspección en los cables de mayor calibre del mazo principal. Antes de intervenir, verifique que el conductor
-      <strong>
-       NO
-      </strong>
-      corresponda a ninguno de los siguientes tipos:
-     </p>
-<ul>
-<li>
-       Cable coaxial.
-      </li>
-<li>
-       Cable entrelazado de comunicación (Twisted pair).
-      </li>
-<li>
-       Fibra óptica.
-      </li>
-<li>
-       Líneas de red CAN (CAN Bus) o sistemas de comunicación multiplexada.
-      </li>
-</ul>
-<h4>
-      2. Identificación del Cable de Apertura de Seguros
-     </h4>
-<p>
-      Muchos vehículos modernos incorporan sistemas de Central Lock avanzados donde la señal de apertura de seguros puede variar sustancialmente dependiendo de si el vehículo se encuentra encendido o apagado.
-     </p>
-<p>
-      Para identificar correctamente el cable de apertura funcional con el vehículo apagado, debe realizarse el mismo procedimiento de simulación de cierre y espera (Sleep Mode) utilizado para localizar la alimentación constante.
-     </p>
-<h5>
-      Procedimiento de verificación de doble estado:
-     </h5>
-<p>
-      Una vez que haya identificado el cable funcional con el vehículo apagado, realice la siguiente validación:
-     </p>
-<ol>
-<li>
-       Encender el vehículo.
-      </li>
-<li>
-       Cerrar nuevamente todas las puertas.
-      </li>
-<li>
-       Verificar si el mismo cable identificado continúa realizando la función de apertura de seguros con el vehículo encendido.
-      </li>
-</ol>
-<p>
-      Si el cable deja de funcionar cuando el vehículo está encendido, será necesario repetir el procedimiento de búsqueda con el vehículo en marcha para identificar la segunda línea de apertura necesaria para este estado.
-     </p>
-<h5>
-      Consideraciones importantes sobre la conexión:
-     </h5>
-<ul>
-<li>
-<strong>
-        No se recomienda unir ambos cables directamente
-       </strong>
-       a la misma salida de apertura del dispositivo GPS.
-      </li>
-<li>
-       Aunque en algunos vehículos esta unión directa puede parecer funcionar, en otros puede provocar fallos críticos en el módulo de cierre centralizado o impedir el funcionamiento correcto de los seguros.
-      </li>
-<li>
-       En caso de ser estrictamente necesario elegir, se recomienda utilizar únicamente el cable que permita la apertura de seguros con el vehículo apagado.
-      </li>
-<li>
-       Si se requiere compatibilidad total en ambos estados (encendido y apagado), deberá utilizarse un
-       <strong>
-        relé (relay) configurado como conmutador
-       </strong>
-       , permitiendo enviar la señal de apertura al cable correspondiente según el estado de la ignición del vehículo.
-      </li>
-</ul>
-<p>
-<strong>
-       Nota técnica adicional:
-      </strong>
-      Durante las pruebas de apertura con el vehículo encendido, es posible que la alarma del vehículo se active mientras el vehículo permanece apagado. En esos casos, únicamente será necesario presionar dos veces el botón de apertura de seguros del control remoto para desactivar nuevamente la alarma.
-     </p>
-<h4>
-      3. Identificación de Señales en el Interruptor de Encendido (Llavín)
-     </h4>
-<p>
-      Para la correcta conexión de las funciones de ignición y bloqueo de motor, identifique los siguientes cables en el interruptor principal:
-     </p>
-<ul>
-<li>
-<strong>
-        Positivo de Entrada (12V+):
-       </strong>
-       Presenta voltaje constante incluso sin la llave insertada. Se identifica conectando el probador a tierra y tocando los cables con el vehículo apagado.
-      </li>
-<li>
-<strong>
-        Accesorio (ACC):
-       </strong>
-       Se activa cuando la llave gira a la primera posición. Alimenta sistemas no críticos como el radio y el ventilador.
-      </li>
-<li>
-<strong>
-        Ignición (IGN):
-       </strong>
-       Se activa en la posición ON. Es el cable responsable de mantener el vehículo encendido. Para validarlo, verifique que la señal sea constante y
-       <strong>
-        no parpadee ni se interrumpa
-       </strong>
-       cuando se gira la llave a la posición de arranque (START). Si parpadea, es una señal de accesorios o falsa ignición.
-      </li>
-<li>
-<strong>
-        Arranque (START):
-       </strong>
-       Proporciona un pulso de 12V únicamente mientras se mantiene la llave en la posición de arranque para accionar el motor.
-      </li>
-</ul>
-<p>
-<strong>
-       Prueba de confirmación de Ignición:
-      </strong>
-      Si tiene dudas, realice una prueba de corte. Con el vehículo apagado, corte el cable sospechoso e intente encenderlo. Si el vehículo no arranca o se apaga inmediatamente, ha identificado el cable correcto para el corte de motor.
-     </p>
-</div>
-</div>
-        <section class="text-block">
-    <h3>Procedimientos de Identificación de Señales</h3>
-
-    <button class="accordion">7.1. Identificación de Ignición (IGN)</button>
-    <div class="panel">
-        <div class="text-block">
-            <p>La ignición es el cable que mantiene el motor funcionando. Debe tener 12V en posición ON y <strong>mantenerlos</strong> durante el arranque (START).</p>
-            <ol>
-                <li>Coloque el multímetro en DC Volts.</li>
-                <li>Puntee el cable sospechoso.</li>
-                <li>Gire la llave a ON: Debe marcar ~12V.</li>
-                <li>Gire la llave a START: El voltaje NO debe caer a 0V. Si cae, es un cable de Accesorios (ACC).</li>
-            </ol>
-        </div>
-    </div>
-
-    <button class="accordion">7.2. Identificación de Arranque (START)</button>
-    <div class="panel">
-        <div class="text-block">
-            <p>Es el cable que activa la marcha. Solo tiene voltaje mientras se gira la llave a la posición de encendido.</p>
-            <ul>
-                <li>Solo presenta 12V en la posición final de la llave.</li>
-                <li>Vuelve a 0V inmediatamente al soltar la llave.</li>
-            </ul>
-        </div>
-    </div>
-
-    <button class="accordion">7.3. Señales en Sistemas Push Start</button>
-    <div class="panel">
-        <div class="text-block">
-            <p>En vehículos con botón, las señales suelen ser de bajo voltaje (5V) o pulsos digitales. <strong>Nunca</strong> corte estos cables sin un diagrama técnico del fabricante.</p>
-            <p>Se recomienda realizar el corte de motor en la bomba de combustible o en el relé principal de ignición (Main Relay) en el compartimento del motor.</p>
-        </div>
-    </div>
-</section>
-
-</main>
-
-        <footer>
-            <p>&copy; 2025 Manual de Capacitación Técnica GPS</p>
-        </footer>
-    </div>
-    <script src="main.js"></script>
-</body>
+     <button class="accordion">
+      7.1. Identificación de Ignición (IGN)
+     </button>
+     <div class="panel">
+      <div class="text-block">
+       <p>
+        La ignición es el cable que mantiene el motor funcionando. Debe tener 12V en posición ON y
+        <strong>
+         mantenerlos
+        </strong>
+        durante el arranque (START).
+       </p>
+       <ol>
+        <li>
+         Coloque el multímetro en DC Volts.
+        </li>
+        <li>
+         Puntee el cable sospechoso.
+        </li>
+        <li>
+         Gire la llave a ON: Debe marcar ~12V.
+        </li>
+        <li>
+         Gire la llave a START: El voltaje NO debe caer a 0V. Si cae, es un cable de Accesorios (ACC).
+        </li>
+       </ol>
+      </div>
+     </div>
+     <button class="accordion">
+      7.2. Identificación de Arranque (START)
+     </button>
+     <div class="panel">
+      <div class="text-block">
+       <p>
+        Es el cable que activa la marcha. Solo tiene voltaje mientras se gira la llave a la posición de encendido.
+       </p>
+       <ul>
+        <li>
+         Solo presenta 12V en la posición final de la llave.
+        </li>
+        <li>
+         Vuelve a 0V inmediatamente al soltar la llave.
+        </li>
+       </ul>
+      </div>
+     </div>
+     <button class="accordion">
+      7.3. Señales en Sistemas Push Start
+     </button>
+     <div class="panel">
+      <div class="text-block">
+       <p>
+        En vehículos con botón, las señales suelen ser de bajo voltaje (5V) o pulsos digitales.
+        <strong>
+         Nunca
+        </strong>
+        corte estos cables sin un diagrama técnico del fabricante.
+       </p>
+       <p>
+        Se recomienda realizar el corte de motor en la bomba de combustible o en el relé principal de ignición (Main Relay) en el compartimento del motor.
+       </p>
+      </div>
+     </div>
+    </section>
+   </main>
+   <footer>
+    <p>
+     © 2025 Manual de Capacitación Técnica GPS
+    </p>
+   </footer>
+  </div>
+  <script src="main.js">
+  </script>
+ </body>
 </html>

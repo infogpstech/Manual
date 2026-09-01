@@ -1,243 +1,423 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manual Técnico GPS - Módulo 2 — Fundamentos de Sistemas GPS</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <nav>
-                <a href="index.html">← Volver al Índice Principal</a>
-            </nav>
-            <h1>Módulo 2 — Fundamentos de Sistemas GPS</h1>
-        </header>
-
-        <main>
-            <button class="accordion">
-    2. Introducción Técnica
-   </button>
-<div class="panel" id="m1_introduccion">
-<div class="text-block">
-<p>
-      Este manual técnico ha sido desarrollado como una guía integral para los nuevos técnicos especializados en la instalación, configuración y mantenimiento de sistemas de rastreo y seguridad vehicular. A diferencia de la navegación convencional, estos dispositivos integran tecnologías de posicionamiento satelital con comunicaciones móviles GSM/LTE para permitir el monitoreo en tiempo real, la gestión de flotas y funciones de seguridad activa como la inmovilización remota. En el contexto actual, la precisión en la instalación es crítica no solo para la funcionalidad del dispositivo, sino también para la integridad eléctrica y mecánica del vehículo.
-     </p>
-<p>
-      A lo largo de este documento, el aspirante encontrará desde los fundamentos de la electrónica automotriz hasta procedimientos avanzados de diagnóstico. Nuestro objetivo primordial es asegurar que cada técnico adquiera las competencias necesarias para realizar instalaciones limpias, seguras y altamente efectivas, minimizando riesgos y maximizando la vida útil de los equipos instalados.
-     </p>
-<p>
-      La capacitación abarca el manejo de herramientas especializadas, la interpretación de diagramas complejos y la aplicación de protocolos de seguridad rigurosos. Al finalizar este manual, se incluye una sección dedicada a las particularidades de los vehículos con los que operamos habitualmente, proporcionando un conocimiento práctico directo para el campo de trabajo.
-     </p>
-</div>
-<div class="back-to-top"><a href="#intro_manual_borrador_i">↑ Volver al Índice</a></div>
-</div><button class="accordion">
-    4. Arquitectura de Hardware: Modelos de GPS
-   </button>
-<div class="panel" id="m1_modelos_de_gps_y_sus_funciones">
-<div class="text-block">
-<p>
-<strong>Modelos de Rastreo y Seguridad Vehicular:</strong> Es fundamental diferenciar estos dispositivos de los sistemas de navegación comunes. Las unidades de rastreo instalables se integran directamente al sistema eléctrico del vehículo para ofrecer funciones de monitoreo continuo, gestión de flotas y seguridad activa, como el apagado remoto. Conocer la arquitectura técnica de cada modelo permite optimizar su instalación y asegurar la compatibilidad con las redes de comunicación GSM/LTE y los servicios de monitoreo.
-     </p>
-<h3>
-      Unidades Descontinuadas
-     </h3>
-<p>
-      Corresponden a dispositivos que han sido retirados del catálogo para nuevas instalaciones en instalaciones nuevas
-     </p>
-</div>
-<div class="img-container">
-<img src="images/m1_modelos_de_gps_y_sus_funciones_1.png"/>
-</div>
-<div class="img-container">
-<img src="images/m1_modelos_de_gps_y_sus_funciones_2.png"/>
-</div>
-<div class="text-block">
-<h3>
-      Unidades En uso
-     </h3>
-<h3>
-      Funcionalidades
-     </h3>
-<p>
-      Las arquitecturas funcionales de las unidades GPS contemporáneas presentan una alta convergencia técnica. En particular, los modelos de la serie GV300 comparten un conector estándar de 16 pines que integra varias funciones, como el bloqueo remoto, la apertura de seguros, el botón de pánico, y la alimentación con un rango de voltaje operativo de entre 8 y 36 voltios. Además, incluye una conexión a tierra y soporta señales de dispositivos de audio, permitiendo la integración de un micrófono y parlantes.
-     </p>
-</div>
-<div class="img-container">
-<img src="images/m1_modelos_de_gps_y_sus_funciones_3.png"/>
-</div>
-<div class="img-container">
-<img src="images/m1_modelos_de_gps_y_sus_funciones_4.png"/>
-</div>
-<div class="text-block">
-<h3>Serie GV300</h3>
-<p>
-      Actualmente, esta plataforma es la que más se ha utilizado a lo largo de los años. Cuenta con modelos como el <strong>GV300W</strong> y el <strong>GV310LAU</strong>. A continuación, se presenta el desglose técnico de las funciones asignadas a cada pin en el conector de 16 pines.
-     </p>
-<p>
-      Al observar de cerca las unidades de la serie GV300, encontramos un conector principal y, en uno de los laterales, una infografía que detalla la función de cada terminal. Esta información es vital para la correcta integración de periféricos.
-     </p>
-</div>
-<div class="img-container">
-<img src="images/m1_modelos_de_gps_y_sus_funciones_6.png"/>
-</div>
-<div class="text-block">
-<ul>
-<li>
-<strong>
-        Pin 1 (Gris):
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Manual Técnico GPS - Módulo 2 — Fundamentos de Sistemas GPS
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="container">
+   <header>
+    <nav>
+     <a href="index.html">
+      ← Volver al Índice Principal
+     </a>
+    </nav>
+    <h1>
+     Módulo 2 — Fundamentos de Sistemas GPS
+    </h1>
+   </header>
+   <main>
+    <button class="accordion">
+     2. Introducción Técnica
+    </button>
+    <div class="panel" id="m1_introduccion">
+     <div class="text-block">
+      <p>
+       Este manual técnico ha sido desarrollado como una guía integral para los nuevos técnicos especializados en la instalación, configuración y mantenimiento de sistemas de rastreo y seguridad vehicular. A diferencia de la navegación convencional, estos dispositivos integran tecnologías de posicionamiento satelital con comunicaciones móviles GSM/LTE para permitir el monitoreo en tiempo real, la gestión de flotas y funciones de seguridad activa como la inmovilización remota. En el contexto actual, la precisión en la instalación es crítica no solo para la funcionalidad del dispositivo, sino también para la integridad eléctrica y mecánica del vehículo.
+      </p>
+      <p>
+       A lo largo de este documento, el aspirante encontrará desde los fundamentos de la electrónica automotriz hasta procedimientos avanzados de diagnóstico. Nuestro objetivo primordial es asegurar que cada técnico adquiera las competencias necesarias para realizar instalaciones limpias, seguras y altamente efectivas, minimizando riesgos y maximizando la vida útil de los equipos instalados.
+      </p>
+      <p>
+       La capacitación abarca el manejo de herramientas especializadas, la interpretación de diagramas complejos y la aplicación de protocolos de seguridad rigurosos. Al finalizar este manual, se incluye una sección dedicada a las particularidades de los vehículos con los que operamos habitualmente, proporcionando un conocimiento práctico directo para el campo de trabajo.
+      </p>
+     </div>
+     <div class="back-to-top">
+      <a href="#intro_manual_borrador_i">
+       ↑ Volver al Índice
+      </a>
+     </div>
+    </div>
+    <button class="accordion">
+     4. Arquitectura de Hardware: Modelos de GPS
+    </button>
+    <div class="panel" id="m1_modelos_de_gps_y_sus_funciones">
+     <div class="text-block">
+      <p>
+       <strong>
+        Modelos de Rastreo y Seguridad Vehicular:
        </strong>
-       micrófono ( + ) Este pin se usa con el positivo del micrófono en caso que la instalación lo requiera.
-      </li>
-<li>
-<strong>
-        Pin 2 (Gris línea negra):
+       Es fundamental diferenciar estos dispositivos de los sistemas de navegación comunes. Las unidades de rastreo instalables se integran directamente al sistema eléctrico del vehículo para ofrecer funciones de monitoreo continuo, gestión de flotas y seguridad activa, como el apagado remoto. Conocer la arquitectura técnica de cada modelo permite optimizar su instalación y asegurar la compatibilidad con las redes de comunicación GSM/LTE y los servicios de monitoreo.
+      </p>
+      <h3>
+       Unidades Descontinuadas
+      </h3>
+      <p>
+       Corresponden a dispositivos que han sido retirados del catálogo para nuevas instalaciones en instalaciones nuevas
+      </p>
+     </div>
+     <div class="img-container">
+      <img src="images/m1_modelos_de_gps_y_sus_funciones_1.png"/>
+     </div>
+     <div class="img-container">
+      <img src="images/m1_modelos_de_gps_y_sus_funciones_2.png"/>
+     </div>
+     <div class="text-block">
+      <h3>
+       Unidades En uso
+      </h3>
+      <h3>
+       Funcionalidades
+      </h3>
+      <p>
+       Las arquitecturas funcionales de las unidades GPS contemporáneas presentan una alta convergencia técnica. En particular, los modelos de la serie GV300 comparten un conector estándar de 16 pines que integra varias funciones, como el bloqueo remoto, la apertura de seguros, el botón de pánico, y la alimentación con un rango de voltaje operativo de entre 8 y 36 voltios. Además, incluye una conexión a tierra y soporta señales de dispositivos de audio, permitiendo la integración de un micrófono y parlantes.
+      </p>
+     </div>
+     <div class="img-container">
+      <img src="images/m1_modelos_de_gps_y_sus_funciones_3.png"/>
+     </div>
+     <div class="img-container">
+      <img src="images/m1_modelos_de_gps_y_sus_funciones_4.png"/>
+     </div>
+     <div class="text-block">
+      <h3>
+       Serie GV300
+      </h3>
+      <p>
+       Actualmente, esta plataforma es la que más se ha utilizado a lo largo de los años. Cuenta con modelos como el
+       <strong>
+        GV300W
        </strong>
-       micrófono ( - ) Es la conexión negativa del micrófono.
-      </li>
-<li>
-<strong>
-        Pin 3 (Blanco):
+       y el
+       <strong>
+        GV310LAU
        </strong>
-       Ignición Este pin se conecta a una señal constante de ignición del vehículo, es decir: la señal debe de activarse al momento que el vehículo se encienda y apagarse al momento que el vehículo se apague.
-      </li>
-<li>
-<strong>
-        Pin 6 (Negro):
+       . A continuación, se presenta el desglose técnico de las funciones asignadas a cada pin en el conector de 16 pines.
+      </p>
+      <p>
+       Al observar de cerca las unidades de la serie GV300, encontramos un conector principal y, en uno de los laterales, una infografía que detalla la función de cada terminal. Esta información es vital para la correcta integración de periféricos.
+      </p>
+     </div>
+     <div class="img-container">
+      <img src="images/m1_modelos_de_gps_y_sus_funciones_6.png"/>
+     </div>
+     <div class="text-block">
+      <ul>
+       <li>
+        <strong>
+         Pin 1 (Gris):
+        </strong>
+        micrófono ( + ) Este pin se usa con el positivo del micrófono en caso que la instalación lo requiera.
+       </li>
+       <li>
+        <strong>
+         Pin 2 (Gris línea negra):
+        </strong>
+        micrófono ( - ) Es la conexión negativa del micrófono.
+       </li>
+       <li>
+        <strong>
+         Pin 3 (Blanco):
+        </strong>
+        Ignición Este pin se conecta a una señal constante de ignición del vehículo, es decir: la señal debe de activarse al momento que el vehículo se encienda y apagarse al momento que el vehículo se apague.
+       </li>
+       <li>
+        <strong>
+         Pin 6 (Negro):
+        </strong>
+        Negativo Este pin se conecta a tierra del vehículo
+       </li>
+      </ul>
+     </div>
+     <div class="img-container">
+      <img src="images/m1_modelos_de_gps_y_sus_funciones_7.png"/>
+     </div>
+     <div class="text-block">
+      <ul>
+       <li>
+        <strong>
+         Pin 8 (Amarillo): Apertura.
+        </strong>
+        Envía un pulso negativo (-) momentáneo para la activación del cierre centralizado.
+       </li>
+       <li>
+        <strong>
+         Pines 9 y 10 (Morados): Parlante.
+        </strong>
+        Salidas para audio (micrófono/parlante activo).
+       </li>
+       <li>
+        <strong>
+         Pin 11 (Rojo): Positivo (+).
+        </strong>
+        Alimentación constante (8V - 36V DC). Debe conectarse a una línea que no se interrumpa al apagar el vehículo.
+       </li>
+       <li>
+        <strong>
+         Pin 13 (Naranja): Pánico.
+        </strong>
+        Entrada para pulso negativo momentáneo proveniente del botón de emergencia.
+       </li>
+       <li>
+        <strong>
+         Pin 14 (Azul): Bloqueo.
+        </strong>
+        Salida de señal negativa sostenida para activar el relé de inmovilización.
+       </li>
+      </ul>
+      <h3>
+       Modelo GV58LAU
+      </h3>
+      <p>
+       Este dispositivo compacto integra la mayoría de las funciones en un arnés de 6 cables. A diferencia de la serie GV300, los cables están integrados directamente al chasis del equipo.
+      </p>
+      <div style="background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin: 10px 0;">
+       <strong>
+        Código de Colores GV58LAU:
        </strong>
-       Negativo Este pin se conecta a tierra del vehículo
-      </li>
-</ul>
-</div>
-<div class="img-container">
-<img src="images/m1_modelos_de_gps_y_sus_funciones_7.png"/>
-</div>
-<div class="text-block">
-<ul>
-<li><strong>Pin 8 (Amarillo): Apertura.</strong> Envía un pulso negativo (-) momentáneo para la activación del cierre centralizado.</li>
-<li><strong>Pines 9 y 10 (Morados): Parlante.</strong> Salidas para audio (micrófono/parlante activo).</li>
-<li><strong>Pin 11 (Rojo): Positivo (+).</strong> Alimentación constante (8V - 36V DC). Debe conectarse a una línea que no se interrumpa al apagar el vehículo.</li>
-<li><strong>Pin 13 (Naranja): Pánico.</strong> Entrada para pulso negativo momentáneo proveniente del botón de emergencia.</li>
-<li><strong>Pin 14 (Azul): Bloqueo.</strong> Salida de señal negativa sostenida para activar el relé de inmovilización.</li>
-</ul>
-<h3>Modelo GV58LAU</h3>
-<p>
-      Este dispositivo compacto integra la mayoría de las funciones en un arnés de 6 cables. A diferencia de la serie GV300, los cables están integrados directamente al chasis del equipo.
-     </p>
-<div style="background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin: 10px 0;">
-<strong>Código de Colores GV58LAU:</strong>
-<ul style="column-count: 2;">
-<li><strong>Blanco:</strong> Ignición</li>
-<li><strong>Rojo:</strong> Positivo (+)</li>
-<li><strong>Negro:</strong> Negativo (-)</li>
-<li><strong>Naranja:</strong> Pánico</li>
-<li><strong>Amarillo:</strong> Apertura</li>
-<li><strong>Verde:</strong> Bloqueo</li>
-</ul>
-</div>
-<div class="warning-box"><img class="warning-icon" src="images/warning_icon.png"/><div><strong>PRECAUCIÓN:</strong><p>Asegúrese de conectar siempre la terminal negativa (Negro) antes de cualquier otra conexión de potencia o señal.</p></div></div>
-</div>
-<div class="img-container">
-<img src="images/m1_modelos_de_gps_y_sus_funciones_8.png"/>
-</div>
-<div class="text-block">
-<h3>Modelo GV75W (Waterproof)</h3>
-<p>
-      Diseñado para aplicaciones en condiciones extremas, como motocicletas, cuatrimotos o maquinaria pesada expuesta a la intemperie. Cuenta con protección IP67.
-     </p>
-<p><strong>Configuración de Cables GV75W:</strong></p>
-<ul>
-<li><strong>Rojo:</strong> Positivo (+)</li>
-<li><strong>Negro:</strong> Negativo (-)</li>
-<li><strong>Blanco:</strong> Ignición</li>
-<li><strong>Azul:</strong> Bloqueo de Motor</li>
-</ul>
-</div>
-<div class="text-block">
-<div class="warning-box"><img class="warning-icon" src="images/warning_icon.png"/><div><strong>PRECAUCION:</strong><p>Esta unidad presenta una falla en el conector, es recomendable eliminar el conector y hacer las conexiones directas.</p></div></div>
-</div>
-<div class="img-container">
-<img src="images/m1_modelos_de_gps_y_sus_funciones_11.png"/>
-</div>
-<div class="text-block">
-</div>
-<div class="img-container">
-<img src="images/m1_modelos_de_gps_y_sus_funciones_5.png"/>
-</div>
-</div><button class="accordion">
-    14. Instalación de Periféricos: Botón de Pánico
-   </button>
-<div class="panel" id="m2_boton_de_panico">
-<div class="text-block">
-<p>
-      Botón de Pánico
+       <ul style="column-count: 2;">
+        <li>
+         <strong>
+          Blanco:
+         </strong>
+         Ignición
+        </li>
+        <li>
+         <strong>
+          Rojo:
+         </strong>
+         Positivo (+)
+        </li>
+        <li>
+         <strong>
+          Negro:
+         </strong>
+         Negativo (-)
+        </li>
+        <li>
+         <strong>
+          Naranja:
+         </strong>
+         Pánico
+        </li>
+        <li>
+         <strong>
+          Amarillo:
+         </strong>
+         Apertura
+        </li>
+        <li>
+         <strong>
+          Verde:
+         </strong>
+         Bloqueo
+        </li>
+       </ul>
+      </div>
+      <div class="warning-box">
+       <img class="warning-icon" src="images/warning_icon.png"/>
+       <div>
+        <strong>
+         PRECAUCIÓN:
+        </strong>
+        <p>
+         Asegúrese de conectar siempre la terminal negativa (Negro) antes de cualquier otra conexión de potencia o señal.
+        </p>
+       </div>
+      </div>
+     </div>
+     <div class="img-container">
+      <img src="images/m1_modelos_de_gps_y_sus_funciones_8.png"/>
+     </div>
+     <div class="text-block">
+      <h3>
+       Modelo GV75W (Waterproof)
+      </h3>
+      <p>
+       Diseñado para aplicaciones en condiciones extremas, como motocicletas, cuatrimotos o maquinaria pesada expuesta a la intemperie. Cuenta con protección IP67.
+      </p>
+      <p>
+       <strong>
+        Configuración de Cables GV75W:
+       </strong>
+      </p>
+      <ul>
+       <li>
+        <strong>
+         Rojo:
+        </strong>
+        Positivo (+)
+       </li>
+       <li>
+        <strong>
+         Negro:
+        </strong>
+        Negativo (-)
+       </li>
+       <li>
+        <strong>
+         Blanco:
+        </strong>
+        Ignición
+       </li>
+       <li>
+        <strong>
+         Azul:
+        </strong>
+        Bloqueo de Motor
+       </li>
+      </ul>
+     </div>
+     <div class="text-block">
+      <div class="warning-box">
+       <img class="warning-icon" src="images/warning_icon.png"/>
+       <div>
+        <strong>
+         PRECAUCION:
+        </strong>
+        <p>
+         Esta unidad presenta una falla en el conector, es recomendable eliminar el conector y hacer las conexiones directas.
+        </p>
+       </div>
+      </div>
+     </div>
+     <div class="img-container">
+      <img src="images/m1_modelos_de_gps_y_sus_funciones_11.png"/>
+     </div>
+     <div class="text-block">
+     </div>
+     <div class="img-container">
+      <img src="images/m1_modelos_de_gps_y_sus_funciones_5.png"/>
+     </div>
+    </div>
+    <button class="accordion">
+     14. Instalación de Periféricos: Botón de Pánico
+    </button>
+    <div class="panel" id="m2_boton_de_panico">
+     <div class="text-block">
+      <p>
+       Botón de Pánico
      Estos pulsadores funcionan como dispositivos de alerta al ser presionados, emitiendo generalmente una señal negativa. Al activarse, el pulsador envía un pulso negativo que dura únicamente mientras se mantiene presionado.
      Características principales: Función temporal La señal se envía solo durante el tiempo de presión, lo que permite alertas momentáneas o señales intermitente El botón incluye terminales con cables de longitud suficiente para una instalación sin problemas. Es recomendable seleccionar cuidadosamente la ubicación de instalación antes de cortar o ajustar el cable. Polaridad: Generalmente, estos pulsadores no están polarizados, lo que significa que cualquiera de sus dos terminales puede funcionar como entrada o salida, sin importar el tipo de corriente utilizada. Esto los hace versátiles en distintas aplicaciones, ya que no requieren una conexión específica de polaridad.
      Sin embargo, en sistemas de alarma o GPS, estos pulsadores suelen emplearse para enviar un pulso de señal negativa. Esto es útil en sistemas que
-     </p>
-</div>
-<div class="img-container">
-<img src="images/m2_boton_de_panico_1.png"/>
-</div>
-<div class="text-block">
-<p>
-      requieren esta polaridad para activarse o generar una alerta, facilitando una integración adecuada con el resto de componentes del sistema.
-     <strong>Instalación:</strong> La integración básica de este periférico consiste en el empalme de una de sus terminales al cable del GPS destinado a la señal de entrada negativa de pánico (Naranja en la mayoría de modelos). La otra terminal debe conectarse a una señal negativa constante (tierra).
+      </p>
+     </div>
+     <div class="img-container">
+      <img src="images/m2_boton_de_panico_1.png"/>
+     </div>
+     <div class="text-block">
+      <p>
+       requieren esta polaridad para activarse o generar una alerta, facilitando una integración adecuada con el resto de componentes del sistema.
+       <strong>
+        Instalación:
+       </strong>
+       La integración básica de este periférico consiste en el empalme de una de sus terminales al cable del GPS destinado a la señal de entrada negativa de pánico (Naranja en la mayoría de modelos). La otra terminal debe conectarse a una señal negativa constante (tierra).
      Si el pulsador tiene un código de colores para identificar las terminales (como rojo y negro), es recomendable seguir esta identificación, conectando cada terminal de acuerdo con su color: el negro generalmente debe ir a un negativo constante.
      Además, en muchos casos, la terminal para la señal negativa constante suele empalmarse con el negativo del GPS, permitiendo que ambos dispositivos compartan la misma conexión a tierra. Esto asegura una instalación ordenada y confiable, reduciendo posibles problemas de conexión y mejorando la estabilidad del sistema, como se puede apreciar en la imagen.
      Es importante recordar que este periférico debe estar oculto pero accesible para el conductor del vehículo. Esto requiere un enfoque creativo e intuitivo para encontrar un lugar práctico donde el botón esté disponible cuando se necesite, pero fuera de la vista para mantener su discreción y evitar manipulaciones no autorizadas
      A continuación, algunas técnicas para ocultar el botón en lugares ideales fuera de la vista y accesibles:
-     </p>
-<ol>
-<li>
-       Debajo del volante: Coloca el botón en la parte inferior del tablero, cerca del volante. Este lugar permite fácil acceso para el piloto mientras permanece fuera de la vista.
-      </li>
-</ol>
-</div>
-<div class="img-container">
-<img src="images/m2_boton_de_panico_2.png"/>
-</div>
-<div class="img-container">
-<img src="images/m2_boton_de_panico_3.png"/>
-</div>
-<div class="img-container">
-<img src="images/m2_boton_de_panico_4.png"/>
-</div>
-<div class="text-block">
-<ol start="2">
-<li><strong>Detrás de una tapa o panel desmontable:</strong> Aprovechando cubiertas o tapas de fusibles.</li>
-<li><strong>En la base del asiento:</strong> En la parte lateral, discreto pero accesible para el piloto.</li>
-<li><strong>Dentro de la consola central:</strong> Permite acceso directo sin comprometer la visibilidad exterior.</li>
-</ol>
-<h3>Configuración de Instalación Estándar</h3>
-<p>
-      Para una instalación limpia, se recomienda:
-     </p>
-<ul>
-<li>Tomar medidas precisas de donde estará oculto el dispositivo antes de cortar cables.</li>
-<li>Separar los cables que no se utilizarán y cortarlos en ángulo diagonal para evitar contactos accidentales.</li>
-<li>Mantener una longitud de reserva para permitir futuras expansiones o mantenimientos.</li>
-</ul>
-</div>
-<div class="back-to-top"><a href="#intro_manual_borrador_i">↑ Volver al Índice</a></div>
-</div><button class="accordion">17. Electrónica Automotriz Moderna: Redes CAN/LIN</button>
-<div class="panel" id="m3_can_bus">
-<div class="text-block">
-<p>Los vehículos modernos usan redes multiplexadas para reducir cableado.</p>
-<ul>
-<li><strong>CAN BUS:</strong> Par trenzado (H/L). Nunca pinchar con lámpara de prueba.</li>
-<li><strong>BCM:</strong> Módulo de habitáculo. Fuente ideal de señales de seguros.</li>
-</ul>
-</div>
-<div class="back-to-top"><a href="#intro_manual_borrador_i">↑ Volver al Índice</a></div>
-</div>
-        </main>
-
-        <footer>
-            <p>&copy; 2025 Manual de Capacitación Técnica GPS</p>
-        </footer>
+      </p>
+      <ol>
+       <li>
+        Debajo del volante: Coloca el botón en la parte inferior del tablero, cerca del volante. Este lugar permite fácil acceso para el piloto mientras permanece fuera de la vista.
+       </li>
+      </ol>
+     </div>
+     <div class="img-container">
+      <img src="images/m2_boton_de_panico_2.png"/>
+     </div>
+     <div class="img-container">
+      <img src="images/m2_boton_de_panico_3.png"/>
+     </div>
+     <div class="img-container">
+      <img src="images/m2_boton_de_panico_4.png"/>
+     </div>
+     <div class="text-block">
+      <ol start="2">
+       <li>
+        <strong>
+         Detrás de una tapa o panel desmontable:
+        </strong>
+        Aprovechando cubiertas o tapas de fusibles.
+       </li>
+       <li>
+        <strong>
+         En la base del asiento:
+        </strong>
+        En la parte lateral, discreto pero accesible para el piloto.
+       </li>
+       <li>
+        <strong>
+         Dentro de la consola central:
+        </strong>
+        Permite acceso directo sin comprometer la visibilidad exterior.
+       </li>
+      </ol>
+      <h3>
+       Configuración de Instalación Estándar
+      </h3>
+      <p>
+       Para una instalación limpia, se recomienda:
+      </p>
+      <ul>
+       <li>
+        Tomar medidas precisas de donde estará oculto el dispositivo antes de cortar cables.
+       </li>
+       <li>
+        Separar los cables que no se utilizarán y cortarlos en ángulo diagonal para evitar contactos accidentales.
+       </li>
+       <li>
+        Mantener una longitud de reserva para permitir futuras expansiones o mantenimientos.
+       </li>
+      </ul>
+     </div>
+     <div class="back-to-top">
+      <a href="#intro_manual_borrador_i">
+       ↑ Volver al Índice
+      </a>
+     </div>
     </div>
-    <script src="main.js"></script>
-</body>
+    <button class="accordion">
+     17. Electrónica Automotriz Moderna: Redes CAN/LIN
+    </button>
+    <div class="panel" id="m3_can_bus">
+     <div class="text-block">
+      <p>
+       Los vehículos modernos usan redes multiplexadas para reducir cableado.
+      </p>
+      <ul>
+       <li>
+        <strong>
+         CAN BUS:
+        </strong>
+        Par trenzado (H/L). Nunca pinchar con lámpara de prueba.
+       </li>
+       <li>
+        <strong>
+         BCM:
+        </strong>
+        Módulo de habitáculo. Fuente ideal de señales de seguros.
+       </li>
+      </ul>
+     </div>
+     <div class="back-to-top">
+      <a href="#intro_manual_borrador_i">
+       ↑ Volver al Índice
+      </a>
+     </div>
+    </div>
+   </main>
+   <footer>
+    <p>
+     © 2025 Manual de Capacitación Técnica GPS
+    </p>
+   </footer>
+  </div>
+  <script src="main.js">
+  </script>
+ </body>
 </html>
