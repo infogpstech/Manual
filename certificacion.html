@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificación Técnica GPS - TRACKLINK Honduras</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=400;600;700&family=Poppins:wght=700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .quiz-card {
+            background: var(--bg-panel);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: var(--card-shadow);
+        }
+        .option-label {
+            display: block;
+            background: var(--bg-body);
+            border: 1px solid var(--border-color);
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin: 8px 0;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: 500;
+        }
+        .option-label:hover {
+            border-color: var(--primary-color);
+            background: var(--accordion-active);
+        }
+        .option-label input {
+            margin-right: 10px;
+        }
+        .certificate-frame {
+            display: none;
+            background: #ffffff;
+            border: 10px solid #0f172a;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            color: #0f172a;
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.2);
+            margin-top: 30px;
+            position: relative;
+        }
+        .cert-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2rem;
+            color: #0284c7;
+            margin: 10px 0;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <h1>Evaluación Técnica y Certificación TRACKLINK</h1>
+                <p>Compruebe sus conocimientos sobre estándares de instalación telemática y obtenga su acreditación.</p>
+            </div>
+            <nav>
+                <a href="index.html">← Volver al Portal Principal</a>
+            </nav>
+        </header>
+
+        <main id="quiz-mount">
+            <div id="quiz-container">
+                <form id="quiz-form">
+                    <div class="quiz-card">
+                        <h3>1. ¿Cuál es la restricción crítica en circuitos de Airbags (SRS)?</h3>
+                        <label class="option-label"><input type="radio" name="q1" value="a"> Prohibido medir impedancia con probadores de foco o cortar cables amarillos.</label>
+                        <label class="option-label"><input type="radio" name="q1" value="b"> Se deben soldar los cables del detonador con cautín directo.</label>
+                        <label class="option-label"><input type="radio" name="q1" value="c"> Se pueden probar con probador de lámpara incandescente de 12V.</label>
+                    </div>
+
+                    <div class="quiz-card">
+                        <h3>2. En un relé de 5 pines, ¿qué pin actúa como salida Normalmente Cerrada (NC) para el corte de ignición?</h3>
+                        <label class="option-label"><input type="radio" name="q2" value="a"> Pin 87</label>
+                        <label class="option-label"><input type="radio" name="q2" value="b"> Pin 87a</label>
+                        <label class="option-label"><input type="radio" name="q2" value="c"> Pin 86</label>
+                    </div>
+
+                    <div class="quiz-card">
+                        <h3>3. ¿A qué distancia máxima del punto de empalme debe instalarse el fusible aéreo de protección?</h3>
+                        <label class="option-label"><input type="radio" name="q3" value="a"> A menos de 10 cm del punto de conexión.</label>
+                        <label class="option-label"><input type="radio" name="q3" value="b"> A 1 metro de distancia del empalme.</label>
+                        <label class="option-label"><input type="radio" name="q3" value="c"> No requiere fusible si la batería tiene buen amperaje.</label>
+                    </div>
+
+                    <div class="quiz-card">
+                        <h3>4. ¿Qué precauciones se deben tomar en vehículos Híbridos o Eléctricos?</h3>
+                        <label class="option-label"><input type="radio" name="q4" value="a"> NUNCA tocar ni pelar cables de color NARANJA (Alto Voltaje HV).</label>
+                        <label class="option-label"><input type="radio" name="q4" value="b"> Cortar la corriente alta directamente con un relé de 30A.</label>
+                        <label class="option-label"><input type="radio" name="q4" value="c"> Desconectar la batería de tracción sin guantes dieléctricos.</label>
+                    </div>
+
+                    <div style="text-align:center; margin-top:30px;">
+                        <input type="text" id="tech-name" placeholder="Nombre Completo del Técnico" style="padding:12px 20px; font-size:1rem; border-radius:8px; border:1px solid var(--border-color); width:100%; max-width:400px; margin-bottom:15px; display:block; margin-left:auto; margin-right:auto;" required>
+                        <button type="button" onclick="evaluateCert()" class="btn-nav-module primary" style="font-size:1.1rem; padding:14px 32px; cursor:pointer;">Evaluar y Generar Certificado</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="certificate" class="certificate-frame">
+                <img src="images/tracklink_logo.png" alt="TRACKLINK Logo" style="max-width:200px; margin-bottom:10px;">
+                <p style="letter-spacing:2px; font-weight:700; color:#64748b;">CERTIFICADO DE ACREDITACIÓN TÉCNICA</p>
+                <div class="cert-title">TRACKLINK HONDURAS</div>
+                <p style="font-size:1.2rem;">Otorgado a:</p>
+                <h2 id="cert-tech-name" style="font-size:2rem; color:#0f172a; margin:10px 0; border-bottom:2px solid #0284c7; display:inline-block; padding-bottom:5px;">Nombre Técnico</h2>
+                <p style="max-width:650px; margin:20px auto; font-size:1.05rem; line-height:1.5;">Por haber demostrado el dominio satisfactorio de los protocolos de instalación telemática, electrónica vehicular, seguridad SRS/HV y estándares de calidad para dispositivos GPS.</p>
+                <div style="display:flex; justify-content:space-around; margin-top:40px; border-top:1px solid #cbd5e1; padding-top:20px;">
+                    <div><strong>Departamento Técnico</strong><br><small>TRACKLINK Honduras</small></div>
+                    <div><strong>Aprobación Acreditada</strong><br><small>Nota: <span id="cert-score">100%</span></small></div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2025 TRACKLINK Honduras — Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+    <script>
+        function evaluateCert() {
+            const nameInput = document.getElementById('tech-name').value.trim();
+            if (!nameInput) {
+                alert('Por favor ingrese su nombre completo para emitir el certificado.');
+                return;
+            }
+
+            const answers = { q1: 'a', q2: 'b', q3: 'a', q4: 'a' };
+            let score = 0;
+            let total = 4;
+
+            for (let q in answers) {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                if (selected && selected.value === answers[q]) {
+                    score++;
+                }
+            }
+
+            const percentage = Math.round((score / total) * 100);
+
+            if (percentage >= 75) {
+                document.getElementById('quiz-container').style.display = 'none';
+                document.getElementById('cert-tech-name').textContent = nameInput;
+                document.getElementById('cert-score').textContent = percentage + '%';
+                document.getElementById('certificate').style.display = 'block';
+            } else {
+                alert(`Su nota fue de ${percentage}%. Requiere al menos 75% para certificar. Por favor repase los módulos e intente nuevamente.`);
+            }
+        }
+    </script>
+</body>
+</html>
