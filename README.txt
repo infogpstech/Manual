@@ -419,3 +419,11 @@ Recursos gráficos
 [x] Advertencias visuales.
 [x] Señalización riesgos.
 [x] Flujos de proceso.
+
+---
+PRÓXIMAS IMPLEMENTACIONES (ROADMAP ACORDADO)
+1. Cuestionarios modulares independientes (10+ preguntas por módulo) con sistema de calificación automático.
+2. Presentaciones HTML independientes especializadas para cada uno de los 10 módulos del manual.
+3. Microservicio backend en Google Apps Script (`google_apps_script.js`) conectado a Google Sheets:
+   - Pestaña 'Usuarios': Registro de usuarios, autenticación y credenciales de cuenta.
+   - Pestaña 'Progreso_Y_Evaluaciones': Seguimiento de notas, avance de aprendizaje e interacciones en simuladores.
